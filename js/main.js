@@ -1,6 +1,17 @@
 (function () {
   'use strict';
 
+  // Mark current navigation link for clearer orientation.
+  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav a, .footer-nav a').forEach(function (link) {
+    var href = link.getAttribute('href') || '';
+    if (!href || href.startsWith('#')) return;
+    var targetPage = href.split('#')[0];
+    if (targetPage === currentPage || (currentPage === '' && targetPage === 'index.html')) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
@@ -57,6 +68,7 @@
       thumb.src = 'assets/gymflow/' + slug + '.jpg';
       thumb.alt = name + ' exercise';
       thumb.loading = 'lazy';
+      thumb.decoding = 'async';
       thumb.className = 'exercise-thumb';
       thumb.dataset.fullSrc = thumb.src;
       item.insertBefore(thumb, item.firstChild);

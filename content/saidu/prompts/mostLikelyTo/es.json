@@ -1,0 +1,1205 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "prompt": "Un médico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un profesor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un chef",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un piloto",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un bombero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un cantante",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Un superhéroe",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un pirata",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un robot",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un astronauta",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un rey",
+      "category": "role"
+    },
+    {
+      "prompt": "Un mago",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un detective",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un granjero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Una estrella de rock",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Un científico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un vampiro",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Una princesa",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un atleta",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un artista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un ninja",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un DJ",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Un caballero",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un abogado",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un enfermero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un ingeniero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un músico",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Un bailarín",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Un fotógrafo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un periodista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un político",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un soldado",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un policía",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un piloto",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un capitán",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un mago",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un payaso",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un mimo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un actor",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Un director",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un productor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un escritor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un poeta",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un comediante",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Un rapero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un bailarín",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Una bailarina",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un cirujano",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un veterinario",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un dentista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un psicólogo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un terapeuta",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un arquitecto",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un diseñador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un modelo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un barbero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un florista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un panadero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un mecánico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un electricista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un fontanero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un carpintero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un conductor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un bibliotecario",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un historiador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un arqueólogo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un biólogo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un químico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un astrónomo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un geólogo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un profesor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un estudiante",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un director",
+      "category": "profession"
+    },
+    {
+      "prompt": "Una reina",
+      "category": "role"
+    },
+    {
+      "prompt": "Un príncipe",
+      "category": "role"
+    },
+    {
+      "prompt": "Un duque",
+      "category": "role"
+    },
+    {
+      "prompt": "Un caballero",
+      "category": "role"
+    },
+    {
+      "prompt": "Un mago",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Una bruja",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un hada",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un dragón",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un unicornio",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un fantasma",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un zombie",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un alienígena",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un espía",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un agente secreto",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un ladrón",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un gángster",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un vaquero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un samurái",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un vikingo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un gladiador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un faraón",
+      "category": "profession"
+    },
+    {
+      "prompt": "Una momia",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un yeti",
+      "category": "profession"
+    },
+    {
+      "prompt": "Una sirena",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un supervillano",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un compañero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un héroe",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un mentor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un rebelde",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un líder",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un chef",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un camarero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un camarero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un sommelier",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un crítico gastronómico",
+      "category": "profession"
+    },
+    {
+      "prompt": "A Athlete",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un entrenador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un árbitro",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un comentarista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un entrenador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un jugador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un streamer",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un YouTuber",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un bloguero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un influencer",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un CEO",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un emprendedor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un inversor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un consultor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un reclutador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un vendedor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un especialista en marketing",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un contador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un banquero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un agente inmobiliario",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un piloto",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un auxiliar de vuelo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un guía turístico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un guía",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un explorador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un jardinero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un florista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un paisajista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un granjero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un ganadero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un pescador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un cazador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un marinero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un buceador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un surfista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un esquiador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un snowboarder",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un escalador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un corredor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un ciclista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un nadador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un gimnasta",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un luchador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un boxeador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un artista marcial",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un juez",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un abogado",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un asistente legal",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un detective",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un científico forense",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un bombero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un paramédico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un técnico de emergencias",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un salvavidas",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un guardia de seguridad",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un camarero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un barista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un sommelier",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un mixólogo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un estilista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un maquillador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un técnico de uñas",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un masajista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un entrenador personal",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un nutricionista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un instructor de yoga",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un profesor de meditación",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un trabajador social",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un consejero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un coach de vida",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un orador motivacional",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un sacerdote",
+      "category": "profession"
+    },
+    {
+      "prompt": "Una monja",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un rabino",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un imam",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un monje",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un gurú",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un príncipe",
+      "category": "role"
+    },
+    {
+      "prompt": "Una princesa",
+      "category": "role"
+    },
+    {
+      "prompt": "Un duque",
+      "category": "role"
+    },
+    {
+      "prompt": "Una duquesa",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un barón",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un conde",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un faraón",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un emperador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un dictador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un revolucionario",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un rebelde",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un inventor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un explorador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un pionero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un pionero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un visionario",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un filósofo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un pensador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un erudito",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un genio",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un prodigio",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un payaso",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un bufón",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un comediante",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Un bromista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un tramposo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un héroe",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un villano",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un antihéroe",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un forajido",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un renegado",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un guardián",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un protector",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un defensor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un campeón",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un guerrero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un sabio",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un oráculo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un profeta",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un vidente",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un místico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un bardo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un juglar",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un trovador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un narrador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un narrador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un caricaturista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un animador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un ilustrador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un diseñador gráfico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un escultor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un pintor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un alfarero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un tejedor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un herrero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un alquimista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un hechicero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un encantador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un nigromante",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un guardabosques",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un explorador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un rastreador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un cazador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un recolector",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un comerciante",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un comerciante",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un vendedor",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un tendero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un traficante",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un diplomático",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un embajador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un negociador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un mediador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un espía",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un doble agente",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un informante",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un topo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un detective",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un estafador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un hacker",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un jugador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un adivino",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un artista de circo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un acróbata",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un funámbulo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un domador de leones",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un luchador",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un culturista",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un halterófilo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un atleta de CrossFit",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un skater",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un ciclista BMX",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un practicante de parkour",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un free runner",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un piloto",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un piloto de carreras",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un piloto de rally",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un conductor de acrobacias",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un marinero",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un navegante",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un capitán de submarino",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un capitán de barco",
+      "category": "profession"
+    },
+    {
+      "prompt": "A Astronaut",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un explorador espacial",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un científico espacial",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un astrofísico",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un robot",
+      "category": "fictional"
+    },
+    {
+      "prompt": "Un cyborg",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un androide",
+      "category": "profession"
+    },
+    {
+      "prompt": "Una IA",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un holograma",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un viajero en el tiempo",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un saltador de dimensiones",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un alterador de realidad",
+      "category": "profession"
+    },
+    {
+      "prompt": "Un superhéroe",
+      "category": "fictional"
+    }
+  ]
+}

@@ -1,0 +1,1205 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "prompt": "Would you rather eat pizza every day or never eat pizza again?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather travel to space or explore the deep ocean?",
+      "category": "travel"
+    },
+    {
+      "prompt": "Would you rather watch movies or read books?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather have unlimited coffee or unlimited tea?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather go camping or stay in luxury hotels?",
+      "category": "travel"
+    },
+    {
+      "prompt": "Would you rather play video games or board games?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather always be 10 minutes early or always 10 minutes late?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have the ability to fly or be invisible?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live without music or without movies?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather be able to speak all languages or talk to animals?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have summer all year or winter all year?",
+      "category": "weather"
+    },
+    {
+      "prompt": "Would you rather be a famous actor or a famous musician?",
+      "category": "career"
+    },
+    {
+      "prompt": "Would you rather lose the ability to read or the ability to speak?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a rewind button or a pause button for your life?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather always speak your mind or never speak again?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be able to time travel or read minds?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have unlimited wealth or unlimited time?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in the past or the future?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather always have to tell the truth or always have to lie?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never use social media again or never watch TV again?",
+      "category": "media"
+    },
+    {
+      "prompt": "Would you rather have a dog or a cat?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in the city or the countryside?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower or a million dollars?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather be able to speak every language or play every instrument?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have a long life or an exciting life?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be too hot or too cold?",
+      "category": "weather"
+    },
+    {
+      "prompt": "Would you rather lose your phone or your keys?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have breakfast for dinner or dinner for breakfast?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather meet your past self or your future self?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather have no WiFi for a week or no air conditioning for a week?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only eat sweet or only eat savory?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather never wear socks or never wear shoes?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather always say yes or always say no?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather win the lottery or have your dream job?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather know when you'll die or how you'll die?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather relive one day forever or skip ahead 10 years?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather have a redo of the last year or skip to next year?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather be the smartest person or the most attractive person?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never be bored or never be stressed?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have unlimited money but no friends or no money but many friends?",
+      "category": "relationships"
+    },
+    {
+      "prompt": "Would you rather travel alone forever or never travel but have a perfect home?",
+      "category": "travel"
+    },
+    {
+      "prompt": "Would you rather never sleep or sleep 20 hours a day?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather eat only one cuisine forever or one type of food forever?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a tiny house or a huge mansion?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather work 4 days a week or work 6 hours a day?",
+      "category": "career"
+    },
+    {
+      "prompt": "Would you rather be famous for 15 minutes or unknown but rich?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a photographic memory or be able to forget anything?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live without mirrors or live without photos?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never age or never get sick?",
+      "category": "health"
+    },
+    {
+      "prompt": "Would you rather always be right or always be liked?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a personal chef or a personal trainer?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather give up your favorite food or your favorite hobby?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never use a car or never use a plane?",
+      "category": "travel"
+    },
+    {
+      "prompt": "Would you rather live 100 years in the past or 100 years in the future?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather have a clone of yourself or read minds?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather be invisible for a day or fly for a day?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather never have to sleep or never have to eat?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only listen to one artist or only watch one show?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather have a redo of yesterday or know what happens tomorrow?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather be great at one thing or good at many things?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never get angry or never get sad?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather always have perfect hair or always have perfect skin?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather give up snacks forever or give up dessert forever?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather only eat breakfast or only eat dinner?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a robot do your job or have a robot do your chores?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a treehouse or live on a houseboat?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never wear makeup or never cut your hair?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be known for your looks or be known for your intelligence?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a 3-day weekend every week or have an extra month of vacation?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never be able to lie or never be able to keep a secret?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather always have to sing instead of speak or always have to whisper?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a tail or have wings you can't fly with?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather be able to talk to plants or be able to talk to insects?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have unlimited battery on your phone or have unlimited WiFi everywhere?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never stub your toe again or never get a paper cut again?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather always know when someone is lying or always know what someone is thinking?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have a personal driver or have a personal pilot?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only watch new movies or only rewatch favorites?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather give up your favorite show or give up your favorite music?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather be the best at a sport nobody watches or be average at the world's most popular sport?",
+      "category": "sports"
+    },
+    {
+      "prompt": "Would you rather have dinner with a historical figure or have dinner with a future descendant?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather never feel cold or never feel hot?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a time machine that only goes back or one that only goes forward?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather be famous in your lifetime or be famous after you die?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a world with no fiction or live in a world with no news?",
+      "category": "media"
+    },
+    {
+      "prompt": "Would you rather never have to wait in line or never have to do laundry?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a perfect memory or be able to erase any memory?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather always be overdressed or always be underdressed?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only travel by train or only travel by boat?",
+      "category": "travel"
+    },
+    {
+      "prompt": "Would you rather live where it's always rainy or live where it's always dry?",
+      "category": "weather"
+    },
+    {
+      "prompt": "Would you rather have a pet dragon or have a pet unicorn?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be able to breathe underwater or be able to run at super speed?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather never get tired or never get hungry?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a mute button for people or have a rewind button for conversations?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only eat food you grow or only eat food from restaurants?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather give up caffeine or give up sugar?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a twin or have a clone that does your chores?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be the funniest person or be the kindest person?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never have a bad hair day or never have a bad night's sleep?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a castle or live in a penthouse?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only read the book or only watch the movie?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather have a soundtrack that plays for your life or have a narrator describe your life?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be able to speak to babies or be able to speak to animals?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather never forget a name or never forget a face?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a garden that grows instantly or have a kitchen that cooks for you?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live without a phone or live without a car?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be invisible only at night or be invisible only during the day?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have a lifetime supply of one food or have a different meal every day for life?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather never be bored or never be tired?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather always win at rock-paper-scissors or always find a parking spot?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather have a robot friend or have a very smart pet?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a tiny home or live in a shared mansion with 10 people?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only drink water or only drink juice?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather give up texting or give up calling?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be able to taste any food in your mind or be able to smell any scent in your mind?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have a do-over for one year of your life or know the exact date of your death?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather never get sick or never get injured?",
+      "category": "health"
+    },
+    {
+      "prompt": "Would you rather have a personal masseuse or have a personal chef?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in the world of your favorite book or live in the world of your favorite movie?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather only wear one color or only wear one outfit (multiple copies)?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be able to understand any language but not speak it or speak any language but not understand it?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have summer all year or have autumn all year?",
+      "category": "weather"
+    },
+    {
+      "prompt": "Would you rather never miss a flight or never lose luggage?",
+      "category": "travel"
+    },
+    {
+      "prompt": "Would you rather have a 100-year-old mind in a 20-year-old body or a 20-year-old mind in a 100-year-old body?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather only eat hot food or only eat cold food?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a magic wallet that refills or have a magic fridge that refills?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be the best dancer or be the best singer?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather never have to sleep or never have to eat?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works on Tuesdays or one that only works when nobody is watching?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live in a world with no music or live in a world with no art?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather have a button that gives you $10 but annoys someone random or no button?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be able to teleport only to places you've been or be able to fly but only 10 mph?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather never have to clean or never have to cook?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have unlimited books or have unlimited movies?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather be famous for something good or be anonymous but rich?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only shower in the morning or only shower at night?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a job you love that pays little or a job you hate that pays a lot?",
+      "category": "career"
+    },
+    {
+      "prompt": "Would you rather live without mirrors or live without clocks?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be able to read one person's mind forever or be able to make one person read your mind forever?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather have a month of perfect weather or a year of okay weather?",
+      "category": "weather"
+    },
+    {
+      "prompt": "Would you rather never lose at your favorite game or never wait in line?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather have a house that cleans itself or a car that drives itself?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only eat with chopsticks or only eat with your hands?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be the best at something useless or be average at something useful?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a personal assistant or have a personal stylist?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a place with no winter or live in a place with no summer?",
+      "category": "weather"
+    },
+    {
+      "prompt": "Would you rather never get a headache or never get a stomach ache?",
+      "category": "health"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're alone or one that only works in a crowd?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only listen to music from one decade or only watch movies from one decade?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather give up coffee for life or give up alcohol for life?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a time machine for 24 hours or have a clone for 24 hours?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be able to learn any skill instantly but only one or learn slowly but as many as you want?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a world where everyone is honest or live in a world where everyone is kind?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a pet that can talk but is boring or a pet that can't talk but is hilarious?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never be late or never be early?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a garden of exotic plants or a room of exotic pets?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be able to taste food without eating it or be able to feel full without eating?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only communicate by writing or only communicate by speaking?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live without weekends or live without holidays?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a power that makes everyone like you or a power that makes everyone respect you?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather be the best in the world at something boring or be top 10 at something exciting?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have unlimited data or unlimited battery life?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never run out of clean socks or never run out of clean underwear?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only eat food from one country or only eat food from one type of cuisine?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a camera that captures memories perfectly or a journal that writes your thoughts automatically?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be able to skip any conversation or be able to skip any meal?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live where it's always daytime or live where it's always nighttime?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that gets stronger when you're sad or one that gets stronger when you're happy?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only watch TV in another language or only read books in another language?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather give up your bed or give up your shower?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a friend who is always late or a friend who always cancels?",
+      "category": "relationships"
+    },
+    {
+      "prompt": "Would you rather be able to un-send any message or be able to un-say any words?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a world with no ads or live in a world with no spam?",
+      "category": "media"
+    },
+    {
+      "prompt": "Would you rather have a talent that impresses kids or a talent that impresses adults?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only drink one beverage for life or only eat one type of protein for life?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to pause time for 1 hour per day or rewind time by 1 hour once per week?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live without a bed or live without a couch?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a device that answers any question or a device that finds any lost item?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be the first to try any new tech or be the last to try any new tech?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only wear formal clothes or only wear casual clothes?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works on your birthday or one that only works when you're sick?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live in a tree or live in a cave?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never get a cold or never get sunburned?",
+      "category": "health"
+    },
+    {
+      "prompt": "Would you rather have a magic pen that makes anything you draw real or a magic camera that makes any photo come to life?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only eat raw food or only eat cooked food?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to talk to your past self or talk to your future self?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather live in a world where everyone has one superpower or live in a world where only you have a superpower?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather have a button that makes you happy for 5 minutes or a button that makes someone else happy for 5 minutes?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather never need to brush your teeth or never need to cut your nails?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only travel to cold places or only travel to hot places?",
+      "category": "travel"
+    },
+    {
+      "prompt": "Would you rather have a house with 20 small rooms or a house with 5 huge rooms?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be famous for 1 day every year or unknown but comfortable for life?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you laugh or one that only works when you cry?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only eat food that is green or only eat food that is beige?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather live without a refrigerator or live without a microwave?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather be able to see 10 years into the future once or change one decision from your past?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather have a robot that does your job or a human assistant who does your job?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only use one social app or only use email and phone?",
+      "category": "media"
+    },
+    {
+      "prompt": "Would you rather give up all drinks except water or give up all solid food except one?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a power to make anyone tell the truth once or make anyone do one thing you say once?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live in a cabin in the woods or live in a skyscraper in the city?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never have a bad meal or never have a bad movie experience?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a time machine that only works for 1 hour total or a clone that only lasts 1 day?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be able to speak every language but with an accent or speak only your language but perfectly in every accent?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only have summer clothes or only have winter clothes?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works underwater or one that only works in the air?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live where there are no mosquitoes or live where there are no traffic jams?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never need to charge anything or never need to refuel anything?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a magic lamp with one wish or a magic ring with three small wishes?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather only eat at home or only eat out?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to relive your best day or be able to erase your worst day?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather live in a world with no plastic or live in a world with no metal?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a pet that lives 200 years or a new pet every 5 years?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather only watch documentaries or only watch comedies?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather give up your dominant hand for a month or give up your phone for a month?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works at midnight or one that only works at noon?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather be the best at a game nobody plays or be average at the most popular game?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather live in a house with no doors or live in a house with no windows?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never forget a password or never lose your keys?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a button that gives you $1 every time you press it but it gets louder each time or no button?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather only eat food you've never tried or only eat your top 5 favorite foods?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to control one person's dreams or be able to control your own dreams?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live in a world where animals can talk or live in a world where plants can talk?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're kind or one that only works when you're rude?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only use cash or only use cards?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never have to make your bed or never have to do dishes?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a device that translates animal speech or a device that translates baby talk?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be able to eat anything without gaining weight or sleep 2 hours and feel rested?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a world with no lies or live in a world with no secrets?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works on full moons or one that only works during eclipses?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only listen to one genre of music or only watch one genre of movie?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather give up sugar for a year or give up salt for a year?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a time machine that can only go back 1 day or one that can only go forward 1 day?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather be the best at something that doesn't exist yet or be the best at something from 100 years ago?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live without a TV or live without a computer?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never get lost or never get bored?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a power to make any food appear or make any drink appear?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only wear secondhand clothes or only wear brand new clothes?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're alone in a room or one that only works in a stadium full of people?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live in a world where everyone knows your name or live in a world where nobody knows your name?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never have a bad day at work or never have a bad day off?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a magic carpet that goes 20 mph or a magic car that goes 200 mph?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather only eat spicy food or only eat bland food?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to know the outcome of any game before it starts or know the ending of any book or movie before you start?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live in a house that's always the perfect temperature or a car that never runs out of gas?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're standing on one leg or one that only works when you're sitting?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only drink hot beverages or only drink cold beverages?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather give up video calls or give up in-person meetings?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a button that pauses your life for 1 year or a button that skips 1 year of your life?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather live in a world with no money or live in a world with no laws?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never have to wait for anything or never have to repeat yourself?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're happy or one that only works when you're angry?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only eat food that comes in a bowl or only eat food that comes on a plate?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to swap bodies with anyone for a day or be able to swap lives with anyone for a year?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live in a world where you can only say yes or live in a world where you can only say no?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a talent that only works at parties or a talent that only works in emergencies?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never need to sleep or never need to eat?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works in the dark or one that only works in bright light?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only travel to places you've never been or only travel to your favorite place?",
+      "category": "travel"
+    },
+    {
+      "prompt": "Would you rather give up your favorite hobby or give up your favorite food?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a device that shows you one random future event or a device that shows you one random past event?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather live in a world with no sports or live in a world with no art?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather be able to make anyone laugh or make anyone cry?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only wear one pair of shoes for life or only wear one outfit for life?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're singing or one that only works when you're silent?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live without a dishwasher or live without a washing machine?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never miss a deadline or never miss a flight?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a power to fix any broken thing or a power to grow any plant instantly?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only eat food that's blue or only eat food that's red?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to remember every dream or forget every nightmare?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a world where everyone has the same personality or everyone has the same face?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works on weekends or one that only works on weekdays?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only listen to music you've never heard or only listen to music you know by heart?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather give up caffeine forever or give up sugar forever?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather have a time machine that only works once or a clone that only appears once?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be the best at something that helps no one or be average at something that helps everyone?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a house with a slide instead of stairs or a house with a trampoline room?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never get a ticket or never get a cold?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're telling the truth or one that only works when you're lying?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only eat breakfast food or only eat dinner food?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather live in a world with no internet or live in a world with no phones?",
+      "category": "media"
+    },
+    {
+      "prompt": "Would you rather have a button that gives everyone $100 or a button that gives you $10,000?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather be able to speak to one historical figure or speak to one person from 100 years in the future?",
+      "category": "time"
+    },
+    {
+      "prompt": "Would you rather only wear bright colors or only wear neutral colors?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're helping someone or one that only works when you're alone?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather live without a bed or live without a table?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never run out of phone battery or never run out of ideas?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a magic notebook where anything you write becomes true or a magic microphone where anything you say becomes true?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only eat food from a list of 10 items or only eat food that's new to you?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to see how everyone truly feels about you or never know what anyone thinks about you?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather live in a world where you're the only one who can lie or everyone else can read minds?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when you're exercising or one that only works when you're resting?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only watch the first episode of every show or only watch the last episode of every show?",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "Would you rather give up all social media or give up all streaming?",
+      "category": "media"
+    },
+    {
+      "prompt": "Would you rather have a device that makes one person love you or a device that makes one person tell the truth?",
+      "category": "fun"
+    },
+    {
+      "prompt": "Would you rather live in a tiny house with a huge yard or a huge house with no yard?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather never have to take an exam again or never have to do a job interview again?",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Would you rather have a superpower that only works when it's raining or one that only works when it's sunny?",
+      "category": "superpower"
+    },
+    {
+      "prompt": "Would you rather only eat food that takes 1 minute to make or only eat food that takes 1 hour to make?",
+      "category": "food"
+    },
+    {
+      "prompt": "Would you rather be able to know the exact time without a clock or know the exact temperature without a thermometer?",
+      "category": "superpower"
+    }
+  ]
+}

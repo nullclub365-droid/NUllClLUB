@@ -7,7 +7,7 @@
 | **Impostor** | `SAIDU/Models/ImpostorWordDatabase.swift` | `UnifiedWordDictionary.sharedEntries` (mapped from `ImpostorWordDatabase.words`). `ImpostorViewModel.assignCards()` uses `UnifiedWordDictionary.randomEntry(avoiding:)`. |
 | **Alias** | Same as Impostor | Same list. `AliasViewModel` uses `UnifiedWordDictionary.sharedEntries` and `UnifiedWordDictionary.sharedEntries[idx].word(for: currentLanguage)` in `startRound()` / `nextWord()`. |
 | **I Have Never** | `SAIDU/Models/GameContent.swift` | `GameContent.iHaveNeverPrompts: [Language: [PromptItem]]`. Used via `GameContent.randomPrompt(for: .iHaveNever, language:)` and `GameContent.prompts(for: .iHaveNever, language:)`. |
-| **Who Is Who** | `SAIDU/Models/GameContent.swift` | `GameContent.whoIsWhoCharacters: [Language: [PromptItem]]`. Same API: `randomPrompt` / `prompts(for:language:)`. |
+| **Who Is Who** | Stays in app (offline) | Uses `GameContent.whoIsWhoCharacters`; not fetched from web. |
 | **Most Likely To** | `SAIDU/Models/GameContent.swift` | `GameContent.mostLikelyToPrompts: [Language: [PromptItem]]`. Same API. |
 | **Would You Rather** | `SAIDU/Models/GameContent.swift` | `GameContent.wouldYouRatherPrompts: [Language: [PromptItem]]`. Same API. |
 | **Hot Seat** | `SAIDU/Models/GameContent.swift` | `GameContent.hotSeatPrompts: [Language: [PromptItem]]`. Same API. |
@@ -23,7 +23,7 @@
 - **`UnifiedWordDictionary.swift`**  
   - Builds `sharedEntries` from `ImpostorWordDatabase.words` and exposes `words(for: Language)`, `randomEntry(avoiding:)`, and `fallbackEntry`.
 
-**Prompt games (I Have Never, Who Is Who, Most Likely To, Would You Rather, Hot Seat):**
+**Prompt games (I Have Never, Most Likely To, Would You Rather, Hot Seat; Who Is Who stays offline):**
 
 - **`GameContent.swift`**  
   - Static dictionaries: `iHaveNeverPrompts`, `mostLikelyToPrompts`, `wouldYouRatherPrompts`, `hotSeatPrompts`, `whoIsWhoCharacters`, each `[Language: [PromptItem]]`.
@@ -40,12 +40,11 @@
 - Impostor (words)
 - Alias (same words)
 - I Have Never (prompts)
-- Who Is Who (prompts)
 - Most Likely To (prompts)
 - Would You Rather (prompts)
 - Hot Seat (prompts)
 
-Mafia and Role Call stay app-only.
+**Stay offline (in-app only):** Mafia, Role Call, **Who Is Who**.
 
 ---
 

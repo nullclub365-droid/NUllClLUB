@@ -1,0 +1,1205 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "prompt": "Most likely to become famous",
+      "category": "future"
+    },
+    {
+      "prompt": "Most likely to travel the world",
+      "category": "future"
+    },
+    {
+      "prompt": "Most likely to get married first",
+      "category": "relationships"
+    },
+    {
+      "prompt": "Most likely to write a book",
+      "category": "future"
+    },
+    {
+      "prompt": "Most likely to start their own business",
+      "category": "career"
+    },
+    {
+      "prompt": "Most likely to become a millionaire",
+      "category": "future"
+    },
+    {
+      "prompt": "Most likely to go viral on social media",
+      "category": "media"
+    },
+    {
+      "prompt": "Most likely to become a couch potato",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to become a gym rat",
+      "category": "fitness"
+    },
+    {
+      "prompt": "Most likely to forget their birthday",
+      "category": "habits"
+    },
+    {
+      "prompt": "Most likely to host the best parties",
+      "category": "social"
+    },
+    {
+      "prompt": "Most likely to become a morning person",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to become a night owl",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to become a foodie",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to burn everything they cook",
+      "category": "habits"
+    },
+    {
+      "prompt": "Most likely to become a workaholic",
+      "category": "career"
+    },
+    {
+      "prompt": "Most likely to retire early",
+      "category": "future"
+    },
+    {
+      "prompt": "Most likely to become a YouTuber",
+      "category": "media"
+    },
+    {
+      "prompt": "Most likely to adopt a child",
+      "category": "family"
+    },
+    {
+      "prompt": "Most likely to move far away from family",
+      "category": "family"
+    },
+    {
+      "prompt": "Most likely to cry at a movie",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get lost in a new city",
+      "category": "habits"
+    },
+    {
+      "prompt": "Most likely to forget someone's name",
+      "category": "habits"
+    },
+    {
+      "prompt": "Most likely to be late to everything",
+      "category": "habits"
+    },
+    {
+      "prompt": "Most likely to have the messiest room",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to be the life of the party",
+      "category": "social"
+    },
+    {
+      "prompt": "Most likely to fall asleep first at a sleepover",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to eat the last slice of pizza",
+      "category": "habits"
+    },
+    {
+      "prompt": "Most likely to start a trend",
+      "category": "social"
+    },
+    {
+      "prompt": "Most likely to win the lottery",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to quit their job",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get a tattoo",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to run a marathon",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to learn a new language",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to live abroad",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get a pet",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to become a teacher",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to become a doctor",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to write a song",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go skydiving",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to eat something weird",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to say something awkward",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to forget an anniversary",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to remember everyone's birthday",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to give the best advice",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to need the most advice",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to break a bone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get a speeding ticket",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to lose their keys",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to find a lost item",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to organize a trip",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to cancel plans last minute",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to show up early",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to stay at a party the longest",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to leave first",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to take the best selfies",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to have the most followers",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to post the most stories",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go off the grid",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to start a podcast",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get into a debate",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to change their mind",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to stick to their opinion",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to try new food",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to order the same thing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to cook for the group",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to order takeout",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to watch a movie twice",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to binge a series",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to read the book first",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to spoil the ending",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to win at board games",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to cheat at games",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get competitive",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to give up first",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to apologize first",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to hold a grudge",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to make everyone laugh",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to laugh at their own jokes",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to cry during a commercial",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get emotional",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to stay calm in a crisis",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to panic first",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to volunteer for something",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to avoid the spotlight",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to take charge",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go with the flow",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to plan a surprise party",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to ruin a surprise",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to keep a secret",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to spread gossip",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to make a speech",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to dodge a speech",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to sing karaoke",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to refuse to sing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to dance at a wedding",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to sit out the dance",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to take too many photos",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never take photos",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to reply to texts instantly",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to leave you on read",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to double-text",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to ghost someone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get back with an ex",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to stay single forever",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get married young",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to have kids first",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to buy a house",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to rent forever",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to splurge on something",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to save every penny",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to quit social media",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to post every day",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go vegan",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never diet",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to run for office",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to avoid politics",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to start a protest",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to break the rules",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to tell a white lie",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to always tell the truth",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to exaggerate a story",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to understate everything",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get famous on TikTok",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never download TikTok",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go viral for something dumb",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to delete their account",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to win an award",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get rejected",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to publish something",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to keep a diary",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to travel solo",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never travel",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to visit every country",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never leave their town",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to learn to play an instrument",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to quit an instrument",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to join a band",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go to concerts alone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to adopt a rescue",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to buy a purebred",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to have multiple pets",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to be allergic to pets",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to live in a tiny house",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to live in a mansion",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to downsize",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to hoard things",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to meditate daily",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never meditate",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to do yoga",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to skip the gym",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to eat healthy",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to eat junk food",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to meal prep",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to order delivery every day",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to wake up at 5am",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to sleep until noon",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to take naps",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to pull an all-nighter",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to remember every joke",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to forget the punchline",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to laugh at nothing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to have a dry sense of humor",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to wear something bold",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to always wear black",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to dress up",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to show up in pajamas",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get a piercing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get a tattoo sleeve",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to dye their hair",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go natural",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to start a collection",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to declutter everything",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to keep souvenirs",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to throw nothing away",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to win an argument",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to agree to disagree",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to walk away",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never back down",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to forgive easily",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to hold a grudge forever",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to apologize too much",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never apologize",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to share their food",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to guard their plate",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to offer to pay",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to split the bill",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to give great gifts",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to forget to get a gift",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to regift",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to make something by hand",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to remember your name",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to forget your face",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to remember your birthday",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to mix you up with someone else",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to show up with a plus-one",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to come alone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to bring a gift",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to bring nothing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to start a group chat",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to leave the group chat",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to send voice notes",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to only text",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to post couple photos",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to keep their relationship private",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to overshare",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never share",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to retire to the beach",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to retire to the mountains",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never retire",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to retire at 40",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to become an influencer",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to avoid the camera",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to do a reality show",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to value their privacy",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go to therapy",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to refuse therapy",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to give advice",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to need advice",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to settle down young",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never settle down",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to have a big wedding",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to elope",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to stay in touch with exes",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to block their ex",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to remain friends",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never speak again",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to volunteer abroad",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to donate money",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to donate time",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to ignore charity",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to recycle everything",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to forget to recycle",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go zero waste",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to not care about eco",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to learn to code",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to avoid technology",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to build an app",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to delete their apps",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get a PhD",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to drop out of school",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to skip college",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to go to trade school",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to work from home",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never work from home",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to start a side hustle",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to quit to travel",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to invest in crypto",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to avoid investing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to save for retirement",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to live for today",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to buy the first round",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never buy a round",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to tip big",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to skip tipping",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to complain about service",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to leave a review",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to speak to the manager",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to let it go",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to take the blame",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to shift the blame",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to take credit",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to share credit",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to stand up for someone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to stay quiet",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to intervene",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to walk away",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to give a toast",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to skip the toast",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to cry during the toast",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to make a joke",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get the group to agree",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to be the dissenter",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to compromise",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to refuse to budge",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to plan the reunion",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to skip the reunion",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to organize the trip",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to show up last minute",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to remember the old days",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to live in the past",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to focus on the future",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to live in the moment",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to text first",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to wait for you to text",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to call instead of text",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never call",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to post relationship goals",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to keep it low-key",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to get engaged quickly",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to date for years",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to have a big family",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to stay child-free",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to adopt",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to foster",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to move back home",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to never move back",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to live with roommates forever",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to live alone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "Most likely to buy a fixer-upper",
+      "category": "lifestyle"
+    }
+  ]
+}

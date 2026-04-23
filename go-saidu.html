@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open SAIDU | NULL CLUB</title>
+  <meta name="description" content="Redirect page for SAIDU store links. iOS users go to App Store, Android users go to Google Play.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="page-content">
+      <h1>Opening SAIDU</h1>
+      <p>If you are on iPhone/iPad, you will be redirected to the App Store. If you are on Android, you will be redirected to Google Play.</p>
+      <p>If nothing happens, use one of the buttons below:</p>
+      <div class="cta-row">
+        <a href="https://apps.apple.com/us/app/saidu/id6758945621" class="cta" target="_blank" rel="noopener noreferrer">Open App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.saidu.game" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Open Google Play</a>
+      </div>
+      <p class="app-outro"><a href="saidu.html">Back to SAIDU page</a></p>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var appStoreUrl = "https://apps.apple.com/us/app/saidu/id6758945621";
+      var playStoreUrl = "https://play.google.com/store/apps/details?id=com.saidu.game";
+      var ua = navigator.userAgent || navigator.vendor || "";
+      var isAndroid = /Android/i.test(ua);
+      var isiOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+      if (isAndroid) {
+        window.location.replace(playStoreUrl);
+        return;
+      }
+      if (isiOS) {
+        window.location.replace(appStoreUrl);
+      }
+    })();
+  </script>
+</body>
+</html>

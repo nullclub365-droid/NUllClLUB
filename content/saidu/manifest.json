@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "updatedAt": "2026-03-17T14:00:00Z",
+  "packs": {
+    "words": { "version": 1 },
+    "iHaveNever": { "version": 1 },
+    "mostLikelyTo": { "version": 1 },
+    "wouldYouRather": { "version": 1 },
+    "hotSeat": { "version": 1 }
+  }
+}

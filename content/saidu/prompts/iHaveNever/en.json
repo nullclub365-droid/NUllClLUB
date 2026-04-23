@@ -1,0 +1,1205 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "prompt": "I have never been to another country",
+      "category": "travel"
+    },
+    {
+      "prompt": "I have never broken a bone",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been on a plane",
+      "category": "travel"
+    },
+    {
+      "prompt": "I have never gone camping",
+      "category": "adventure"
+    },
+    {
+      "prompt": "I have never tried sushi",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been to a concert",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never had a pet",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a wedding",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been to a funeral",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never dyed my hair",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a tattoo",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a piercing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been in a fight",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been to the hospital",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had surgery",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never been to a nightclub",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never gone skiing",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never gone snowboarding",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never been surfing",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never been scuba diving",
+      "category": "adventure"
+    },
+    {
+      "prompt": "I have never been skydiving",
+      "category": "adventure"
+    },
+    {
+      "prompt": "I have never ridden a horse",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been on a cruise",
+      "category": "travel"
+    },
+    {
+      "prompt": "I have never been to a theme park",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never ridden a roller coaster",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a zoo",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to an aquarium",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never tried karaoke",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been on TV",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never been in a play",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never learned to swim",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never learned to ride a bike",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never driven a car",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never gotten a speeding ticket",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been pulled over",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never missed a flight",
+      "category": "travel"
+    },
+    {
+      "prompt": "I have never lost my passport",
+      "category": "travel"
+    },
+    {
+      "prompt": "I have never been to a strip club",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never been drunk",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never tried drugs",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never smoked",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never been to a casino",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never gambled",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never won the lottery",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a protest",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never been arrested",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been to court",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been to jail",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been in a car accident",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been in a natural disaster",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been robbed",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never lost my phone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a long-distance relationship",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been on a blind date",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never used a dating app",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been to a reunion",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been the new kid at school",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never changed my name",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never moved to a new city",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never lived alone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a roommate",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never cooked a full meal",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never ordered takeout",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been vegetarian",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been vegan",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never tried spicy food",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never eaten insects",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never gone fishing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been hunting",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never grown a plant",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a garden",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a farmers market",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been to a flea market",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a museum",
+      "category": "culture"
+    },
+    {
+      "prompt": "I have never been to an art gallery",
+      "category": "culture"
+    },
+    {
+      "prompt": "I have never been to the opera",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a ballet",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a Broadway show",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never read a full book in one day",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never written a letter by hand",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never sent a postcard",
+      "category": "travel"
+    },
+    {
+      "prompt": "I have never been to a library",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never failed a class",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been suspended",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been expelled",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never skipped school",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never cheated on a test",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been to summer camp",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to sleepaway camp",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a sleepover",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never had a birthday party",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never thrown a surprise party",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never been surprised by a party",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never gone trick-or-treating",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never dressed up for Halloween",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never had a white Christmas",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a New Year's Eve party",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never seen the ball drop",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never made a New Year's resolution",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a baby shower",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been to a gender reveal",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been a bridesmaid or groomsman",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been in a wedding party",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never given a speech in public",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been on a podcast",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never been interviewed",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never written a blog post",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never posted a video online",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never gone viral",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never had a viral post",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never deleted a social media account",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never taken a social media break",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been blocked by someone",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never ghosted someone",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been ghosted",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never had a one-night stand",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been in love",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never had my heart broken",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never broken someone's heart",
+      "category": "relationships"
+    },
+    {
+      "prompt": "I have never been to therapy",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never taken medication for mental health",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had a panic attack",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been to the emergency room",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never called 911",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never performed CPR",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never saved someone's life",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never attended a memorial service",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never lost a close friend",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never lost a family member",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been to a wake",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never given a eulogy",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never given blood",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never been an organ donor",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never volunteered",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never donated to charity",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never run a marathon",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never run a 5K",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never done a triathlon",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never been to a gym",
+      "category": "fitness"
+    },
+    {
+      "prompt": "I have never had a personal trainer",
+      "category": "fitness"
+    },
+    {
+      "prompt": "I have never done yoga",
+      "category": "fitness"
+    },
+    {
+      "prompt": "I have never meditated",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been on a diet",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never tried intermittent fasting",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never taken a cooking class",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never taken a dance class",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never learned a musical instrument",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been in a band",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never sung in public",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never danced in public",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a rave",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a music festival",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to Coachella",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a sporting event",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never been to a Super Bowl party",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never been to the Olympics",
+      "category": "sports"
+    },
+    {
+      "prompt": "I have never met a celebrity",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never gotten an autograph",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a movie premiere",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been an extra in a film",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a film set",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a recording studio",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been backstage",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a book signing",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never met an author",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a comedy show",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to an open mic",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never performed stand-up",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been in a flash mob",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a escape room",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a trampoline park",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a water park",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a laser tag",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a paintball game",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a bowling alley",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never gotten a strike",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to an arcade",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never won a stuffed animal",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a carnival",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been on a Ferris wheel",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a circus",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never seen a magic show",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a haunted house",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a séance",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never seen a UFO",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never believed in ghosts",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a psychic",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never had my palm read",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never been to a tarot reading",
+      "category": "fun"
+    },
+    {
+      "prompt": "I have never tried acupuncture",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never been to a chiropractor",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had a massage",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a spa",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a facial",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a manicure",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a pedicure",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never gotten a professional photo shoot",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a fashion show",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a runway show",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a product launch",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a networking event",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been to a job fair",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been fired",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never quit a job without notice",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been promoted",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never changed careers",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never worked from home",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been to a conference",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never given a presentation",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been to a trade show",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never started a business",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never failed at a business",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never invested in stocks",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a side hustle",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been freelance",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never worked overtime",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never called in sick when I wasn't",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been written up",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never had a performance review",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never negotiated my salary",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never asked for a raise",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been rejected from a job",
+      "category": "career"
+    },
+    {
+      "prompt": "I have never been to a college campus",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never graduated from college",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never dropped out of school",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never taken a gap year",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never studied abroad",
+      "category": "travel"
+    },
+    {
+      "prompt": "I have never been to a lecture",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a TED talk",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a workshop",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a retreat",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a meditation retreat",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a yoga retreat",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a spiritual retreat",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a silent retreat",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a detox",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never been on a cleanse",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never tried a fad diet",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had food poisoning",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had an allergic reaction",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never been stung by a bee",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never been bitten by a dog",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never been to the dentist",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had a cavity",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had braces",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had my wisdom teeth removed",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never worn glasses",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never worn contact lenses",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never had LASIK",
+      "category": "health"
+    },
+    {
+      "prompt": "I have never broken a phone",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never lost my wallet",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had my identity stolen",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been hacked",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never had a virus on my computer",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never built a PC",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never played a video game",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never beaten a video game",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never played an MMO",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never been to a LAN party",
+      "category": "entertainment"
+    },
+    {
+      "prompt": "I have never streamed on Twitch",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never made a TikTok",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never gone live on social media",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never had a blue check",
+      "category": "media"
+    },
+    {
+      "prompt": "I have never been doxxed",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been canceled",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been in a comment war",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never left a bad review",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never returned something to a store",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never shoplifted",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been kicked out of a store",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been kicked out of a bar",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been refused service",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never sent food back at a restaurant",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never left without tipping",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never left a 0% tip",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a Michelin star restaurant",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been to a food truck",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been to a potluck",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never hosted a dinner party",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never cooked for more than 10 people",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never baked a cake",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never made bread from scratch",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never grown my own vegetables",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never been to a vineyard",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been wine tasting",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been to a brewery",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never tried craft beer",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been to a cocktail bar",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never ordered a drink I didn't know",
+      "category": "food"
+    },
+    {
+      "prompt": "I have never been carded",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never used a fake ID",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been to a speakeasy",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never been to a rooftop bar",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never been to a dive bar",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never been to a house party",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never thrown a house party",
+      "category": "social"
+    },
+    {
+      "prompt": "I have never had the police called on a party",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been evicted",
+      "category": "personal"
+    },
+    {
+      "prompt": "I have never been late on rent",
+      "category": "lifestyle"
+    },
+    {
+      "prompt": "I have never had a roommate conflict",
+      "category": "relationships"
+    }
+  ]
+}

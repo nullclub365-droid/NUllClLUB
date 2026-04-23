@@ -4,7 +4,7 @@
   --bg: #0a0a0c;
   --surface: #12121a;
   --text: #e8e8ed;
-  --text-muted: #8888a0;
+  --text-muted: #a3a3bc;
   --accent: #00d4aa;
   --accent-dim: rgba(0, 212, 170, 0.15);
   --glass: rgba(255, 255, 255, 0.04);
@@ -31,6 +31,13 @@ body {
   color: var(--text);
   background: var(--bg);
   overflow-x: hidden;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 /* Header */
@@ -75,6 +82,11 @@ body {
   color: var(--accent);
 }
 
+.nav a[aria-current="page"],
+.footer-nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -112,7 +124,15 @@ body {
 .hero-tagline {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   color: var(--text-muted);
-  margin: 0 0 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.hero-desc {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: var(--text-muted);
+  max-width: 28rem;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
 }
 
 .cta {
@@ -144,8 +164,17 @@ body {
   font-weight: 800;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   text-align: center;
-  margin: 0 0 3rem;
+  margin: 0 0 1rem;
   color: var(--text);
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 36rem;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .product-cards {
@@ -355,6 +384,51 @@ body {
   margin-bottom: 0;
 }
 
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.cta-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.cta-ghost:hover {
+  box-shadow: none;
+  background: var(--accent-dim);
+}
+
+.visual-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+  margin: 0 0 2rem;
+}
+
+.visual-card {
+  min-height: 120px;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1rem;
+  background: linear-gradient(145deg, rgba(0, 212, 170, 0.12), rgba(255, 255, 255, 0.03));
+}
+
+.visual-card h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.visual-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 .app-section {
   margin-bottom: 2.5rem;
 }
@@ -411,6 +485,45 @@ body {
   color: var(--text-muted);
   font-size: 1rem;
   max-width: 54rem;
+  margin: 0 0 1rem;
+}
+
+.about-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-text a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+}
+
+.app-intro-secondary {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.55;
+}
+
+.app-outro {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.app-outro a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.app-outro a:hover {
+  text-decoration: underline;
 }
 
 /* Privacy section on app page */
@@ -549,6 +662,87 @@ body {
   font-size: 0.9rem;
   color: var(--text-muted);
   font-style: italic;
+}
+
+.faq-list {
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  border-top: 1px solid var(--glass-border);
+  padding: 1rem 0;
+}
+
+.faq-item h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.roadmap {
+  margin: 1.5rem 0 2rem;
+  padding: 1.1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  background: var(--glass);
+}
+
+.roadmap h2 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.roadmap ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.roadmap li {
+  margin-bottom: 0.35rem;
+  color: var(--text-muted);
+}
+
+.waitlist-card {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--glass);
+}
+
+.waitlist-card:hover {
+  border-color: var(--accent);
+}
+
+.mobile-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 120;
+  display: none;
+  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+  background: rgba(10, 10, 12, 0.9);
+  border-top: 1px solid var(--glass-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.mobile-sticky-cta .cta {
+  width: 100%;
+  text-align: center;
 }
 
 /* App page deep links (Library, Privacy) */
@@ -702,5 +896,11 @@ body {
   }
   .exercise-list {
     grid-template-columns: 1fr;
+  }
+  .mobile-sticky-cta {
+    display: block;
+  }
+  .app-page .page-content {
+    padding-bottom: 6rem;
   }
 }
