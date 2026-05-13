@@ -1,0 +1,489 @@
+//
+//  HomeScreen.swift
+//  SmartCart
+//
+
+import SwiftUI
+import FirebaseAnalytics
+
+struct HomeScreen: View {
+    @EnvironmentObject var store: AppStore
+    @State private var appeared = false
+
+    var onRecipeSelected: (Int64) -> Void
+    var onSettings: () -> Void
+    var onPremium: () -> Void
+    var onNutrition: () -> Void
+    var onMealPrep: () -> Void
+    var onStatistics: () -> Void
+    var onTimers: () -> Void
+    var onCookingHistory: () -> Void
+    var onAchievements: () -> Void
+    var onConverter: () -> Void
+    var onInsight: (String) -> Void
+    /// Called when user taps "No meals planned" to open the Planner tab.
+    var onOpenPlanner: (() -> Void)? = nil
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                headerSection
+                nutritionHeroCard
+                quickAccessGrid
+                if store.plannedMealsForToday.isEmpty {
+                    plannedMealsEmptyCard
+                } else {
+                    plannedMealsSection
+                }
+                if store.recentHistoryItems.isEmpty {
+                    recentlyCookedEmptyCard
+                } else {
+                    recentlyCookedSection
+                }
+                insightsSection
+                Spacer(minLength: 24)
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 16)
+        }
+        .background(AppTheme.background)
+        .safeAreaInset(edge: .bottom, spacing: 0) { BannerAdView() }
+        .refreshable {
+            try? await Task.sleep(nanoseconds: 400_000_000)
+        }
+        .onAppear {
+            if AccessibilitySettings.shouldReduceMotion { appeared = true }
+            else { withAnimation(.easeOut(duration: 0.2)) { appeared = true } }
+        }
+    }
+
+    private var headerSection: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 8) {
+                Text(greeting)
+                    .font(.body)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+                Text("What's cooking?")
+                    .font(.title2)
+                    .fontWeight(.bold)
+            }
+            Spacer()
+            HStack(spacing: 4) {
+                QuickActionButton(icon: "crown.fill", label: "Premium", action: onPremium)
+                QuickActionButton(icon: "chart.bar", label: "Statistics", action: onStatistics)
+                QuickActionButton(icon: "gearshape", label: "Settings", action: onSettings)
+            }
+        }
+        .opacity(appeared ? 1 : 0)
+        .offset(y: appeared ? 0 : -20)
+    }
+
+    private var nutritionHeroCard: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle()
+                        .fill(AppTheme.primary.opacity(0.2))
+                        .frame(width: 48, height: 48)
+                    Image(systemName: "flame.fill")
+                        .font(.system(size: 28))
+                        .foregroundStyle(AppTheme.primary)
+                }
+                Text("Today's Nutrition")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.onPrimaryContainer)
+            }
+            HStack {
+                Spacer()
+                nutritionStat(value: store.todayCalories, unit: "kcal", icon: "flame.fill", color: AppTheme.primary)
+                Rectangle()
+                    .fill(AppTheme.onPrimaryContainer.opacity(0.2))
+                    .frame(width: 1, height: 60)
+                nutritionStat(value: store.todayProtein, unit: "g protein", icon: "fork.knife", color: AppTheme.secondary)
+                Spacer()
+            }
+        }
+        .padding(24)
+        .frame(maxWidth: .infinity)
+        .background(
+            LinearGradient(
+                colors: [AppTheme.primaryContainer, AppTheme.secondaryContainer.opacity(0.7)],
+                startPoint: .leading,
+                endPoint: .trailing
+            )
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 28))
+        .opacity(appeared ? 1 : 0)
+        .offset(y: appeared ? 0 : 40)
+    }
+
+    private func nutritionStat(value: Int, unit: String, icon: String, color: Color) -> some View {
+        VStack(spacing: 4) {
+            Image(systemName: icon)
+                .font(.system(size: 24))
+                .foregroundStyle(color)
+            Text("\(value)")
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundStyle(AppTheme.onPrimaryContainer)
+            Text(unit)
+                .font(.subheadline)
+                .foregroundStyle(AppTheme.onPrimaryContainer.opacity(0.7))
+        }
+    }
+
+    private var quickAccessGrid: some View {
+        VStack(spacing: 12) {
+            HStack(spacing: 12) {
+                QuickAccessCard(icon: "chart.pie", title: "Food Log", color: AppTheme.secondary, action: onNutrition)
+                QuickAccessCard(icon: "list.bullet.clipboard", title: "Meal Prep", color: AppTheme.tertiary, action: onMealPrep)
+            }
+            HStack(spacing: 12) {
+                QuickAccessCard(icon: "clock.arrow.circlepath", title: "History", color: AppTheme.tertiary, action: onCookingHistory)
+                QuickAccessCard(icon: "medal", title: "Badges", color: AppTheme.secondary, action: onAchievements)
+                QuickAccessCard(icon: "function", title: "Converter", color: AppTheme.primary, action: onConverter)
+            }
+        }
+        .opacity(appeared ? 1 : 0)
+        .offset(y: appeared ? 0 : 60)
+    }
+
+    private var plannedMealsEmptyCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Planned Meals", subtitle: "\(dayNameForToday())'s meals")
+            Button(action: { onOpenPlanner?() }) {
+                HStack(spacing: 16) {
+                    ZStack {
+                        Circle()
+                            .fill(AppTheme.primary.opacity(0.15))
+                            .frame(width: 48, height: 48)
+                        Image(systemName: "calendar.badge.plus")
+                            .font(.title2)
+                            .foregroundStyle(AppTheme.primary)
+                    }
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("No meals planned for today")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                            .foregroundStyle(AppTheme.onSurface)
+                        Text("Open the Planner tab to plan your week")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.onSurfaceVariant)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                .padding(16)
+                .background(AppTheme.surface)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+            }
+            .buttonStyle(.plain)
+            .accessibilityHint("Double tap to open Planner tab")
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private var recentlyCookedEmptyCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Recently Cooked", subtitle: "Your cooking history")
+            HStack(spacing: 16) {
+                ZStack {
+                    Circle()
+                        .fill(AppTheme.tertiary.opacity(0.15))
+                        .frame(width: 48, height: 48)
+                    Image(systemName: "clock.arrow.circlepath")
+                        .font(.title2)
+                        .foregroundStyle(AppTheme.tertiary)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("No recent cooking")
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                        .foregroundStyle(AppTheme.onSurface)
+                    Text("Complete recipes to see them here")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                Spacer()
+            }
+            .padding(16)
+            .background(AppTheme.surface)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private var plannedMealsSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            SectionHeader(title: "Planned Meals", subtitle: "\(dayNameForToday())'s meals")
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 16) {
+                    ForEach(Array(store.plannedMealsForToday.enumerated()), id: \.offset) { _, meal in
+                        RecipeCardCompact(
+                            name: meal.name,
+                            calories: meal.calories,
+                            protein: meal.protein,
+                            readyInMinutes: store.recipe(byId: meal.id)?.readyInMinutes ?? 25,
+                            onClick: { onRecipeSelected(meal.id) }
+                        )
+                    }
+                }
+            }
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private var recentlyCookedSection: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            SectionHeader(title: "Recently Cooked", subtitle: "Your cooking history")
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 16) {
+                    ForEach(Array(store.recentHistoryItems.enumerated()), id: \.offset) { _, item in
+                        HistoryCard(recipeName: item.recipeName, cookedAt: item.cookedAt) {
+                            onRecipeSelected(item.recipeId)
+                        }
+                    }
+                }
+            }
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private var insightsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Insights", subtitle: "Tips based on your cooking")
+            ForEach(InsightRepository.random()) { insight in
+                InsightCard(insight: insight) { onInsight(insight.id) }
+            }
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private var greeting: String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour < 12 { return "Good morning" }
+        if hour < 17 { return "Good afternoon" }
+        return "Good evening"
+    }
+
+    private func dayNameForToday() -> String {
+        let f = DateFormatter()
+        f.dateFormat = "EEEE"
+        return f.string(from: Date())
+    }
+}
+
+private struct QuickActionButton: View {
+    let icon: String
+    var label: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: icon)
+                .font(.system(size: 22))
+                .foregroundStyle(AppTheme.onSurfaceVariant)
+                .frame(width: 44, height: 44)
+                .background(AppTheme.surfaceVariant.opacity(0.5))
+                .clipShape(Circle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityActionLabel(label, descriptive: "Open \(label)", hint: "Double tap to open \(label)")
+        .accessibilityTouchTarget()
+    }
+}
+
+private struct QuickAccessCard: View {
+    let icon: String
+    let title: String
+    let color: Color
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 8) {
+                ZStack {
+                    Circle()
+                        .fill(color.opacity(0.2))
+                        .frame(width: 44, height: 44)
+                    Image(systemName: icon)
+                        .font(.system(size: 24))
+                        .foregroundStyle(color)
+                }
+                Text(title)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .foregroundStyle(AppTheme.onSurface)
+                    .lineLimit(1)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(16)
+            .background(color.opacity(0.1))
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+        }
+        .buttonStyle(.plain)
+        .accessibilityActionLabel(title, descriptive: "Open \(title)", hint: "Double tap to open \(title)")
+        .accessibilityTouchTarget()
+    }
+}
+
+private struct SectionHeader: View {
+    let title: String
+    let subtitle: String?
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(title)
+                .font(.headline)
+                .fontWeight(.bold)
+                .foregroundStyle(AppTheme.onSurface)
+            if let subtitle = subtitle {
+                Text(subtitle)
+                    .font(.subheadline)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+            }
+        }
+    }
+}
+
+private struct RecipeCardCompact: View {
+    let name: String
+    let calories: Int
+    let protein: Int
+    let readyInMinutes: Int
+    let onClick: () -> Void
+
+    var body: some View {
+        Button(action: onClick) {
+            VStack(alignment: .leading, spacing: 8) {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(AppTheme.surfaceVariant)
+                    .frame(width: 160, height: 80)
+                    .overlay(
+                        Image(systemName: "fork.knife")
+                            .font(.system(size: 32))
+                            .foregroundStyle(AppTheme.onSurfaceVariant.opacity(0.5))
+                    )
+                Text(name)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.onSurface)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                Text("\(calories) kcal · \(protein)g protein")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+            }
+            .frame(width: 160)
+            .padding(16)
+            .background(AppTheme.surface)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+        }
+        .buttonStyle(.plain)
+        .accessibilityActionLabel(name, descriptive: "Planned meal \(name), \(calories) kcal, \(protein)g protein", hint: "Double tap to open recipe")
+        .accessibilityTouchTarget()
+    }
+}
+
+private struct HistoryCard: View {
+    let recipeName: String
+    let cookedAt: Int64
+    let onClick: () -> Void
+
+    private var formattedDate: String {
+        let d = Date(timeIntervalSince1970: Double(cookedAt) / 1000)
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        f.timeStyle = .short
+        return f.string(from: d)
+    }
+
+    var body: some View {
+        Button(action: onClick) {
+            VStack(alignment: .leading, spacing: 8) {
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(AppTheme.surfaceVariant)
+                    .frame(width: 200, height: 80)
+                    .overlay(
+                        Image(systemName: "fork.knife")
+                            .font(.system(size: 32))
+                            .foregroundStyle(AppTheme.onSurfaceVariant.opacity(0.5))
+                    )
+                Text(recipeName)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.onSurface)
+                    .lineLimit(2)
+                Text(formattedDate)
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant.opacity(0.8))
+            }
+            .frame(width: 200)
+            .padding(16)
+            .background(AppTheme.surface)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+        }
+        .buttonStyle(.plain)
+        .accessibilityActionLabel(recipeName, descriptive: "Recently cooked \(recipeName), \(formattedDate)", hint: "Double tap to open recipe")
+        .accessibilityTouchTarget()
+    }
+}
+
+private struct InsightCard: View {
+    let insight: Insight
+    let onClick: () -> Void
+
+    var body: some View {
+        Button(action: onClick) {
+            HStack(spacing: 16) {
+                ZStack {
+                    Circle()
+                        .fill(AppTheme.tertiary.opacity(0.2))
+                        .frame(width: 48, height: 48)
+                    Image(systemName: insight.iconName)
+                        .font(.system(size: 26))
+                        .foregroundStyle(AppTheme.tertiary)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(insight.title)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(AppTheme.onSurface)
+                    Text(insight.shortDescription)
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 20))
+                    .foregroundStyle(AppTheme.onSurfaceVariant.opacity(0.6))
+            }
+            .padding(20)
+            .background(AppTheme.tertiaryContainer.opacity(0.3))
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+        }
+        .buttonStyle(.plain)
+        .accessibilityActionLabel(insight.title, descriptive: "\(insight.title). \(insight.shortDescription)", hint: "Double tap to read more")
+        .accessibilityTouchTarget()
+    }
+}
+
+#Preview {
+    HomeScreen(
+        onRecipeSelected: { _ in },
+        onSettings: {},
+        onPremium: {},
+        onNutrition: {},
+        onMealPrep: {},
+        onStatistics: {},
+        onTimers: {},
+        onCookingHistory: {},
+        onAchievements: {},
+        onConverter: {},
+        onInsight: { _ in }
+    )
+    .environmentObject(AppStore())
+}
