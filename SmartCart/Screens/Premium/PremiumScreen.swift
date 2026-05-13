@@ -11,6 +11,7 @@ struct PremiumScreen: View {
     var onBack: () -> Void
 
     @State private var isAnnual = false
+    @State private var showConfirmation = false
 
     var body: some View {
         ScrollView {
@@ -26,6 +27,12 @@ struct PremiumScreen: View {
         .background(AppTheme.background)
         .navigationTitle("Go Premium")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Trial Started! 🎉", isPresented: $showConfirmation) {
+            Button("Done") { onBack() }
+        } message: {
+            let period = isAnnual ? "annual" : "monthly"
+            Text("Your \(period) premium trial has started. Enjoy ad-free cooking and all premium features!")
+        }
         .onAppear {
             AnalyticsHelper.trackPremiumViewed(source: "premium_screen")
         }
@@ -155,6 +162,7 @@ struct PremiumScreen: View {
         let period = isAnnual ? "annual" : "monthly"
         AnalyticsHelper.trackPremiumPurchased(price: isAnnual ? 24.99 : 2.99, period: period)
         AccessibilitySettings.announce("Premium trial started")
+        showConfirmation = true
     }
 }
 
