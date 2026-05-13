@@ -130,6 +130,7 @@ struct RecipeDetailScreen: View {
                             Button(action: {
                                 Haptics.light()
                                 store.toggleFavorite(recipeId: recipe.id)
+                                AchievementTracker.checkAndTrackAchievements(store: store)
                             }) {
                                 Image(systemName: store.isFavorite(recipeId: recipe.id) ? "heart.fill" : "heart")
                                     .foregroundStyle(store.isFavorite(recipeId: recipe.id) ? .red : AppTheme.onSurfaceVariant)
@@ -204,6 +205,7 @@ struct RecipeDetailScreen: View {
                 Button(action: {
                     Haptics.light()
                     store.setRecipeRating(recipeId: recipeId, rating: star)
+                    AchievementTracker.checkAndTrackAchievements(store: store)
                 }) {
                     Image(systemName: star <= current ? "star.fill" : "star")
                         .font(.title3)

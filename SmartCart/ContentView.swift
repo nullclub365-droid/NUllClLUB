@@ -266,7 +266,11 @@ struct ContentView: View {
         case .addItems:
             AddItemsScreen(
                 onBack: { safePop(path: path) },
-                onAddToPantry: { items in store.addItemsToPantry(items); safePop(path: path) },
+                onAddToPantry: { items in
+                    store.addItemsToPantry(items)
+                    AchievementTracker.checkAndTrackAchievements(store: store)
+                    safePop(path: path)
+                },
                 onAddToGroceryList: { items in store.addItemsToGroceryList(items); safePop(path: path) }
             )
         case .quickAddSwipe:
