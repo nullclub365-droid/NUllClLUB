@@ -145,6 +145,7 @@ struct PostCookingCheckScreen: View {
 
             Button(action: {
                 AchievementTracker.checkAndTrackAchievements(store: store)
+                AppReviewPrompt.requestReviewIfEligible(store: store)
                 onDone()
             }) {
                 Text("Done")
