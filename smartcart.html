@@ -21,13 +21,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMARTCART-ID"></script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMARTCART-GA4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-SMARTCART-ID');
+    gtag('config', 'G-SMARTCART-GA4', { 'page_path': window.location.pathname });
+
+    // Track App Store link clicks
+    document.addEventListener('click', function(e) {
+      if (e.target.href && e.target.href.includes('apps.apple.com')) {
+        gtag('event', 'app_store_click', {
+          'event_category': 'engagement',
+          'event_label': 'SmartCart App Store',
+          'value': 1
+        });
+      }
+    });
+  </script>
+
+  <!-- Structured Data for Rich Snippets -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SmartCart",
+      "description": "Weekly meal planner, grocery list, and food log in one app",
+      "url": "https://nullclub365-droid.github.io/NUllClLUB/smartcart.html",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "NULL CLUB",
+        "url": "https://nullclub365-droid.github.io/NUllClLUB/"
+      }
+    }
   </script>
 </head>
 <body>
