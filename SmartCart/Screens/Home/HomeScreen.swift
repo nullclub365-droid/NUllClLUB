@@ -69,7 +69,8 @@ struct HomeScreen: View {
             }
             Spacer()
             HStack(spacing: 4) {
-                QuickActionButton(icon: "crown.fill", label: "Premium", action: onPremium)
+                // Premium hidden for next version
+                // QuickActionButton(icon: "crown.fill", label: "Premium", action: onPremium)
                 QuickActionButton(icon: "chart.bar", label: "Statistics", action: onStatistics)
                 QuickActionButton(icon: "gearshape", label: "Settings", action: onSettings)
             }

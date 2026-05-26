@@ -118,7 +118,7 @@ struct ContentView: View {
             HomeScreen(
                 onRecipeSelected: { id in homePath.append(.recipeDetail(id)) },
                 onSettings: { homePath.append(.settings) },
-                onPremium: { homePath.append(.premium) },
+                onPremium: { }, // Premium hidden for next version
                 onNutrition: { homePath.append(.nutrition) },
                 onMealPrep: { homePath.append(.mealPrep) },
                 onStatistics: { homePath.append(.statistics) },
