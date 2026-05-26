@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartCart: Plan meals, manage recipes, organize groceries, track nutrition. All in one app. No account required.">
+    <meta name="keywords" content="meal planner, recipe app, grocery list, meal planning, nutrition tracking">
+    <meta name="author" content="NULL CLUB">
+    <meta property="og:title" content="SmartCart: Meal Planner & Grocery List">
+    <meta property="og:description" content="Plan your meals. Track nutrition. Never waste food again.">
+    <meta property="og:image" content="https://nullclub365-droid.github.io/NUllClLUB/smartcart-og.jpg">
+    <meta property="og:url" content="https://nullclub365-droid.github.io/NUllClLUB/smartcart.html">
+
+    <title>SmartCart: Meal Planner & Grocery List App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2E7D32;
+            --primary-light: #4CAF50;
+            --primary-dark: #1B5E20;
+            --secondary: #FFC107;
+            --surface: #FFFFFF;
+            --surface-alt: #F5F5F5;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --border: #E0E0E0;
+            --success: #4CAF50;
+            --warning: #FFC107;
+            --danger: #F44336;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--surface);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 4rem 2rem;
+            background: var(--surface-alt);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .problem-text {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--surface-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 4rem 2rem;
+            background: var(--surface-alt);
+        }
+
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .benefit-item::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-item h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .benefit-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--surface-alt);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 2rem;
+            background: var(--surface-alt);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--surface-alt);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Trust Section */
+        .trust {
+            padding: 4rem 2rem;
+            background: white;
+            text-align: center;
+        }
+
+        .trust-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 2rem auto 0;
+        }
+
+        .trust-item {
+            padding: 2rem;
+        }
+
+        .trust-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-final {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-final p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+
+        .footer-credit {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+
+        /* Utility Classes */
+        .max-width {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">🛒 SmartCart</a>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" class="nav-cta" target="_blank">Download App</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Plan Once. Eat Well. No Thinking Required.</h1>
+        <p>SmartCart removes the friction of meal planning. Decide what to cook, manage your groceries, track nutrition—all in one simple app.</p>
+        <div class="cta-buttons">
+            <a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" class="btn btn-primary" target="_blank">Download Free</a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <h2 class="section-title">The Problem You Know Too Well</h2>
+        <p class="problem-text">
+            Every evening at 6 PM, you stand in front of your fridge. You have good ingredients. You know how to cook. But deciding what to make feels overwhelming, so you order delivery instead. Then the ingredients expire.
+            <br><br>
+            SmartCart solves this. It removes the decision fatigue, so you cook more and waste less.
+        </p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">What You Get</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🍽️</div>
+                <h3>Smart Meal Planning</h3>
+                <p>Plan your entire week in 5 minutes. Choose from 415+ delicious recipes. Get meal prep insights without the complexity.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛒</div>
+                <h3>Intelligent Grocery List</h3>
+                <p>Tap a recipe, auto-add ingredients to your list. Check items off as you shop. Track your pantry with expiry dates.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Nutrition Tracking</h3>
+                <p>Log meals and see your daily nutrition (calories, protein, carbs, fiber). Understand what you're eating without obsessing.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <h3>Achievements & Streaks</h3>
+                <p>Small wins keep you motivated. Track cooking streaks, earn badges, see your progress over time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy First</h3>
+                <p>Your data stays on your device. No account required. No tracking, no creepy ads. Your meals are yours alone.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Simple & Focused</h3>
+                <p>415 recipes, not 10,000. Features that matter, not features that complicate. Learn the app in 5 minutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2 class="section-title">Why Choose SmartCart?</h2>
+        <div class="benefits-list">
+            <div class="benefit-item">
+                <h4>Eat Healthier Without Overthinking</h4>
+                <p>Plan balanced meals in advance, reduce impulse food delivery orders, and track nutrition effortlessly.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>Save Money on Groceries</h4>
+                <p>Reduce food waste by 30-50%. Plan meals around what you have. Smart grocery lists prevent overspending.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>Built by Someone Who Lived This Problem</h4>
+                <p>Not designed by a VC-backed company chasing engagement metrics. Built by an indie developer who struggled with meal planning.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>Affordable & No Surprises</h4>
+                <p>Free with ads, or $2.99/month for ad-free. No surprise price hikes. Cancel anytime.</p>
+            </div>
+            <div class="benefit-item">
+                <h4>All Your Data Is Yours</h4>
+                <p>Complete control. Backup and restore anytime. We never see your meal plans or data.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Simple Pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Free</h3>
+                <div class="price">$0</div>
+                <div class="price-period">Forever free</div>
+                <div class="pricing-features">
+                    ✓ 415+ recipes<br>
+                    ✓ Meal planning<br>
+                    ✓ Grocery list<br>
+                    ✓ Nutrition tracking<br>
+                    ✓ Ads included
+                </div>
+                <a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" class="btn btn-primary" target="_blank">Get Started</a>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Premium</h3>
+                <div class="price">$2.99</div>
+                <div class="price-period">Per month</div>
+                <div class="pricing-features">
+                    ✓ Everything in Free<br>
+                    ✓ Ad-free experience<br>
+                    ✓ Premium features<br>
+                    ✓ Priority support<br>
+                    ✓ Cancel anytime
+                </div>
+                <a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" class="btn btn-primary" target="_blank">Try Premium</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>How do I add recipes to my meal plan?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Open the Recipes tab, browse or search for a recipe, and tap "Add to Meal Plan." Choose the day and meal slot (breakfast, lunch, dinner). Done! Your ingredients automatically populate your grocery list.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Where is my data stored?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    All your data is stored only on your device. Nothing is sent to external servers. We never see your meal plans, recipes, or personal information. Your privacy is yours.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I backup my data?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! Go to Settings → Backup & Restore to export your data as a JSON file or import a previous backup. You have complete control over your data.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do I need to create an account?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Nope! SmartCart works immediately after download. No account, no login, no tracking. Just open and start planning.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What's the difference between Free and Premium?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Free includes all core features: meal planning, grocery list, recipes, and nutrition tracking. Premium removes ads and unlocks additional features. Both versions get updates and support.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Does it work offline?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! SmartCart works completely offline. All your data is stored locally, so you can plan meals and access recipes anywhere, anytime.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you track my data or show me ads?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We don't track you. Free tier includes tasteful ads; Premium removes them. We never sell your data, never harvest your meal information, and never share your information with third parties.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <h2 class="section-title">Why Trust SmartCart?</h2>
+        <div class="trust-items">
+            <div class="trust-item">
+                <strong>🔒 Privacy First</strong>
+                <p>Your data. Your device. No tracking, no harvesting, no selling.</p>
+            </div>
+            <div class="trust-item">
+                <strong>👨‍💻 Built by an Indie Dev</strong>
+                <p>Created by someone who lived this problem, not optimized by growth metrics.</p>
+            </div>
+            <div class="trust-item">
+                <strong>📱 No Account Required</strong>
+                <p>Start using instantly. No sign-up friction, no lock-in.</p>
+            </div>
+            <div class="trust-item">
+                <strong>💰 Fair Pricing</strong>
+                <p>$2.99/month. No surprise hikes, no dark patterns. Cancel anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final">
+        <h2>Ready to Cook Smarter?</h2>
+        <p>Download SmartCart free on the App Store. Start planning today.</p>
+        <div class="cta-buttons">
+            <a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" class="btn btn-primary" target="_blank">Download on App Store</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>SmartCart</strong> — Meal planner built for real life.</p>
+            <div class="footer-links">
+                <a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" target="_blank">Download App</a>
+                <a href="https://nullclub365-droid.github.io/NUllClLUB/index.html" target="_blank">NULL CLUB</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="#" onclick="alert('Coming soon'); return false;">Terms of Service</a>
+            </div>
+            <div class="footer-credit">
+                Part of the <strong>NULL CLUB</strong> family of indie apps.<br>
+                © 2026 NULL CLUB. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ Toggle Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
