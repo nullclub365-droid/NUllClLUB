@@ -1,0 +1,63 @@
+{
+  "version" : 2,
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "com.nullclub.smartcart.premium.monthly",
+      "localizations" : [
+        {
+          "description" : "Unlock advanced features: custom templates, detailed nutrition reports, ad-free experience, and priority support.",
+          "displayName" : "SmartCart Premium — Monthly",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.nullclub.smartcart.premium.monthly",
+      "productType" : "AutoRenewableSubscription",
+      "recurringSubscriptionPeriod" : "P1M",
+      "referenceName" : "Premium Monthly",
+      "subscriptionGroupID" : "com.nullclub.smartcart.premium",
+      "subscriptionPeriods" : [
+        {
+          "benefits" : [
+            {
+              "displayName" : "Advanced Filtering",
+              "identifier" : "advanced_filtering"
+            },
+            {
+              "displayName" : "Custom Templates",
+              "identifier" : "custom_templates"
+            },
+            {
+              "displayName" : "Detailed Reports",
+              "identifier" : "detailed_reports"
+            },
+            {
+              "displayName" : "Ad-Free",
+              "identifier" : "ad_free"
+            },
+            {
+              "displayName" : "Priority Support",
+              "identifier" : "priority_support"
+            }
+          ],
+          "discounts" : [],
+          "introductoryOffer" : {
+            "displayPrice" : "0.99",
+            "internalID" : "com.nullclub.smartcart.premium.monthly.intro",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "payAsYouGo",
+            "referenceName" : "Intro Offer 1 Month at $0.99",
+            "subscriptionPeriod" : "P1M"
+          },
+          "subscriptionPeriod" : "P1M"
+        }
+      ]
+    }
+  ],
+  "settings" : {
+    "_failTransactions" : false,
+    "_locale" : "en_US",
+    "_storefront" : "US"
+  }
+}
