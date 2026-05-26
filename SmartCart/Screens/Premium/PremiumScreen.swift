@@ -5,18 +5,25 @@
 
 import SwiftUI
 import FirebaseAnalytics
+import StoreKit
 
 struct PremiumScreen: View {
     @EnvironmentObject var store: AppStore
+    @EnvironmentObject var referralManager: ReferralManager
+    @StateObject private var storeManager = StoreManager.shared
     var onBack: () -> Void
 
     @State private var isAnnual = false
     @State private var showConfirmation = false
+    @State private var isPurchasing = false
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 headerSection
+                if referralManager.referralCode != nil && !referralManager.hasAppliedReferral {
+                    referralBonusSection
+                }
                 toggleSection
                 featuresSection
                 pricingSection
@@ -36,6 +43,27 @@ struct PremiumScreen: View {
         .onAppear {
             AnalyticsHelper.trackPremiumViewed(source: "premium_screen")
         }
+    }
+
+    private var referralBonusSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Image(systemName: "gift.fill")
+                    .font(.headline)
+                    .foregroundStyle(AppTheme.primary)
+                Text("Referral Bonus!")
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.onSurface)
+                Spacer()
+            }
+            Text("You've been invited! Get 7 extra days free when you start your trial.")
+                .font(.subheadline)
+                .foregroundStyle(AppTheme.onSurfaceVariant)
+        }
+        .padding(16)
+        .background(AppTheme.primaryContainer.opacity(0.3))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 
     private var headerSection: some View {
@@ -96,47 +124,83 @@ struct PremiumScreen: View {
         }
     }
 
+    private var selectedProduct: Product? {
+        isAnnual ? storeManager.getAnnualProduct() : storeManager.getMonthlyProduct()
+    }
+
     private var pricingSection: some View {
         VStack(spacing: 12) {
-            HStack(spacing: 16) {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(isAnnual ? "$24.99" : "$2.99")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundStyle(AppTheme.onSurface)
-                    Text(isAnnual ? "per year" : "per month")
-                        .font(.caption)
-                        .foregroundStyle(AppTheme.onSurfaceVariant)
+            if let product = selectedProduct {
+                HStack(spacing: 16) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(product.displayPrice)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundStyle(AppTheme.onSurface)
+                        Text(isAnnual ? "per year" : "per month")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.onSurfaceVariant)
+                    }
+                    Spacer()
+                    VStack(alignment: .trailing, spacing: 4) {
+                        Text(isAnnual ? "14-day" : "7-day")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppTheme.primary)
+                        Text("free trial")
+                            .font(.caption2)
+                            .foregroundStyle(AppTheme.onSurfaceVariant)
+                    }
                 }
-                Spacer()
-                VStack(alignment: .trailing, spacing: 4) {
-                    Text(isAnnual ? "Free trial" : "7-day")
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(AppTheme.primary)
-                    Text(isAnnual ? "14 days" : "free trial")
-                        .font(.caption2)
-                        .foregroundStyle(AppTheme.onSurfaceVariant)
-                }
-            }
-            .padding(16)
-            .background(AppTheme.primaryContainer.opacity(0.5))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(16)
+                .background(AppTheme.primaryContainer.opacity(0.5))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
 
-            Button(action: startFreeTrial) {
-                HStack(spacing: 8) {
-                    Image(systemName: "crown.fill")
-                    Text("Start Free Trial")
-                        .font(.headline)
-                        .fontWeight(.semibold)
+                Button(action: { Task { await startFreeTrial(product) } }) {
+                    HStack(spacing: 8) {
+                        if isPurchasing {
+                            ProgressView()
+                                .tint(.white)
+                        } else {
+                            Image(systemName: "crown.fill")
+                        }
+                        Text(isPurchasing ? "Processing..." : "Start Free Trial")
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 52)
+                    .background(AppTheme.primary)
+                    .foregroundStyle(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
+                .buttonStyle(.plain)
+                .disabled(isPurchasing || storeManager.isLoading)
+            } else {
+                HStack {
+                    ProgressView()
+                        .tint(AppTheme.primary)
+                    Text("Loading pricing...")
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                .padding(16)
                 .frame(maxWidth: .infinity)
-                .frame(height: 52)
-                .background(AppTheme.primary)
-                .foregroundStyle(.white)
+                .background(AppTheme.surface)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
             }
-            .buttonStyle(.plain)
+
+            if let errorMessage = storeManager.errorMessage {
+                HStack(spacing: 8) {
+                    Image(systemName: "exclamationmark.circle.fill")
+                        .foregroundStyle(.red)
+                    Text(errorMessage)
+                        .font(.caption)
+                        .foregroundStyle(.red)
+                }
+                .padding(12)
+                .background(Color.red.opacity(0.1))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+            }
 
             HStack(spacing: 8) {
                 Image(systemName: "checkmark.circle.fill")
@@ -157,12 +221,17 @@ struct PremiumScreen: View {
         }
     }
 
-    private func startFreeTrial() {
-        Haptics.light()
-        let period = isAnnual ? "annual" : "monthly"
-        AnalyticsHelper.trackPremiumPurchased(price: isAnnual ? 24.99 : 2.99, period: period)
-        AccessibilitySettings.announce("Premium trial started")
-        showConfirmation = true
+    private func startFreeTrial(_ product: Product) async {
+        isPurchasing = true
+        let success = await storeManager.purchase(product)
+        isPurchasing = false
+
+        if success {
+            referralManager.applyReferral(store: store)
+            Haptics.light()
+            AccessibilitySettings.announce("Premium trial started")
+            showConfirmation = true
+        }
     }
 }
 

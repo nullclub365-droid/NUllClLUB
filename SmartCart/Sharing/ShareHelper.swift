@@ -6,10 +6,21 @@
 //
 
 import SwiftUI
+import UIKit
 
 class ShareHelper {
 
     static let appStoreLink = "https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715"
+
+    static func generateReferralCode() -> String {
+        if let userId = UserDefaults.standard.string(forKey: "smartcart_user_id") {
+            return userId
+        }
+        let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+        let shortCode = deviceId.prefix(8).lowercased()
+        UserDefaults.standard.set(shortCode, forKey: "smartcart_user_id")
+        return shortCode
+    }
 
     // MARK: - Meal Plan Sharing
 

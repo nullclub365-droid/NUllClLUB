@@ -1,0 +1,31 @@
+{
+  "name": "smartcart-image-agent",
+  "version": "1.0.0",
+  "description": "Image generation agent using Google Gemini API and Octokit for GitHub integration",
+  "main": "imageAgent.js",
+  "type": "module",
+  "scripts": {
+    "start": "node imageAgent.js",
+    "generate": "node imageAgent.js",
+    "test": "node imageAgent.js --test",
+    "validate": "node validate-config.js",
+    "setup": "echo 'Please read SETUP_GUIDE.md for instructions'",
+    "recipes": "node recipeImageAgent.js",
+    "recipes:batch": "node recipeImageAgent.js 10",
+    "recipes:test": "node recipeImageAgent.js 5 --dry-run"
+  },
+  "keywords": [
+    "image-generation",
+    "gemini",
+    "github",
+    "agent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.3.0",
+    "@octokit/rest": "^20.0.0",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2"
+  }
+}

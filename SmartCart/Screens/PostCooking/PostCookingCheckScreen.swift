@@ -8,6 +8,7 @@ import FirebaseAnalytics
 
 struct PostCookingCheckScreen: View {
     @EnvironmentObject var store: AppStore
+    @EnvironmentObject var notificationManager: NotificationManager
     let recipe: Recipe
     var onDone: () -> Void
 
@@ -146,6 +147,7 @@ struct PostCookingCheckScreen: View {
             Button(action: {
                 AchievementTracker.checkAndTrackAchievements(store: store)
                 AppReviewPrompt.requestReviewIfEligible(store: store)
+                notificationManager.scheduleEngagementNotifications(store: store)
                 onDone()
             }) {
                 Text("Done")

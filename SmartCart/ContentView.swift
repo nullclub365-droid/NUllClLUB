@@ -278,7 +278,7 @@ struct ContentView: View {
                 .environmentObject(store)
         case .postCookingCheck(let id):
             if let recipe = store.recipes.first(where: { $0.id == id }) {
-                PostCookingCheckScreen(recipe: recipe, onDone: { safePop(path: path) })
+                PostCookingCheckScreen(recipe: recipe, onDone: { path.wrappedValue = [] })
                     .environmentObject(store)
             }
         case .premium:

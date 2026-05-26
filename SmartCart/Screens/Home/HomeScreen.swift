@@ -223,6 +223,7 @@ struct HomeScreen: View {
                 HStack(spacing: 16) {
                     ForEach(Array(store.plannedMealsForToday.enumerated()), id: \.offset) { _, meal in
                         RecipeCardCompact(
+                            recipeId: meal.id,
                             name: meal.name,
                             calories: meal.calories,
                             protein: meal.protein,
@@ -242,7 +243,7 @@ struct HomeScreen: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
                     ForEach(Array(store.recentHistoryItems.enumerated()), id: \.offset) { _, item in
-                        HistoryCard(recipeName: item.recipeName, cookedAt: item.cookedAt) {
+                        HistoryCard(recipeId: item.recipeId, recipeName: item.recipeName, cookedAt: item.cookedAt) {
                             onRecipeSelected(item.recipeId)
                         }
                     }
@@ -350,6 +351,7 @@ private struct SectionHeader: View {
 }
 
 private struct RecipeCardCompact: View {
+    let recipeId: Int64
     let name: String
     let calories: Int
     let protein: Int
@@ -359,14 +361,26 @@ private struct RecipeCardCompact: View {
     var body: some View {
         Button(action: onClick) {
             VStack(alignment: .leading, spacing: 8) {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(AppTheme.surfaceVariant)
-                    .frame(width: 160, height: 80)
-                    .overlay(
-                        Image(systemName: "fork.knife")
-                            .font(.system(size: 32))
-                            .foregroundStyle(AppTheme.onSurfaceVariant.opacity(0.5))
-                    )
+                ZStack {
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(AppTheme.surfaceVariant)
+                        .frame(width: 160, height: 80)
+
+                    AsyncImage(url: URL(string: "https://raw.githubusercontent.com/nullclub365-droid/smartcart-assets/main/\(recipeId).jpg")) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 160, height: 80)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                        default:
+                            Image(systemName: "fork.knife")
+                                .font(.system(size: 32))
+                                .foregroundStyle(AppTheme.onSurfaceVariant.opacity(0.5))
+                        }
+                    }
+                }
                 Text(name)
                     .font(.subheadline)
                     .fontWeight(.semibold)
@@ -389,6 +403,7 @@ private struct RecipeCardCompact: View {
 }
 
 private struct HistoryCard: View {
+    let recipeId: Int64
     let recipeName: String
     let cookedAt: Int64
     let onClick: () -> Void
@@ -404,14 +419,26 @@ private struct HistoryCard: View {
     var body: some View {
         Button(action: onClick) {
             VStack(alignment: .leading, spacing: 8) {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(AppTheme.surfaceVariant)
-                    .frame(width: 200, height: 80)
-                    .overlay(
-                        Image(systemName: "fork.knife")
-                            .font(.system(size: 32))
-                            .foregroundStyle(AppTheme.onSurfaceVariant.opacity(0.5))
-                    )
+                ZStack {
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(AppTheme.surfaceVariant)
+                        .frame(width: 200, height: 80)
+
+                    AsyncImage(url: URL(string: "https://raw.githubusercontent.com/nullclub365-droid/smartcart-assets/main/\(recipeId).jpg")) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 200, height: 80)
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                        default:
+                            Image(systemName: "fork.knife")
+                                .font(.system(size: 32))
+                                .foregroundStyle(AppTheme.onSurfaceVariant.opacity(0.5))
+                        }
+                    }
+                }
                 Text(recipeName)
                     .font(.subheadline)
                     .fontWeight(.semibold)

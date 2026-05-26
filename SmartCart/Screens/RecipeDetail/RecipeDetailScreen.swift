@@ -55,10 +55,10 @@ struct RecipeDetailScreen: View {
                         }
                         VStack(alignment: .leading, spacing: 24) {
                             header(recipe)
-                        missingIngredientsSection(recipe)
-                        ingredientsSection(recipe)
-                        stepsSection(recipe)
-                        notesSection(recipeId: recipe.id)
+                            missingIngredientsSection(recipe)
+                            ingredientsSection(recipe)
+                            stepsSection(recipe)
+                            notesSection(recipeId: recipe.id)
                         Button(action: { onStartCooking(recipe.id) }) {
                             HStack {
                                 Image(systemName: "play.fill")
@@ -228,15 +228,29 @@ struct RecipeDetailScreen: View {
             Text("Ingredients")
                 .font(.headline)
                 .foregroundStyle(AppTheme.onSurface)
-            ForEach(Array(recipe.ingredients.enumerated()), id: \.offset) { _, ing in
-                HStack {
-                    Text(store.ingredient(byId: ing.ingredientId)?.canonicalName ?? "Ingredient")
-                        .foregroundStyle(AppTheme.onSurface)
-                    Spacer()
-                    if let qty = ing.qtyText { Text(qty).foregroundStyle(AppTheme.onSurfaceVariant) }
+            VStack(spacing: 0) {
+                ForEach(Array(recipe.ingredients.enumerated()), id: \.offset) { index, ing in
+                    HStack(alignment: .center, spacing: 12) {
+                        Text(store.ingredient(byId: ing.ingredientId)?.canonicalName ?? "Ingredient")
+                            .foregroundStyle(AppTheme.onSurface)
+                            .lineLimit(2)
+                        Spacer(minLength: 8)
+                        if let qty = ing.qtyText {
+                            Text(qty)
+                                .foregroundStyle(AppTheme.onSurfaceVariant)
+                                .lineLimit(1)
+                        }
+                    }
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 12)
+                    if index < recipe.ingredients.count - 1 {
+                        Divider()
+                            .padding(.horizontal, 12)
+                    }
                 }
-                .padding(.vertical, 4)
             }
+            .background(AppTheme.surface)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }
 
