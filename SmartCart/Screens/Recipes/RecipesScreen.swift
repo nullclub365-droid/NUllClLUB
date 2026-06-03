@@ -86,6 +86,62 @@ struct RecipesScreen: View {
     }
 
     @ViewBuilder
+    private var trendingSection: some View {
+        Section("Trending This Week") {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    trendingRecipeCard(3)
+                    trendingRecipeCard(5)
+                    trendingRecipeCard(7)
+                    trendingRecipeCard(12)
+                    trendingRecipeCard(15)
+                }
+                .padding(.vertical, 8)
+            }
+        }
+        .listRowInsets(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
+        .listRowBackground(Color.clear)
+    }
+
+    private func trendingRecipeCard(_ recipeId: Int64) -> some View {
+        Group {
+            if let recipe = store.recipe(byId: recipeId) {
+                Button(action: {
+                    handleRecipeSelected(recipeId)
+                }) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        ZStack {
+                            Circle()
+                                .fill(AppTheme.primary.opacity(0.2))
+                            Image(systemName: "fork.knife")
+                                .font(.system(size: 18))
+                                .foregroundStyle(AppTheme.primary)
+                        }
+                        .frame(width: 40, height: 40)
+
+                        Text(recipe.name)
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppTheme.onSurface)
+                            .lineLimit(2)
+                        HStack(spacing: 4) {
+                            Image(systemName: "star.fill")
+                                .font(.caption2)
+                            Text("4.8")
+                                .font(.caption2)
+                        }
+                        .foregroundStyle(AppTheme.secondary)
+                    }
+                    .frame(width: 110)
+                    .padding(10)
+                    .background(AppTheme.surface)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
     private var filtersSection: some View {
         Section {
             filterChips
@@ -107,6 +163,7 @@ struct RecipesScreen: View {
 
     var body: some View {
         List {
+            trendingSection
             filtersSection
             recipesContentSection
         }
