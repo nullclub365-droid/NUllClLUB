@@ -74,6 +74,9 @@ struct CookingHistoryScreen: View {
                     .foregroundStyle(AppTheme.onSurface)
                     .padding(.horizontal)
 
+                HabitCalendar(recipeHistory: store.recipeHistory)
+                    .padding(.horizontal)
+
                 calendarCard
                 if let _ = selectedDate {
                     selectedDateSection
