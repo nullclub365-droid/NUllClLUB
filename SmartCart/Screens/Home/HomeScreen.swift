@@ -36,6 +36,7 @@ struct HomeScreen: View {
                 if !store.favoriteRecipeIds.isEmpty {
                     savedRecipesSection
                 }
+                quickTimerCard
                 quickAccessGrid
                 referralCard
                 if store.plannedMealsForToday.isEmpty {
@@ -552,6 +553,36 @@ struct HomeScreen: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .buttonStyle(.plain)
+    }
+
+    private var quickTimerCard: some View {
+        HStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(AppTheme.secondary.opacity(0.15))
+                    .frame(width: 44, height: 44)
+                Image(systemName: "timer")
+                    .font(.system(size: 20))
+                    .foregroundStyle(AppTheme.secondary)
+            }
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Quick Timer")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.onSurface)
+                Text("Set cooking countdown & get notified")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+            }
+            Spacer()
+            Image(systemName: "chevron.right")
+                .font(.caption)
+                .foregroundStyle(AppTheme.onSurfaceVariant)
+        }
+        .padding(12)
+        .background(AppTheme.surfaceVariant.opacity(0.3))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .opacity(appeared ? 1 : 0)
     }
 
     private var savedRecipesSection: some View {
