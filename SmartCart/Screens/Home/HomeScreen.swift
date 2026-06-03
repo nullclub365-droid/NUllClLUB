@@ -33,7 +33,9 @@ struct HomeScreen: View {
                 quickAccessGrid
                 referralCard
                 if store.plannedMealsForToday.isEmpty {
-                    plannedMealsEmptyCard
+                    if !UserDefaults.standard.bool(forKey: "smartcart_tutorial_shown") {
+                        plannedMealsEmptyCard
+                    }
                 } else {
                     plannedMealsSection
                 }
