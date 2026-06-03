@@ -30,15 +30,6 @@ struct HomeScreen: View {
             VStack(alignment: .leading, spacing: 24) {
                 headerSection
                 nutritionHeroCard
-                progressCard
-                trendingRecipesSection
-                weeklyChallengSection
-                if !store.favoriteRecipeIds.isEmpty {
-                    savedRecipesSection
-                }
-                quickTimerCard
-                quickAccessGrid
-                referralCard
                 if store.plannedMealsForToday.isEmpty {
                     if !UserDefaults.standard.bool(forKey: "smartcart_tutorial_shown") {
                         plannedMealsEmptyCard
@@ -51,9 +42,7 @@ struct HomeScreen: View {
                 } else {
                     recentlyCookedSection
                 }
-                if !store.recipeHistory.isEmpty {
-                    habitCalendarSection
-                }
+                quickAccessGrid
                 featureDiscoverySection
                 insightsSection
                 Spacer(minLength: 24)
@@ -159,75 +148,7 @@ struct HomeScreen: View {
         }
     }
 
-    private var progressCard: some View {
-        let totalMeals = store.currentPlan?.days.reduce(0) { sum, day in
-            sum + [day.breakfastId, day.lunchId, day.dinnerId, day.snackId].compactMap { $0 }.count
-        } ?? 0
-        let progress = min(Double(totalMeals) / 21.0, 1.0)
-        let progressPercent = Int(progress * 100)
-
-        return VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("This Week's Progress")
-                        .font(.headline)
-                        .foregroundStyle(AppTheme.onSurface)
-                    Text("\(totalMeals) of 21 meals planned")
-                        .font(.caption)
-                        .foregroundStyle(AppTheme.onSurfaceVariant)
-                }
-                Spacer()
-                ZStack {
-                    Circle()
-                        .fill(AppTheme.primary.opacity(0.15))
-                        .frame(width: 56, height: 56)
-                    VStack(spacing: 0) {
-                        Text("\(progressPercent)%")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                            .foregroundStyle(AppTheme.primary)
-                        Text("done")
-                            .font(.caption2)
-                            .foregroundStyle(AppTheme.onSurfaceVariant)
-                    }
-                }
-            }
-
-            GeometryReader { geometry in
-                ZStack(alignment: .leading) {
-                    Capsule()
-                        .fill(AppTheme.primary.opacity(0.15))
-                    Capsule()
-                        .fill(
-                            LinearGradient(
-                                gradient: Gradient(colors: [AppTheme.primary, AppTheme.secondary]),
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
-                        )
-                        .frame(width: geometry.size.width * progress)
-                }
-                .frame(height: 8)
-            }
-            .frame(height: 8)
-
-            HStack(spacing: 8) {
-                Image(systemName: totalMeals >= 7 ? "checkmark.circle.fill" : "circle")
-                    .foregroundStyle(totalMeals >= 7 ? AppTheme.primary : AppTheme.onSurfaceVariant)
-                Text(totalMeals >= 7 ? "Great start! Keep it going" : "Add more meals to complete your week")
-                    .font(.caption)
-                    .foregroundStyle(AppTheme.onSurfaceVariant)
-                Spacer()
-            }
-        }
-        .padding(16)
-        .background(AppTheme.surface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .opacity(appeared ? 1 : 0)
-        .offset(y: appeared ? 0 : 20)
-    }
-
-    private var quickAccessGrid: some View {
+private var quickAccessGrid: some View {
         VStack(spacing: 12) {
             HStack(spacing: 12) {
                 QuickAccessCard(icon: "chart.pie", title: "Food Log", color: AppTheme.secondary, action: onNutrition)
@@ -243,72 +164,7 @@ struct HomeScreen: View {
         .offset(y: appeared ? 0 : 60)
     }
 
-    private var referralCard: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 12) {
-                ZStack {
-                    Circle()
-                        .fill(AppTheme.primary.opacity(0.15))
-                        .frame(width: 44, height: 44)
-                    Image(systemName: "person.crop.circle.badge.plus")
-                        .font(.system(size: 22))
-                        .foregroundStyle(AppTheme.primary)
-                }
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Invite Friends")
-                        .font(.headline)
-                        .foregroundStyle(AppTheme.onSurface)
-                    Text("Get 1 week free premium each")
-                        .font(.caption)
-                        .foregroundStyle(AppTheme.onSurfaceVariant)
-                }
-                Spacer()
-            }
-            .padding(12)
-            .background(AppTheme.surfaceVariant.opacity(0.5))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-
-            HStack(spacing: 8) {
-                Button(action: shareReferralCode) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "square.and.arrow.up")
-                        Text("Share Code")
-                    }
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(10)
-                    .background(AppTheme.primary)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
-
-                Button(action: {
-                    UIPasteboard.general.string = referralManager.userId
-                    Haptics.light()
-                }) {
-                    HStack(spacing: 8) {
-                        Image(systemName: "doc.on.doc")
-                        Text(referralManager.userId.prefix(6).uppercased())
-                    }
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(AppTheme.primary)
-                    .frame(maxWidth: .infinity)
-                    .padding(10)
-                    .background(AppTheme.primary.opacity(0.1))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
-            }
-        }
-        .padding(16)
-        .background(AppTheme.surface)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .opacity(appeared ? 1 : 0)
-        .offset(y: appeared ? 0 : 20)
-    }
-
-    private var plannedMealsEmptyCard: some View {
+private var plannedMealsEmptyCard: some View {
         VStack(alignment: .leading, spacing: 16) {
             SectionHeader(title: "Get Started", subtitle: "Your 3-minute guide")
 
@@ -555,145 +411,7 @@ struct HomeScreen: View {
         .buttonStyle(.plain)
     }
 
-    private var quickTimerCard: some View {
-        HStack(spacing: 12) {
-            ZStack {
-                Circle()
-                    .fill(AppTheme.secondary.opacity(0.15))
-                    .frame(width: 44, height: 44)
-                Image(systemName: "timer")
-                    .font(.system(size: 20))
-                    .foregroundStyle(AppTheme.secondary)
-            }
-            VStack(alignment: .leading, spacing: 2) {
-                Text("Quick Timer")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(AppTheme.onSurface)
-                Text("Set cooking countdown & get notified")
-                    .font(.caption)
-                    .foregroundStyle(AppTheme.onSurfaceVariant)
-            }
-            Spacer()
-            Image(systemName: "chevron.right")
-                .font(.caption)
-                .foregroundStyle(AppTheme.onSurfaceVariant)
-        }
-        .padding(12)
-        .background(AppTheme.surfaceVariant.opacity(0.3))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
-        .opacity(appeared ? 1 : 0)
-    }
-
-    private var savedRecipesSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack {
-                SectionHeader(title: "Saved Recipes", subtitle: "Your favorite meals")
-                Spacer()
-                Text("\(store.favoriteRecipeIds.count)")
-                    .font(.caption2)
-                    .fontWeight(.semibold)
-                    .foregroundStyle(AppTheme.primary)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
-                    .background(AppTheme.primary.opacity(0.1))
-                    .clipShape(Capsule())
-            }
-            VStack(spacing: 8) {
-                HStack(spacing: 12) {
-                    ZStack {
-                        Circle()
-                            .fill(AppTheme.secondary.opacity(0.15))
-                            .frame(width: 44, height: 44)
-                        Image(systemName: "heart.fill")
-                            .font(.system(size: 20))
-                            .foregroundStyle(AppTheme.secondary)
-                    }
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text("Quick access to your favorites")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(AppTheme.onSurface)
-                        Text("Tap recipes you like while browsing to save them here")
-                            .font(.caption)
-                            .foregroundStyle(AppTheme.onSurfaceVariant)
-                    }
-                    Spacer()
-                }
-                .padding(12)
-                .background(AppTheme.surfaceVariant.opacity(0.3))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            }
-        }
-        .opacity(appeared ? 1 : 0)
-    }
-
-    private var trendingRecipesSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            SectionHeader(title: "Trending Now", subtitle: "Popular this week")
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
-                    TrendingRecipeCard(title: "Buddha Bowl", emoji: "🥗", badge: "Trending") {
-                        onRecipeSelected(3)
-                    }
-                    TrendingRecipeCard(title: "Grilled Salmon", emoji: "🐟", badge: "Chef's Pick") {
-                        onRecipeSelected(5)
-                    }
-                    TrendingRecipeCard(title: "Pasta Primavera", emoji: "🍝", badge: "Trending") {
-                        onRecipeSelected(7)
-                    }
-                }
-            }
-        }
-        .opacity(appeared ? 1 : 0)
-    }
-
-    private var weeklyChallengSection: some View {
-        let mealsPlanned = store.currentPlan?.days.reduce(0) { count, day in
-            count + [day.breakfastId, day.lunchId, day.dinnerId, day.snackId].compactMap { $0 }.count
-        } ?? 0
-
-        let thisWeekCooks = store.recipeHistory.filter { item in
-            let cookedDate = Date(timeIntervalSince1970: Double(item.cookedAt) / 1000)
-            let daysSinceCooked = Calendar.current.dateComponents([.day], from: cookedDate, to: Date()).day ?? 8
-            return daysSinceCooked < 7
-        }.count
-
-        return VStack(alignment: .leading, spacing: 12) {
-            SectionHeader(title: "Weekly Challenge", subtitle: "Earn streaks & badges")
-
-            VStack(spacing: 10) {
-                ChallengeCard(
-                    title: "Plan 7 Meals",
-                    description: "Plan every meal for this week",
-                    progress: Double(min(mealsPlanned, 7)) / 7.0,
-                    count: "\(mealsPlanned)/7",
-                    icon: "📋",
-                    color: AppTheme.primary
-                )
-
-                ChallengeCard(
-                    title: "Cook 5 Times",
-                    description: "Actually cook from your plan",
-                    progress: Double(min(thisWeekCooks, 5)) / 5.0,
-                    count: "\(thisWeekCooks)/5",
-                    icon: "👨‍🍳",
-                    color: AppTheme.secondary
-                )
-            }
-        }
-        .opacity(appeared ? 1 : 0)
-    }
-
-    private var habitCalendarSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            SectionHeader(title: "Your Habits", subtitle: "Track your cooking momentum")
-            HabitCalendar(recipeHistory: store.recipeHistory)
-        }
-        .opacity(appeared ? 1 : 0)
-    }
-
-    private var insightsSection: some View {
+private var insightsSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionHeader(title: "Insights", subtitle: "Tips based on your cooking")
             ForEach(InsightRepository.random()) { insight in
