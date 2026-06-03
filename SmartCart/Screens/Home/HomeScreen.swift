@@ -50,6 +50,9 @@ struct HomeScreen: View {
                 } else {
                     recentlyCookedSection
                 }
+                if !store.recipeHistory.isEmpty {
+                    habitCalendarSection
+                }
                 featureDiscoverySection
                 insightsSection
                 Spacer(minLength: 24)
@@ -647,6 +650,14 @@ struct HomeScreen: View {
                     color: AppTheme.secondary
                 )
             }
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private var habitCalendarSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Your Habits", subtitle: "Track your cooking momentum")
+            HabitCalendar(recipeHistory: store.recipeHistory)
         }
         .opacity(appeared ? 1 : 0)
     }
