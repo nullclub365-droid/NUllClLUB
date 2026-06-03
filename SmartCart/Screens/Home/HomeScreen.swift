@@ -31,6 +31,8 @@ struct HomeScreen: View {
                 headerSection
                 nutritionHeroCard
                 progressCard
+                trendingRecipesSection
+                weeklyChallengSection
                 quickAccessGrid
                 referralCard
                 if store.plannedMealsForToday.isEmpty {
@@ -544,6 +546,63 @@ struct HomeScreen: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .buttonStyle(.plain)
+    }
+
+    private var trendingRecipesSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Trending Now", subtitle: "Popular this week")
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    TrendingRecipeCard(title: "Buddha Bowl", emoji: "🥗", badge: "Trending") {
+                        onRecipeSelected(3)
+                    }
+                    TrendingRecipeCard(title: "Grilled Salmon", emoji: "🐟", badge: "Chef's Pick") {
+                        onRecipeSelected(5)
+                    }
+                    TrendingRecipeCard(title: "Pasta Primavera", emoji: "🍝", badge: "Trending") {
+                        onRecipeSelected(7)
+                    }
+                }
+            }
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private var weeklyChallengSection: some View {
+        let mealsPlanned = store.currentPlan?.days.reduce(0) { count, day in
+            count + [day.breakfastId, day.lunchId, day.dinnerId, day.snackId].compactMap { $0 }.count
+        } ?? 0
+
+        let thisWeekCooks = store.recipeHistory.filter { item in
+            let cookedDate = Date(timeIntervalSince1970: Double(item.cookedAt) / 1000)
+            let daysSinceCooked = Calendar.current.dateComponents([.day], from: cookedDate, to: Date()).day ?? 8
+            return daysSinceCooked < 7
+        }.count
+
+        return VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Weekly Challenge", subtitle: "Earn streaks & badges")
+
+            VStack(spacing: 10) {
+                ChallengeCard(
+                    title: "Plan 7 Meals",
+                    description: "Plan every meal for this week",
+                    progress: Double(min(mealsPlanned, 7)) / 7.0,
+                    count: "\(mealsPlanned)/7",
+                    icon: "📋",
+                    color: AppTheme.primary
+                )
+
+                ChallengeCard(
+                    title: "Cook 5 Times",
+                    description: "Actually cook from your plan",
+                    progress: Double(min(thisWeekCooks, 5)) / 5.0,
+                    count: "\(thisWeekCooks)/5",
+                    icon: "👨‍🍳",
+                    color: AppTheme.secondary
+                )
+            }
+        }
+        .opacity(appeared ? 1 : 0)
     }
 
     private var insightsSection: some View {
