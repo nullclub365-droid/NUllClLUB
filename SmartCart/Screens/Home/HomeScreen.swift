@@ -33,6 +33,9 @@ struct HomeScreen: View {
                 progressCard
                 trendingRecipesSection
                 weeklyChallengSection
+                if !store.favoriteRecipeIds.isEmpty {
+                    savedRecipesSection
+                }
                 quickAccessGrid
                 referralCard
                 if store.plannedMealsForToday.isEmpty {
@@ -546,6 +549,49 @@ struct HomeScreen: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .buttonStyle(.plain)
+    }
+
+    private var savedRecipesSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                SectionHeader(title: "Saved Recipes", subtitle: "Your favorite meals")
+                Spacer()
+                Text("\(store.favoriteRecipeIds.count)")
+                    .font(.caption2)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.primary)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(AppTheme.primary.opacity(0.1))
+                    .clipShape(Capsule())
+            }
+            VStack(spacing: 8) {
+                HStack(spacing: 12) {
+                    ZStack {
+                        Circle()
+                            .fill(AppTheme.secondary.opacity(0.15))
+                            .frame(width: 44, height: 44)
+                        Image(systemName: "heart.fill")
+                            .font(.system(size: 20))
+                            .foregroundStyle(AppTheme.secondary)
+                    }
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Quick access to your favorites")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppTheme.onSurface)
+                        Text("Tap recipes you like while browsing to save them here")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.onSurfaceVariant)
+                    }
+                    Spacer()
+                }
+                .padding(12)
+                .background(AppTheme.surfaceVariant.opacity(0.3))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+        }
+        .opacity(appeared ? 1 : 0)
     }
 
     private var trendingRecipesSection: some View {
