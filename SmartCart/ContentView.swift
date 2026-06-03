@@ -57,7 +57,7 @@ struct ContentView: View {
                 .environmentObject(store)
         }
         .fullScreenCover(isPresented: $showTutorial) {
-            TutorialModal(onDismiss: { showTutorial = false })
+            TutorialModal(onDismiss: { showTutorial = false }, dietPreferences: store.dietPreferences)
         }
         .alert("Could not save data", isPresented: Binding(
             get: { store.lastPersistenceError != nil },

@@ -8,6 +8,7 @@ import SwiftUI
 struct TutorialModal: View {
     @State private var currentStep = 1
     var onDismiss: () -> Void
+    var dietPreferences: [String] = []
 
     var body: some View {
         ZStack {
@@ -94,15 +95,29 @@ struct TutorialModal: View {
                 .fontWeight(.semibold)
                 .foregroundStyle(AppTheme.onSurface)
 
-            Text("Tap any recipe to see nutrition, cook time, and ingredients")
+            Text(dietPreferences.isEmpty ? "Tap any recipe to see nutrition, cook time, and ingredients" : "Recipes matched to your \(dietPreferences.first?.lowercased() ?? "diet") preference")
                 .font(.caption)
                 .foregroundStyle(AppTheme.onSurfaceVariant)
                 .multilineTextAlignment(.center)
 
             VStack(spacing: 12) {
-                recipeCard(title: "Grilled Chicken Bowl", time: "25 min", cal: "450 cal", image: "🍗")
-                recipeCard(title: "Veggie Stir Fry", time: "20 min", cal: "320 cal", image: "🥦")
-                recipeCard(title: "Salmon with Rice", time: "30 min", cal: "580 cal", image: "🐟")
+                if dietPreferences.contains("vegan") || dietPreferences.contains("vegetarian") {
+                    recipeCard(title: "Buddha Bowl", time: "20 min", cal: "380 cal", image: "🥗")
+                    recipeCard(title: "Lentil Curry", time: "25 min", cal: "420 cal", image: "🌶️")
+                    recipeCard(title: "Chickpea Pasta", time: "15 min", cal: "360 cal", image: "🍝")
+                } else if dietPreferences.contains("keto") || dietPreferences.contains("low-carb") {
+                    recipeCard(title: "Grilled Steak & Veggies", time: "30 min", cal: "520 cal", image: "🥩")
+                    recipeCard(title: "Salmon with Butter", time: "25 min", cal: "580 cal", image: "🐟")
+                    recipeCard(title: "Eggs & Bacon", time: "10 min", cal: "450 cal", image: "🍳")
+                } else if dietPreferences.contains("paleo") {
+                    recipeCard(title: "Grilled Chicken Bowl", time: "25 min", cal: "450 cal", image: "🍗")
+                    recipeCard(title: "Salmon with Sweet Potato", time: "30 min", cal: "520 cal", image: "🐟")
+                    recipeCard(title: "Turkey & Vegetables", time: "20 min", cal: "380 cal", image: "🦃")
+                } else {
+                    recipeCard(title: "Grilled Chicken Bowl", time: "25 min", cal: "450 cal", image: "🍗")
+                    recipeCard(title: "Veggie Stir Fry", time: "20 min", cal: "320 cal", image: "🥦")
+                    recipeCard(title: "Salmon with Rice", time: "30 min", cal: "580 cal", image: "🐟")
+                }
             }
             .padding(.horizontal, 16)
         }
