@@ -17,10 +17,16 @@ struct TutorialModal: View {
             VStack(spacing: 0) {
                 // Header
                 HStack {
-                    Text("Welcome to SmartCart")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundStyle(AppTheme.onSurface)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Step \(currentStep) of 3")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppTheme.primary)
+                        Text("Welcome to SmartCart")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundStyle(AppTheme.onSurface)
+                    }
                     Spacer()
                     Button(action: onDismiss) {
                         Image(systemName: "xmark.circle.fill")
@@ -42,40 +48,21 @@ struct TutorialModal: View {
 
                 Spacer()
 
-                // Step content
-                VStack(alignment: .center, spacing: 24) {
-                    if currentStep == 1 {
-                        tutorialStep(
-                            icon: "fork.knife",
-                            title: "Browse 415+ Recipes",
-                            description: "Discover delicious, healthy recipes with photos, nutrition info, and cook times.",
-                            number: "1"
-                        )
-                    } else if currentStep == 2 {
-                        tutorialStep(
-                            icon: "calendar.badge.plus",
-                            title: "Plan Your Week",
-                            description: "Pick recipes for each meal. Generate a smart grocery list automatically.",
-                            number: "2"
-                        )
-                    } else {
-                        tutorialStep(
-                            icon: "chart.pie.fill",
-                            title: "Track Your Nutrition",
-                            description: "Log meals, monitor calories, protein, and hit your health goals.",
-                            number: "3"
-                        )
-                    }
+                // Step content - Interactive
+                if currentStep == 1 {
+                    step1Content
+                } else if currentStep == 2 {
+                    step2Content
+                } else {
+                    step3Content
                 }
-                .frame(maxWidth: .infinity)
-                .padding(30)
 
                 Spacer()
 
                 // Buttons
                 VStack(spacing: 12) {
                     Button(action: nextStep) {
-                        Text(currentStep == 3 ? "Get Started" : "Next")
+                        Text(currentStep == 3 ? "Get Started" : "Next Step")
                             .font(.headline)
                             .foregroundStyle(.white)
                             .frame(maxWidth: .infinity)
@@ -100,29 +87,163 @@ struct TutorialModal: View {
         }
     }
 
-    private func tutorialStep(icon: String, title: String, description: String, number: String) -> some View {
+    private var step1Content: some View {
         VStack(spacing: 16) {
-            ZStack {
-                Circle()
-                    .fill(AppTheme.primary.opacity(0.15))
-                    .frame(width: 80, height: 80)
-                Image(systemName: icon)
-                    .font(.system(size: 40))
-                    .foregroundStyle(AppTheme.primary)
-            }
-
-            Text(title)
+            Text("Browse 415+ Recipes")
                 .font(.title3)
                 .fontWeight(.semibold)
                 .foregroundStyle(AppTheme.onSurface)
-                .multilineTextAlignment(.center)
 
-            Text(description)
-                .font(.body)
+            Text("Tap any recipe to see nutrition, cook time, and ingredients")
+                .font(.caption)
                 .foregroundStyle(AppTheme.onSurfaceVariant)
                 .multilineTextAlignment(.center)
-                .lineLimit(3)
+
+            VStack(spacing: 12) {
+                recipeCard(title: "Grilled Chicken Bowl", time: "25 min", cal: "450 cal", image: "🍗")
+                recipeCard(title: "Veggie Stir Fry", time: "20 min", cal: "320 cal", image: "🥦")
+                recipeCard(title: "Salmon with Rice", time: "30 min", cal: "580 cal", image: "🐟")
+            }
+            .padding(.horizontal, 16)
         }
+        .padding(20)
+    }
+
+    private var step2Content: some View {
+        VStack(spacing: 16) {
+            Text("Plan Your Week")
+                .font(.title3)
+                .fontWeight(.semibold)
+                .foregroundStyle(AppTheme.onSurface)
+
+            Text("Pick recipes for each meal and auto-generate your grocery list")
+                .font(.caption)
+                .foregroundStyle(AppTheme.onSurfaceVariant)
+                .multilineTextAlignment(.center)
+
+            VStack(spacing: 8) {
+                plannerDay(day: "Monday", meal: "🍗 Grilled Chicken Bowl")
+                plannerDay(day: "Tuesday", meal: "🥦 Veggie Stir Fry")
+                plannerDay(day: "Wednesday", meal: "🐟 Salmon with Rice")
+
+                HStack(spacing: 8) {
+                    Image(systemName: "plus.circle.fill")
+                        .foregroundStyle(AppTheme.primary)
+                    Text("Add more meals")
+                        .font(.subheadline)
+                        .foregroundStyle(AppTheme.primary)
+                    Spacer()
+                }
+                .padding(12)
+                .background(AppTheme.primary.opacity(0.1))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+            }
+            .padding(.horizontal, 16)
+        }
+        .padding(20)
+    }
+
+    private var step3Content: some View {
+        VStack(spacing: 16) {
+            Text("Track Your Nutrition")
+                .font(.title3)
+                .fontWeight(.semibold)
+                .foregroundStyle(AppTheme.onSurface)
+
+            Text("Log meals and watch your nutrition stats in real-time")
+                .font(.caption)
+                .foregroundStyle(AppTheme.onSurfaceVariant)
+                .multilineTextAlignment(.center)
+
+            VStack(spacing: 12) {
+                nutritionStat(label: "Calories", value: "1,450", icon: "🔥", color: AppTheme.primary)
+                nutritionStat(label: "Protein", value: "85g", icon: "💪", color: AppTheme.secondary)
+                nutritionStat(label: "Carbs", value: "180g", icon: "🌾", color: AppTheme.tertiary)
+            }
+            .padding(.horizontal, 16)
+
+            HStack(spacing: 8) {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundStyle(AppTheme.primary)
+                Text("See detailed insights on the Nutrition tab")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+                Spacer()
+            }
+            .padding(12)
+            .background(AppTheme.primary.opacity(0.1))
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .padding(.horizontal, 16)
+        }
+        .padding(20)
+    }
+
+    private func recipeCard(title: String, time: String, cal: String, image: String) -> some View {
+        HStack(spacing: 12) {
+            Text(image)
+                .font(.system(size: 32))
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.onSurface)
+                HStack(spacing: 12) {
+                    Label(time, systemImage: "clock")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                    Label(cal, systemImage: "flame")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.secondary)
+                }
+            }
+            Spacer()
+            Image(systemName: "chevron.right")
+                .font(.caption)
+                .foregroundStyle(AppTheme.onSurfaceVariant)
+        }
+        .padding(12)
+        .background(AppTheme.surfaceVariant.opacity(0.5))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+
+    private func plannerDay(day: String, meal: String) -> some View {
+        HStack(spacing: 12) {
+            Text(day)
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .foregroundStyle(AppTheme.onSurface)
+                .frame(width: 70, alignment: .leading)
+            Text(meal)
+                .font(.caption)
+                .foregroundStyle(AppTheme.onSurfaceVariant)
+            Spacer()
+            Image(systemName: "checkmark")
+                .font(.caption)
+                .foregroundStyle(AppTheme.primary)
+        }
+        .padding(10)
+        .background(AppTheme.surfaceVariant.opacity(0.5))
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+    }
+
+    private func nutritionStat(label: String, value: String, icon: String, color: Color) -> some View {
+        HStack(spacing: 12) {
+            Text(icon)
+                .font(.system(size: 24))
+            VStack(alignment: .leading, spacing: 2) {
+                Text(label)
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+                Text(value)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.onSurface)
+            }
+            Spacer()
+        }
+        .padding(12)
+        .background(color.opacity(0.1))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 
     private func nextStep() {
