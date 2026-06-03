@@ -13,13 +13,16 @@ final class ReferralManager: NSObject, ObservableObject {
     @Published var referralCode: String?
     @Published var referrerUserId: String?
     @Published var hasAppliedReferral = false
+    @Published var userId: String = ""
 
     private let referralCodeKey = "smartcart_referral_code"
     private let referrerUserIdKey = "smartcart_referrer_user_id"
     private let appliedReferralKey = "smartcart_applied_referral"
+    private let userIdKey = "smartcart_user_id"
 
     override init() {
         super.init()
+        ensureUserIdExists()
         loadStoredReferral()
     }
 
@@ -57,6 +60,16 @@ final class ReferralManager: NSObject, ObservableObject {
         AnalyticsHelper.trackFeatureUsed("premium_trial_from_referral", details: [
             "referral_code": referralId
         ])
+    }
+
+    private func ensureUserIdExists() {
+        if let stored = UserDefaults.standard.string(forKey: userIdKey) {
+            userId = stored
+        } else {
+            let generated = UUID().uuidString.lowercased().prefix(12)
+            userId = String(generated)
+            UserDefaults.standard.set(userId, forKey: userIdKey)
+        }
     }
 
     private func loadStoredReferral() {

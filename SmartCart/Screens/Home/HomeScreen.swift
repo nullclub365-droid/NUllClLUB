@@ -8,6 +8,7 @@ import FirebaseAnalytics
 
 struct HomeScreen: View {
     @EnvironmentObject var store: AppStore
+    @EnvironmentObject var referralManager: ReferralManager
     @State private var appeared = false
 
     var onRecipeSelected: (Int64) -> Void
@@ -30,6 +31,7 @@ struct HomeScreen: View {
                 headerSection
                 nutritionHeroCard
                 quickAccessGrid
+                referralCard
                 if store.plannedMealsForToday.isEmpty {
                     plannedMealsEmptyCard
                 } else {
@@ -55,6 +57,16 @@ struct HomeScreen: View {
             if AccessibilitySettings.shouldReduceMotion { appeared = true }
             else { withAnimation(.easeOut(duration: 0.2)) { appeared = true } }
         }
+    }
+
+    private func shareReferralCode() {
+        let message = "Join me on SmartCart! 🍽️\n\nGet 1 week free premium with my code: \(referralManager.userId.prefix(6).uppercased())\n\nDownload SmartCart: \(ShareHelper.appStoreLink)"
+        let items: [Any] = [message]
+
+        let vc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first?.windows.first?.rootViewController?.present(vc, animated: true)
+
+        AnalyticsHelper.trackShareInitiated(type: "referral", content: "invite_friends")
     }
 
     private var headerSection: some View {
@@ -148,6 +160,71 @@ struct HomeScreen: View {
         }
         .opacity(appeared ? 1 : 0)
         .offset(y: appeared ? 0 : 60)
+    }
+
+    private var referralCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle()
+                        .fill(AppTheme.primary.opacity(0.15))
+                        .frame(width: 44, height: 44)
+                    Image(systemName: "person.crop.circle.badge.plus")
+                        .font(.system(size: 22))
+                        .foregroundStyle(AppTheme.primary)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Invite Friends")
+                        .font(.headline)
+                        .foregroundStyle(AppTheme.onSurface)
+                    Text("Get 1 week free premium each")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                Spacer()
+            }
+            .padding(12)
+            .background(AppTheme.surfaceVariant.opacity(0.5))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+
+            HStack(spacing: 8) {
+                Button(action: shareReferralCode) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "square.and.arrow.up")
+                        Text("Share Code")
+                    }
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(10)
+                    .background(AppTheme.primary)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+
+                Button(action: {
+                    UIPasteboard.general.string = referralManager.userId
+                    Haptics.light()
+                }) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "doc.on.doc")
+                        Text(referralManager.userId.prefix(6).uppercased())
+                    }
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(AppTheme.primary)
+                    .frame(maxWidth: .infinity)
+                    .padding(10)
+                    .background(AppTheme.primary.opacity(0.1))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+            }
+        }
+        .padding(16)
+        .background(AppTheme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .opacity(appeared ? 1 : 0)
+        .offset(y: appeared ? 0 : 20)
     }
 
     private var plannedMealsEmptyCard: some View {
