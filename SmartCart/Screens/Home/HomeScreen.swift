@@ -238,14 +238,14 @@ struct HomeScreen: View {
                     title: "Browse 415+ recipes",
                     description: "Find meals you love",
                     icon: "fork.knife",
-                    action: { selectedTab = 2 }
+                    action: { }
                 )
                 quickStartStep(
                     number: "2",
                     title: "Plan your week",
                     description: "Choose recipes for each meal",
                     icon: "calendar.badge.plus",
-                    action: { selectedTab = 3 }
+                    action: { onOpenPlanner?() }
                 )
                 quickStartStep(
                     number: "3",
@@ -256,7 +256,7 @@ struct HomeScreen: View {
                 )
             }
 
-            Button(action: { selectedTab = 2 }) {
+            Button(action: { onOpenPlanner?() }) {
                 HStack(spacing: 8) {
                     Image(systemName: "sparkles")
                     Text("Start Exploring")
@@ -398,7 +398,7 @@ struct HomeScreen: View {
                         iconColor: AppTheme.secondary,
                         title: "Rate Recipes",
                         description: "Share feedback and unlock ratings badge",
-                        action: { selectedTab = 2 }
+                        action: { }
                     )
                 }
 
@@ -418,7 +418,7 @@ struct HomeScreen: View {
                         iconColor: AppTheme.secondary,
                         title: "Save Favorites",
                         description: "Build your personal recipe collection",
-                        action: { selectedTab = 2 }
+                        action: { }
                     )
                 }
             }
