@@ -30,6 +30,7 @@ struct HomeScreen: View {
             VStack(alignment: .leading, spacing: 24) {
                 headerSection
                 nutritionHeroCard
+                progressCard
                 quickAccessGrid
                 referralCard
                 if store.plannedMealsForToday.isEmpty {
@@ -147,6 +148,74 @@ struct HomeScreen: View {
                 .font(.subheadline)
                 .foregroundStyle(AppTheme.onPrimaryContainer.opacity(0.7))
         }
+    }
+
+    private var progressCard: some View {
+        let totalMeals = store.currentPlan?.days.reduce(0) { sum, day in
+            sum + [day.breakfastId, day.lunchId, day.dinnerId, day.snackId].compactMap { $0 }.count
+        } ?? 0
+        let progress = min(Double(totalMeals) / 21.0, 1.0)
+        let progressPercent = Int(progress * 100)
+
+        return VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("This Week's Progress")
+                        .font(.headline)
+                        .foregroundStyle(AppTheme.onSurface)
+                    Text("\(totalMeals) of 21 meals planned")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                Spacer()
+                ZStack {
+                    Circle()
+                        .fill(AppTheme.primary.opacity(0.15))
+                        .frame(width: 56, height: 56)
+                    VStack(spacing: 0) {
+                        Text("\(progressPercent)%")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundStyle(AppTheme.primary)
+                        Text("done")
+                            .font(.caption2)
+                            .foregroundStyle(AppTheme.onSurfaceVariant)
+                    }
+                }
+            }
+
+            GeometryReader { geometry in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(AppTheme.primary.opacity(0.15))
+                    Capsule()
+                        .fill(
+                            LinearGradient(
+                                gradient: Gradient(colors: [AppTheme.primary, AppTheme.secondary]),
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .frame(width: geometry.size.width * progress)
+                }
+                .frame(height: 8)
+            }
+            .frame(height: 8)
+
+            HStack(spacing: 8) {
+                Image(systemName: totalMeals >= 7 ? "checkmark.circle.fill" : "circle")
+                    .foregroundStyle(totalMeals >= 7 ? AppTheme.primary : AppTheme.onSurfaceVariant)
+                Text(totalMeals >= 7 ? "Great start! Keep it going" : "Add more meals to complete your week")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+                Spacer()
+            }
+        }
+        .padding(16)
+        .background(AppTheme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .opacity(appeared ? 1 : 0)
+        .offset(y: appeared ? 0 : 20)
     }
 
     private var quickAccessGrid: some View {
