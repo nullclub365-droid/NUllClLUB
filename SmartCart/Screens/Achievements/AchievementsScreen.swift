@@ -46,6 +46,7 @@ struct AchievementsScreen: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 headerCard
+                weeklyChallengesSection
                 if unlockedCount == 0 {
                     EmptyStateView(
                         icon: "medal",
@@ -102,6 +103,46 @@ struct AchievementsScreen: View {
         .padding(20)
         .background(AppTheme.primaryContainer.opacity(0.5))
         .clipShape(RoundedRectangle(cornerRadius: 24))
+    }
+
+    private var weeklyChallengesSection: some View {
+        let mealsPlanned = store.currentPlan?.days.reduce(0) { count, day in
+            count + [day.breakfastId, day.lunchId, day.dinnerId, day.snackId].compactMap { $0 }.count
+        } ?? 0
+
+        let thisWeekCooks = store.recipeHistory.filter { item in
+            let cookedDate = Date(timeIntervalSince1970: Double(item.cookedAt) / 1000)
+            let daysSinceCooked = Calendar.current.dateComponents([.day], from: cookedDate, to: Date()).day ?? 8
+            return daysSinceCooked < 7
+        }.count
+
+        return VStack(alignment: .leading, spacing: 12) {
+            Text("Weekly Challenges")
+                .font(.headline)
+                .foregroundStyle(AppTheme.onSurface)
+                .padding(.horizontal)
+
+            VStack(spacing: 10) {
+                ChallengeCard(
+                    title: "Plan 7 Meals",
+                    description: "Plan every meal for this week",
+                    progress: Double(min(mealsPlanned, 7)) / 7.0,
+                    count: "\(mealsPlanned)/7",
+                    icon: "📋",
+                    color: AppTheme.primary
+                )
+
+                ChallengeCard(
+                    title: "Cook 5 Times",
+                    description: "Actually cook from your plan",
+                    progress: Double(min(thisWeekCooks, 5)) / 5.0,
+                    count: "\(thisWeekCooks)/5",
+                    icon: "👨‍🍳",
+                    color: AppTheme.secondary
+                )
+            }
+            .padding(.horizontal)
+        }
     }
 }
 
