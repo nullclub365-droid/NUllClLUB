@@ -1,0 +1,761 @@
+30 CLAUDE CODE PROMPTS FOR SMARTCART POSTS
+Copy & paste one prompt at a time into Claude Code
+
+=====================================================
+
+PROMPT 1 - DAY 1 (Monday, June 2) - MEAL PLANNER FEATURE
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Meal Planner Feature
+Hook: "Stop wasting time deciding what to eat"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 2 - DAY 2 (Tuesday, June 3) - MEAL PREP HACK
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Meal Prep Hack - Batch Cooking
+Hook: "This meal prep hack saves me 10 hours/week"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 3 - DAY 3 (Wednesday, June 4) - GROCERY LIST FEATURE
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Smart Grocery List
+Hook: "Stop forgetting groceries at the store"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 4 - DAY 4 (Thursday, June 5) - BEFORE/AFTER KITCHEN
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Kitchen Organization Before/After
+Hook: "My kitchen before and after meal prep"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 5 - DAY 5 (Friday, June 6) - NUTRITION TRACKING
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Nutrition Tracking Feature
+Hook: "I tracked my nutrition for 30 days and here's what happened"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 6 - DAY 6 (Saturday, June 7) - COMMUNITY TESTIMONIAL
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: User Testimonial
+Hook: "One of our favorite SmartCart stories"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 7 - DAY 7 (Sunday, June 8) - ACHIEVEMENTS GAMIFICATION
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Achievement System
+Hook: "I didn't expect to get ADDICTED to meal prepping"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 8 - DAY 8 (Monday, June 9) - QUICK TIPS 5MIN MEALS
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Quick Meal Ideas
+Hook: "3 meals under 5 minutes (literally)"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 9 - DAY 9 (Tuesday, June 10) - HEALTHY VS LAZY COMPARISON
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Healthy vs Lazy Comparison
+Hook: "Same time, different results"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 10 - DAY 10 (Wednesday, June 11) - COOKING DISASTER RECOVERY
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Cooking Disaster Fix
+Hook: "When your recipe is a disaster (here's the fix)"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 11 - DAY 11 (Thursday, June 12) - INGREDIENT SWAPS
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Ingredient Swaps
+Hook: "Swap this ONE ingredient and save 200 calories"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 12 - DAY 12 (Friday, June 13) - PANTRY SYSTEM FEATURE
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Pantry Tracking Feature
+Hook: "This pantry feature is preventing me from wasting SO much food"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 13 - DAY 13 (Saturday, June 14) - WEEKEND MEAL PREP BLUEPRINT
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Sunday Meal Prep Guide
+Hook: "Complete Sunday meal prep in 10 minutes (step-by-step)"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 14 - DAY 14 (Sunday, June 15) - TAG A FRIEND ENGAGEMENT
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Community Engagement
+Hook: "Tag someone who NEEDS SmartCart"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 15 - DAY 15 (Monday, June 16) - MACROS EDUCATION
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Nutrition Education
+Hook: "Stop being confused about macros. Here's all you need to know"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 16 - DAY 16 (Tuesday, June 17) - BUDGET MEAL PREP
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Budget Meal Prep
+Hook: "Complete week of meals for $50 (yes, really)"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 17 - DAY 17 (Wednesday, June 18) - SMART GROCERY LIST FEATURE
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Grocery List Smart Features
+Hook: "This grocery list feature cuts my shopping time in HALF"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 18 - DAY 18 (Thursday, June 19) - POV TRENDING FORMAT
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: POV Trending Format
+Hook: "POV: You just discovered an app that plans meals for you"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 19 - DAY 19 (Friday, June 20) - SPREADSHEET VS APP HUMOR
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Spreadsheet vs App Comparison
+Hook: "Meal planning with a spreadsheet vs. with SmartCart"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 20 - DAY 20 (Saturday, June 21) - WEEK WITH VS WITHOUT MEAL PREP
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Week Comparison
+Hook: "Your busy week WITH meal prep vs. WITHOUT"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 21 - DAY 21 (Sunday, June 22) - APP UPDATE ANNOUNCEMENT
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: App Update
+Hook: "We just rolled out 5 new features based on YOUR feedback"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 22 - DAY 22 (Monday, June 23) - APP STORE REVIEW REQUEST
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Review Request
+Hook: "Can we ask you for one small favor?"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 23 - DAY 23 (Tuesday, June 24) - DOWNLOAD CTA
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Download CTA
+Hook: "If you've been thinking about trying SmartCart, TODAY is the day"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 24 - DAY 24 (Wednesday, June 25) - USER FEATURE COMMUNITY
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Community User Content
+Hook: "Show us your SmartCart moment"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 25 - DAY 25 (Thursday, June 26) - WHY MEAL PREP FAILS
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Why Meal Prep Fails
+Hook: "Why meal prep fails (and how to actually stick with it)"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 26 - DAY 26 (Friday, June 27) - WEEKEND MOTIVATION
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Motivation
+Hook: "If you're about to start meal prep, read this"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 27 - DAY 27 (Saturday, June 28) - TOP 3 HIDDEN FEATURES
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Hidden Features
+Hook: "3 SmartCart features people don't know about but SHOULD"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 28 - DAY 28 (Sunday, June 29) - MONTH RECAP COMMUNITY WINS
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Month Recap
+Hook: "Our favorite SmartCart stories from June"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 29 - DAY 29 (Monday, June 30) - TRENDING AUDIO ADAPTATION
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: TikTok
+Topic: Trending Format
+Hook: "We tried the trending audio with a meal prep twist"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (200 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+PROMPT 30 - DAY 30 (Tuesday, July 1) - MONTH CLOSING THANK YOU
+
+Generate a social media post for SmartCart.
+
+**APP CONTEXT:**
+- App: SmartCart (meal planning, grocery list, nutrition tracking, achievements)
+- Current downloads: 4.96K
+- Goal: Increase downloads + re-engagement
+- Target audience: Busy young adults (20-35), health-conscious, meal prep enthusiasts
+
+**BRAND COLORS:**
+Primary: Teal (#4AAFA8) | Secondary: Mustard (#E8A838) | Ink: #2C1A0E | Paper: #F5ECD7
+
+**BRAND VOICE:** Playful, educational, relatable. Use numbers. Conversational. End with question.
+
+**POST DETAILS:**
+Platform: Instagram Reels
+Topic: Month Closing
+Hook: "Thank you for an amazing June"
+
+**GENERATE ONLY:**
+Hook (12 words max) | Caption (250 chars) | 7 Hashtags | CTA | Video description (1 sentence) | Suggested colors from palette
+
+=====================================================
+
+HOW TO USE:
+1. Pick a prompt from above (PROMPT 1 - PROMPT 30)
+2. Copy the entire prompt
+3. Paste into Claude Code
+4. Claude generates: Hook | Caption | 7 Hashtags | CTA | Video description | Colors
+5. Copy output → Use for your post
