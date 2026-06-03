@@ -8,6 +8,7 @@ import SwiftUI
 private let hasRequestedATTKey = "smartcart_att_requested"
 private let hasRequestedNotificationPermissionKey = "smartcart_notification_permission_requested"
 private let hasScheduledEngagementNotificationsKey = "smartcart_engagement_notifications_scheduled"
+private let hasTutorialBeenShownKey = "smartcart_tutorial_shown"
 
 struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
@@ -18,6 +19,7 @@ struct ContentView: View {
     @State private var recipesPath: [AppRoute] = []
     @State private var plannerPath: [AppRoute] = []
     @State private var hasInitializedAds = false
+    @State private var showTutorial = false
     #if DEBUG
     @State private var showSimulatorATTMessage = false
     #endif
@@ -39,7 +41,10 @@ struct ContentView: View {
             }
         }
         .onChange(of: store.onboardingCompleted) { _, completed in
-            if completed { requestATTAndInitializeAdsIfNeeded() }
+            if completed {
+                requestATTAndInitializeAdsIfNeeded()
+                showTutorialIfNeeded()
+            }
         }
         .onAppear {
             requestATTAndInitializeAdsIfNeeded()
@@ -50,6 +55,9 @@ struct ContentView: View {
         )) {
             OnboardingScreen(onComplete: {})
                 .environmentObject(store)
+        }
+        .fullScreenCover(isPresented: $showTutorial) {
+            TutorialModal(onDismiss: { showTutorial = false })
         }
         .alert("Could not save data", isPresented: Binding(
             get: { store.lastPersistenceError != nil },
@@ -124,6 +132,15 @@ struct ContentView: View {
             if manager.isAuthorized {
                 manager.scheduleEngagementNotifications(store: store)
             }
+        }
+    }
+
+    private func showTutorialIfNeeded() {
+        guard !UserDefaults.standard.bool(forKey: hasTutorialBeenShownKey) else { return }
+        UserDefaults.standard.set(true, forKey: hasTutorialBeenShownKey)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            showTutorial = true
         }
     }
 
