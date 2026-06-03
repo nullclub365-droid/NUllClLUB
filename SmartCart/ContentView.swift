@@ -7,6 +7,7 @@ import SwiftUI
 
 private let hasRequestedATTKey = "smartcart_att_requested"
 private let hasRequestedNotificationPermissionKey = "smartcart_notification_permission_requested"
+private let hasScheduledEngagementNotificationsKey = "smartcart_engagement_notifications_scheduled"
 
 struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
@@ -110,6 +111,19 @@ struct ContentView: View {
         UserDefaults.standard.set(true, forKey: hasRequestedNotificationPermissionKey)
         NotificationScheduler.requestPermission { _ in
             NotificationScheduler.schedule(store: store)
+            scheduleEngagementNotificationsOnce()
+        }
+    }
+
+    private func scheduleEngagementNotificationsOnce() {
+        guard !UserDefaults.standard.bool(forKey: hasScheduledEngagementNotificationsKey) else { return }
+        UserDefaults.standard.set(true, forKey: hasScheduledEngagementNotificationsKey)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let manager = NotificationManager.shared
+            if manager.isAuthorized {
+                manager.scheduleEngagementNotifications(store: store)
+            }
         }
     }
 
