@@ -384,25 +384,42 @@ struct HomeScreen: View {
     private var recentlyCookedEmptyCard: some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionHeader(title: "Recently Cooked", subtitle: "Your cooking history")
-            HStack(spacing: 16) {
-                ZStack {
-                    Circle()
-                        .fill(AppTheme.tertiary.opacity(0.15))
-                        .frame(width: 48, height: 48)
-                    Image(systemName: "clock.arrow.circlepath")
-                        .font(.title2)
-                        .foregroundStyle(AppTheme.tertiary)
+            VStack(spacing: 12) {
+                HStack(spacing: 16) {
+                    ZStack {
+                        Circle()
+                            .fill(AppTheme.tertiary.opacity(0.15))
+                            .frame(width: 48, height: 48)
+                        Image(systemName: "clock.arrow.circlepath")
+                            .font(.title2)
+                            .foregroundStyle(AppTheme.tertiary)
+                    }
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("No meals cooked yet")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                            .foregroundStyle(AppTheme.onSurface)
+                        Text("Start cooking from your planned meals to build your history")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.onSurfaceVariant)
+                    }
+                    Spacer()
                 }
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("No recent cooking")
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundStyle(AppTheme.onSurface)
-                    Text("Complete recipes to see them here")
-                        .font(.caption)
-                        .foregroundStyle(AppTheme.onSurfaceVariant)
+
+                Button(action: { onOpenPlanner?() }) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "book.fill")
+                        Text("View Meal Plan")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(10)
+                    .background(AppTheme.tertiary.opacity(0.1))
+                    .foregroundStyle(AppTheme.tertiary)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
-                Spacer()
+                .buttonStyle(.plain)
             }
             .padding(16)
             .background(AppTheme.surface)
