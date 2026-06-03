@@ -42,6 +42,7 @@ struct HomeScreen: View {
                 } else {
                     recentlyCookedSection
                 }
+                featureDiscoverySection
                 insightsSection
                 Spacer(minLength: 24)
             }
@@ -228,40 +229,85 @@ struct HomeScreen: View {
     }
 
     private var plannedMealsEmptyCard: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            SectionHeader(title: "Planned Meals", subtitle: "\(dayNameForToday())'s meals")
-            Button(action: { onOpenPlanner?() }) {
-                HStack(spacing: 16) {
-                    ZStack {
-                        Circle()
-                            .fill(AppTheme.primary.opacity(0.15))
-                            .frame(width: 48, height: 48)
-                        Image(systemName: "calendar.badge.plus")
-                            .font(.title2)
-                            .foregroundStyle(AppTheme.primary)
-                    }
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("No meals planned for today")
-                            .font(.subheadline)
-                            .fontWeight(.medium)
-                            .foregroundStyle(AppTheme.onSurface)
-                        Text("Open the Planner tab to plan your week")
-                            .font(.caption)
-                            .foregroundStyle(AppTheme.onSurfaceVariant)
-                    }
-                    Spacer()
-                    Image(systemName: "chevron.right")
+        VStack(alignment: .leading, spacing: 16) {
+            SectionHeader(title: "Get Started", subtitle: "Your 3-minute guide")
+
+            VStack(spacing: 12) {
+                quickStartStep(
+                    number: "1",
+                    title: "Browse 415+ recipes",
+                    description: "Find meals you love",
+                    icon: "fork.knife",
+                    action: { selectedTab = 2 }
+                )
+                quickStartStep(
+                    number: "2",
+                    title: "Plan your week",
+                    description: "Choose recipes for each meal",
+                    icon: "calendar.badge.plus",
+                    action: { selectedTab = 3 }
+                )
+                quickStartStep(
+                    number: "3",
+                    title: "Track nutrition",
+                    description: "Log meals and see your stats",
+                    icon: "chart.pie.fill",
+                    action: onNutrition
+                )
+            }
+
+            Button(action: { selectedTab = 2 }) {
+                HStack(spacing: 8) {
+                    Image(systemName: "sparkles")
+                    Text("Start Exploring")
+                        .fontWeight(.semibold)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(12)
+                .background(AppTheme.primary)
+                .foregroundStyle(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            .buttonStyle(.plain)
+        }
+        .padding(16)
+        .background(AppTheme.surface)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .opacity(appeared ? 1 : 0)
+        .offset(y: appeared ? 0 : 20)
+    }
+
+    private func quickStartStep(number: String, title: String, description: String, icon: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle()
+                        .fill(AppTheme.primary.opacity(0.15))
+                        .frame(width: 40, height: 40)
+                    Text(number)
+                        .font(.system(.subheadline, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundStyle(AppTheme.primary)
+                }
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(AppTheme.onSurface)
+                    Text(description)
                         .font(.caption)
                         .foregroundStyle(AppTheme.onSurfaceVariant)
                 }
-                .padding(16)
-                .background(AppTheme.surface)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
             }
-            .buttonStyle(.plain)
-            .accessibilityHint("Double tap to open Planner tab")
+            .padding(12)
+            .background(AppTheme.surfaceVariant.opacity(0.4))
+            .clipShape(RoundedRectangle(cornerRadius: 10))
         }
-        .opacity(appeared ? 1 : 0)
+        .buttonStyle(.plain)
     }
 
     private var recentlyCookedEmptyCard: some View {
@@ -329,6 +375,87 @@ struct HomeScreen: View {
             }
         }
         .opacity(appeared ? 1 : 0)
+    }
+
+    private var featureDiscoverySection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            SectionHeader(title: "Explore More", subtitle: "Features you haven't tried yet")
+
+            VStack(spacing: 10) {
+                if store.pantryItems.isEmpty {
+                    featureCard(
+                        icon: "bag.fill",
+                        iconColor: AppTheme.secondary,
+                        title: "Pantry Manager",
+                        description: "Track ingredients and get expiry alerts",
+                        action: { }
+                    )
+                }
+
+                if store.recipeRatings.isEmpty && store.recipeHistory.count > 0 {
+                    featureCard(
+                        icon: "star.fill",
+                        iconColor: AppTheme.secondary,
+                        title: "Rate Recipes",
+                        description: "Share feedback and unlock ratings badge",
+                        action: { selectedTab = 2 }
+                    )
+                }
+
+                if store.nutritionEntries.isEmpty && store.recipeHistory.count > 0 {
+                    featureCard(
+                        icon: "chart.pie.fill",
+                        iconColor: AppTheme.tertiary,
+                        title: "Nutrition Tracking",
+                        description: "Log meals and monitor your health goals",
+                        action: onNutrition
+                    )
+                }
+
+                if store.favoriteRecipeIds.isEmpty {
+                    featureCard(
+                        icon: "heart.fill",
+                        iconColor: AppTheme.secondary,
+                        title: "Save Favorites",
+                        description: "Build your personal recipe collection",
+                        action: { selectedTab = 2 }
+                    )
+                }
+            }
+        }
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private func featureCard(icon: String, iconColor: Color, title: String, description: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle()
+                        .fill(iconColor.opacity(0.15))
+                        .frame(width: 44, height: 44)
+                    Image(systemName: icon)
+                        .font(.system(size: 20))
+                        .foregroundStyle(iconColor)
+                }
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(AppTheme.onSurface)
+                    Text(description)
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                Spacer()
+                Image(systemName: "arrow.right.circle.fill")
+                    .font(.title3)
+                    .foregroundStyle(iconColor.opacity(0.6))
+            }
+            .padding(12)
+            .background(AppTheme.surfaceVariant.opacity(0.3))
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+        }
+        .buttonStyle(.plain)
     }
 
     private var insightsSection: some View {
