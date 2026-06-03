@@ -9,72 +9,61 @@ struct OnboardingScreen: View {
     @EnvironmentObject var store: AppStore
     var onComplete: () -> Void
 
-    private let commonAllergies = ["Peanuts", "Tree nuts", "Milk", "Eggs", "Wheat", "Soy", "Fish", "Shellfish"]
     private let commonDiets = ["Vegetarian", "Vegan", "Keto", "Paleo", "Low-carb", "Gluten-free", "Dairy-free"]
     private let commonGoals = ["Weight loss", "Muscle gain", "Heart health", "Better sleep", "More energy"]
 
-    @State private var selectedAllergies: Set<String> = []
     @State private var selectedDiets: Set<String> = []
     @State private var selectedGoals: Set<String> = []
-    @State private var otherAllergies: String = ""
     @State private var otherDiets: String = ""
     @State private var otherGoals: String = ""
+    @State private var currentStep: Int = 1
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 28) {
+            VStack(alignment: .leading, spacing: 24) {
+                stepIndicator
                 header
-                allergiesSection
-                dietSection
-                goalsSection
-                getStartedButton
+
+                if currentStep == 1 {
+                    dietSection
+                } else {
+                    goalsSection
+                }
+
+                navigationButtons
+                Spacer(minLength: 24)
             }
             .padding(24)
         }
         .background(AppTheme.background)
         .onAppear {
-            selectedAllergies = Set(store.allergies)
             selectedDiets = Set(store.dietPreferences.map { $0.capitalized })
             selectedGoals = Set(store.healthGoals.map { $0.capitalized })
         }
     }
 
+    private var stepIndicator: some View {
+        HStack(spacing: 8) {
+            ForEach(1...2, id: \.self) { step in
+                Capsule()
+                    .fill(step <= currentStep ? AppTheme.primary : AppTheme.primary.opacity(0.2))
+                    .frame(height: 4)
+            }
+        }
+    }
+
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Welcome to SmartCart")
-                .font(.title)
+            Text(currentStep == 1 ? "What do you eat?" : "Any health goals?")
+                .font(.title2)
                 .fontWeight(.bold)
                 .foregroundStyle(AppTheme.onSurface)
-            Text("Set your preferences so we can tailor recipes to you. You can change these anytime in Settings.")
+            Text(currentStep == 1 ? "Tell us your diet so we can recommend the right recipes." : "Optional: Help us suggest recipes tailored to you.")
                 .font(.subheadline)
                 .foregroundStyle(AppTheme.onSurfaceVariant)
         }
     }
 
-    private var allergiesSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Allergies (we'll exclude these from suggestions)")
-                .font(.headline)
-                .foregroundStyle(AppTheme.onSurface)
-            FlowLayout(spacing: 8) {
-                ForEach(commonAllergies, id: \.self) { item in
-                    Chip(
-                        title: item,
-                        isSelected: selectedAllergies.contains(item)
-                    ) {
-                        if selectedAllergies.contains(item) {
-                            selectedAllergies.remove(item)
-                        } else {
-                            selectedAllergies.insert(item)
-                        }
-                    }
-                }
-            }
-            TextField("Other allergies (comma-separated)", text: $otherAllergies)
-                .textFieldStyle(.roundedBorder)
-                .autocapitalization(.none)
-        }
-    }
 
     private var dietSection: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -103,9 +92,6 @@ struct OnboardingScreen: View {
 
     private var goalsSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Health goals (optional)")
-                .font(.headline)
-                .foregroundStyle(AppTheme.onSurface)
             FlowLayout(spacing: 8) {
                 ForEach(commonGoals, id: \.self) { item in
                     Chip(
@@ -126,10 +112,10 @@ struct OnboardingScreen: View {
         }
     }
 
-    private var getStartedButton: some View {
+    private var navigationButtons: some View {
         VStack(spacing: 12) {
-            Button(action: saveAndComplete) {
-                Text("Get Started")
+            Button(action: handleNext) {
+                Text(currentStep == 1 ? "Continue" : "Get Started")
                     .font(.headline)
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
@@ -137,17 +123,42 @@ struct OnboardingScreen: View {
                     .background(AppTheme.primary)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             }
-            .accessibilityActionLabel("Get Started", descriptive: "Save preferences and finish setup", hint: "Double tap to continue")
-            .accessibilityTouchTarget()
+            .accessibilityActionLabel(currentStep == 1 ? "Continue" : "Get Started")
 
-            Button(action: skipOnboarding) {
-                Text("Skip for now")
-                    .font(.subheadline)
-                    .foregroundStyle(AppTheme.onSurfaceVariant)
+            if currentStep == 1 {
+                Button(action: skipOnboarding) {
+                    Text("Skip preferences")
+                        .font(.subheadline)
+                        .foregroundStyle(AppTheme.primary)
+                        .frame(maxWidth: .infinity)
+                }
+            } else {
+                Button(action: handleBack) {
+                    Text("Back")
+                        .font(.subheadline)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                        .frame(maxWidth: .infinity)
+                }
             }
-            .accessibilityActionLabel("Skip for now", descriptive: "Continue without setting preferences", hint: "You can set allergies and diet later in Settings")
         }
-        .padding(.top, 8)
+        .padding(.top, 12)
+    }
+
+    private func handleNext() {
+        if currentStep == 1 {
+            guard !selectedDiets.isEmpty else { return }
+            withAnimation(.easeInOut(duration: 0.2)) {
+                currentStep = 2
+            }
+        } else {
+            saveAndComplete()
+        }
+    }
+
+    private func handleBack() {
+        withAnimation(.easeInOut(duration: 0.2)) {
+            currentStep = 1
+        }
     }
 
     private func skipOnboarding() {
@@ -157,10 +168,6 @@ struct OnboardingScreen: View {
     }
 
     private func saveAndComplete() {
-        var allergiesList = Array(selectedAllergies)
-        allergiesList.append(contentsOf: otherAllergies.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty })
-        store.setAllergies(allergiesList)
-
         var dietsList = Array(selectedDiets).map { $0.lowercased() }
         dietsList.append(contentsOf: otherDiets.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces).lowercased() }.filter { !$0.isEmpty })
         store.setDietPreferences(dietsList)
