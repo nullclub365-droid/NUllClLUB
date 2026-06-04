@@ -413,14 +413,20 @@ final class AppStore: ObservableObject {
             }
             return (false, "All ingredients are already in your pantry or grocery list!")
         }
+
+        print("[DEBUG] Before adding items: groceryItems.count = \(groceryItems.count)")
         for item in needed {
             let newItem = GroceryItem(id: nextGroceryId, ingredientId: item.ingredientId, quantityText: item.qtyText, source: "planner", isChecked: false, category: item.category, sharedListId: nil)
             nextGroceryId += 1
             groceryItems.append(newItem)
+            print("[DEBUG] Added item: \(item.ingredientId), total now: \(groceryItems.count)")
         }
+        print("[DEBUG] Before saveNow: groceryItems.count = \(groceryItems.count)")
         saveNow()
+        print("[DEBUG] After saveNow: groceryItems.count = \(groceryItems.count)")
         let count = needed.count
         let finalCount = groceryItems.count
+        print("[DEBUG] Returning success: Added \(count), Final count: \(finalCount)")
         return (true, "✅ Added \(count) items! Total in list: \(finalCount)")
     }
 
