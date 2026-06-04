@@ -92,58 +92,59 @@ struct RecipesScreen: View {
                 Button(action: {
                     handleRecipeSelected(3)
                 }) {
-                    ZStack(alignment: .topLeading) {
-                        VStack(alignment: .leading, spacing: 16) {
-                            Text("Trending This Week")
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack {
+                            Text("🔥 TRENDING THIS WEEK")
                                 .font(.caption)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(AppTheme.primary)
-                                .padding(12)
-                                .background(AppTheme.primary.opacity(0.1))
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
-
+                                .fontWeight(.bold)
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 6)
+                                .background(AppTheme.secondary)
+                                .clipShape(RoundedRectangle(cornerRadius: 6))
                             Spacer()
-
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text(recipe.name)
-                                    .font(.headline)
-                                    .fontWeight(.semibold)
-                                    .foregroundStyle(AppTheme.onSurface)
-
-                                HStack(spacing: 12) {
-                                    Label("\(recipe.readyInMinutes) min", systemImage: "clock")
-                                        .font(.caption)
-                                        .foregroundStyle(AppTheme.onSurfaceVariant)
-                                    Label("\(recipe.calories) kcal", systemImage: "flame.fill")
-                                        .font(.caption)
-                                        .foregroundStyle(AppTheme.secondary)
-                                }
-
-                                HStack(spacing: 4) {
-                                    Image(systemName: "star.fill")
-                                        .font(.caption2)
-                                    Text("4.8")
-                                        .font(.caption2)
-                                }
-                                .foregroundStyle(AppTheme.secondary)
-                            }
                         }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(20)
-                        .background(
-                            LinearGradient(
-                                gradient: Gradient(colors: [
-                                    AppTheme.primary.opacity(0.05),
-                                    AppTheme.secondary.opacity(0.05)
-                                ]),
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .border(AppTheme.primary.opacity(0.3), width: 2)
-                        .clipShape(RoundedRectangle(cornerRadius: 16))
+
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text(recipe.name)
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .foregroundStyle(AppTheme.onSurface)
+
+                            HStack(spacing: 16) {
+                                Label("\(recipe.readyInMinutes) min", systemImage: "clock.fill")
+                                    .font(.subheadline)
+                                    .foregroundStyle(AppTheme.onSurfaceVariant)
+                                Label("\(recipe.calories) kcal", systemImage: "flame.fill")
+                                    .font(.subheadline)
+                                    .foregroundStyle(AppTheme.secondary)
+                                Spacer()
+                            }
+
+                            HStack(spacing: 4) {
+                                Image(systemName: "star.fill")
+                                    .font(.caption)
+                                Text("4.8 • 2.3k ratings")
+                                    .font(.caption)
+                            }
+                            .foregroundStyle(AppTheme.secondary)
+                        }
+                        .padding(16)
                     }
-                    .frame(height: 180)
+                    .padding(16)
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [
+                                AppTheme.secondary.opacity(0.12),
+                                AppTheme.primary.opacity(0.08)
+                            ]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .border(AppTheme.secondary, width: 2)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .shadow(color: AppTheme.secondary.opacity(0.3), radius: 8, x: 0, y: 4)
                 }
             }
         }
