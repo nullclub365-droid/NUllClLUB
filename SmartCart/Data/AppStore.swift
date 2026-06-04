@@ -387,11 +387,13 @@ final class AppStore: ObservableObject {
 
         var needed: [(ingredientId: Int64, qtyText: String?, category: String)] = []
         var addedIngredientIds: Set<Int64> = []
+        var recipeCount = 0
 
         for day in plan.days {
             let recipeIds = [day.breakfastId, day.lunchId, day.dinnerId, day.snackId].compactMap { $0 }
             for recipeId in recipeIds {
                 guard let recipe = recipe(byId: recipeId) else { continue }
+                recipeCount += 1
                 if !matchesDiet(recipe: recipe, diets: diets) { continue }
                 if !excludesAllergens(recipe: recipe, ingredientMap: ingredientMap, allergies: allergies) { continue }
                 for ing in recipe.ingredients where !ing.optional {
@@ -406,6 +408,9 @@ final class AppStore: ObservableObject {
         }
 
         if needed.isEmpty {
+            if recipeCount == 0 {
+                return (false, "No recipes in meal plan. Add recipes first!")
+            }
             return (false, "All ingredients are already in your pantry or grocery list!")
         }
         for item in needed {
@@ -415,7 +420,8 @@ final class AppStore: ObservableObject {
         }
         saveNow()
         let count = needed.count
-        return (true, "Added \(count) item\(count == 1 ? "" : "s") to grocery list.")
+        let finalCount = groceryItems.count
+        return (true, "✅ Added \(count) items! Total in list: \(finalCount)")
     }
 
     private func matchesDiet(recipe: Recipe, diets: [String]) -> Bool {
