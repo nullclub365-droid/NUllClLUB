@@ -409,8 +409,11 @@ final class AppStore: ObservableObject {
             return (false, "All ingredients are already in your pantry or grocery list!")
         }
         for item in needed {
-            addGroceryItem(ingredientId: item.ingredientId, quantityText: item.qtyText, category: item.category, source: "planner")
+            let newItem = GroceryItem(id: nextGroceryId, ingredientId: item.ingredientId, quantityText: item.qtyText, source: "planner", isChecked: false, category: item.category, sharedListId: nil)
+            nextGroceryId += 1
+            groceryItems.append(newItem)
         }
+        saveNow()
         let count = needed.count
         return (true, "Added \(count) item\(count == 1 ? "" : "s") to grocery list.")
     }
