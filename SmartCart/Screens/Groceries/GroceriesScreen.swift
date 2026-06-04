@@ -93,7 +93,7 @@ struct GroceriesScreen: View {
                     EmptyStateView(
                         icon: "cart",
                         title: "Your list is empty",
-                        message: "Add ingredients from your pantry or search to build your grocery list.",
+                        message: "Generate a list from your meal plan or add ingredients manually.",
                         actionTitle: "Add items",
                         action: onAddItems
                     )
@@ -135,6 +135,7 @@ struct GroceriesScreen: View {
                 }
             }
         }
+        .id(store.groceryItems.count)
     }
 
     private var pantryTabContent: some View {
