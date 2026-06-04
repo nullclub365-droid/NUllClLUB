@@ -382,9 +382,6 @@ final class AppStore: ObservableObject {
         let pantryIds = Set(pantryItems.map(\.ingredientId))
         let existingGroceryIds = Set(groceryItems.map(\.ingredientId))
 
-        print("[DEBUG] Starting grocery generation")
-        print("[DEBUG] Pantry items: \(pantryItems.count), IDs: \(pantryIds)")
-        print("[DEBUG] Existing grocery items: \(groceryItems.count), IDs: \(existingGroceryIds)")
         let ingredientMap = Dictionary(uniqueKeysWithValues: ingredients.map { ($0.id, $0) })
         let diets = dietPreferences
         let allergies = allergies
@@ -398,33 +395,13 @@ final class AppStore: ObservableObject {
             for recipeId in recipeIds {
                 guard let recipe = recipe(byId: recipeId) else { continue }
                 recipeCount += 1
-                print("[DEBUG] Recipe \(recipeId): \(recipe.name), ingredients: \(recipe.ingredients.count)")
-                if !matchesDiet(recipe: recipe, diets: diets) {
-                    print("[DEBUG]   - Skipped due to diet filter")
-                    continue
-                }
                 if !excludesAllergens(recipe: recipe, ingredientMap: ingredientMap, allergies: allergies) {
-                    print("[DEBUG]   - Skipped due to allergen filter")
                     continue
                 }
-                for ing in recipe.ingredients {
-                    if ing.optional {
-                        print("[DEBUG]   - Ingredient \(ing.ingredientId): OPTIONAL, skipping")
-                        continue
-                    }
-                    if pantryIds.contains(ing.ingredientId) {
-                        print("[DEBUG]   - Ingredient \(ing.ingredientId): IN PANTRY")
-                        continue
-                    }
-                    if existingGroceryIds.contains(ing.ingredientId) {
-                        print("[DEBUG]   - Ingredient \(ing.ingredientId): IN GROCERY")
-                        continue
-                    }
-                    if addedIngredientIds.contains(ing.ingredientId) {
-                        print("[DEBUG]   - Ingredient \(ing.ingredientId): ALREADY ADDED")
-                        continue
-                    }
-                    print("[DEBUG]   - Ingredient \(ing.ingredientId): WILL ADD")
+                for ing in recipe.ingredients where !ing.optional {
+                    if pantryIds.contains(ing.ingredientId) { continue }
+                    if existingGroceryIds.contains(ing.ingredientId) { continue }
+                    if addedIngredientIds.contains(ing.ingredientId) { continue }
                     addedIngredientIds.insert(ing.ingredientId)
                     let category = ingredientMap[ing.ingredientId]?.category ?? "Misc"
                     needed.append((ing.ingredientId, ing.qtyText, category))
@@ -432,30 +409,21 @@ final class AppStore: ObservableObject {
             }
         }
 
-        print("[DEBUG] Recipes found: \(recipeCount), needed ingredients: \(needed.count)")
-        print("[DEBUG] Needed: \(needed.map(\.ingredientId))")
-
         if needed.isEmpty {
             if recipeCount == 0 {
                 return (false, "No recipes in meal plan. Add recipes first!")
             }
-            print("[DEBUG] All ingredients already accounted for - pantry: \(pantryIds.count), grocery: \(existingGroceryIds.count)")
             return (false, "All ingredients are already in your pantry or grocery list!")
         }
 
-        print("[DEBUG] Before adding items: groceryItems.count = \(groceryItems.count)")
         for item in needed {
             let newItem = GroceryItem(id: nextGroceryId, ingredientId: item.ingredientId, quantityText: item.qtyText, source: "planner", isChecked: false, category: item.category, sharedListId: nil)
             nextGroceryId += 1
             groceryItems.append(newItem)
-            print("[DEBUG] Added item: \(item.ingredientId), total now: \(groceryItems.count)")
         }
-        print("[DEBUG] Before saveNow: groceryItems.count = \(groceryItems.count)")
         saveNow()
-        print("[DEBUG] After saveNow: groceryItems.count = \(groceryItems.count)")
         let count = needed.count
         let finalCount = groceryItems.count
-        print("[DEBUG] Returning success: Added \(count), Final count: \(finalCount)")
         return (true, "✅ Added \(count) items! Total in list: \(finalCount)")
     }
 
