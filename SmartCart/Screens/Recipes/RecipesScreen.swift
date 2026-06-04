@@ -87,58 +87,68 @@ struct RecipesScreen: View {
 
     @ViewBuilder
     private var trendingSection: some View {
-        Section("Trending This Week") {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
-                    trendingRecipeCard(3)
-                    trendingRecipeCard(5)
-                    trendingRecipeCard(7)
-                    trendingRecipeCard(12)
-                    trendingRecipeCard(15)
+        Section {
+            if let recipe = store.recipe(byId: 3) {
+                Button(action: {
+                    handleRecipeSelected(3)
+                }) {
+                    ZStack(alignment: .topLeading) {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Text("Trending This Week")
+                                .font(.caption)
+                                .fontWeight(.semibold)
+                                .foregroundStyle(AppTheme.primary)
+                                .padding(12)
+                                .background(AppTheme.primary.opacity(0.1))
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+
+                            Spacer()
+
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text(recipe.name)
+                                    .font(.headline)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(AppTheme.onSurface)
+
+                                HStack(spacing: 12) {
+                                    Label("\(recipe.readyInMinutes) min", systemImage: "clock")
+                                        .font(.caption)
+                                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                                    Label("\(recipe.calories) kcal", systemImage: "flame.fill")
+                                        .font(.caption)
+                                        .foregroundStyle(AppTheme.secondary)
+                                }
+
+                                HStack(spacing: 4) {
+                                    Image(systemName: "star.fill")
+                                        .font(.caption2)
+                                    Text("4.8")
+                                        .font(.caption2)
+                                }
+                                .foregroundStyle(AppTheme.secondary)
+                            }
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(20)
+                        .background(
+                            LinearGradient(
+                                gradient: Gradient(colors: [
+                                    AppTheme.primary.opacity(0.05),
+                                    AppTheme.secondary.opacity(0.05)
+                                ]),
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                        .border(AppTheme.primary.opacity(0.3), width: 2)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                    }
+                    .frame(height: 180)
                 }
-                .padding(.vertical, 8)
             }
         }
         .listRowInsets(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
         .listRowBackground(Color.clear)
-    }
-
-    private func trendingRecipeCard(_ recipeId: Int64) -> some View {
-        Group {
-            if let recipe = store.recipe(byId: recipeId) {
-                Button(action: {
-                    handleRecipeSelected(recipeId)
-                }) {
-                    VStack(alignment: .leading, spacing: 8) {
-                        ZStack {
-                            Circle()
-                                .fill(AppTheme.primary.opacity(0.2))
-                            Image(systemName: "fork.knife")
-                                .font(.system(size: 18))
-                                .foregroundStyle(AppTheme.primary)
-                        }
-                        .frame(width: 40, height: 40)
-
-                        Text(recipe.name)
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(AppTheme.onSurface)
-                            .lineLimit(2)
-                        HStack(spacing: 4) {
-                            Image(systemName: "star.fill")
-                                .font(.caption2)
-                            Text("4.8")
-                                .font(.caption2)
-                        }
-                        .foregroundStyle(AppTheme.secondary)
-                    }
-                    .frame(width: 110)
-                    .padding(10)
-                    .background(AppTheme.surface)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
-            }
-        }
     }
 
     @ViewBuilder
