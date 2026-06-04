@@ -25,6 +25,17 @@ struct HomeScreen: View {
     /// Called when user taps "No meals planned" to open the Planner tab.
     var onOpenPlanner: (() -> Void)? = nil
 
+    private var allFeaturesExplored: Bool {
+        let plannerExplored = (store.currentPlan?.days.count ?? 0) > 0
+        let historyExplored = !store.recipeHistory.isEmpty
+        let pantryExplored = !store.pantryItems.isEmpty
+        let nutritionExplored = !store.nutritionEntries.isEmpty
+        let favoritesExplored = !store.favoriteRecipeIds.isEmpty
+        let ratingsExplored = !store.recipeRatings.isEmpty
+
+        return plannerExplored && historyExplored && pantryExplored && nutritionExplored && favoritesExplored && ratingsExplored
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
@@ -43,7 +54,9 @@ struct HomeScreen: View {
                 } else {
                     recentlyCookedSection
                 }
-                featureDiscoverySection
+                if !allFeaturesExplored {
+                    featureDiscoverySection
+                }
                 insightsSection
                 Spacer(minLength: 24)
             }
