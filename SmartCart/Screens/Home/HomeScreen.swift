@@ -42,7 +42,6 @@ struct HomeScreen: View {
                 } else {
                     recentlyCookedSection
                 }
-                quickAccessGrid
                 featureDiscoverySection
                 insightsSection
                 Spacer(minLength: 24)
