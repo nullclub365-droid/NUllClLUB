@@ -331,52 +331,145 @@ private var plannedMealsEmptyCard: some View {
     }
 
     private var featureDiscoverySection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            SectionHeader(title: "Explore More", subtitle: "Features you haven't tried yet")
+        VStack(alignment: .leading, spacing: 16) {
+            SectionHeader(title: "Explore More", subtitle: "Discover all features")
 
-            VStack(spacing: 10) {
-                if store.pantryItems.isEmpty {
-                    featureCard(
-                        icon: "bag.fill",
-                        iconColor: AppTheme.secondary,
-                        title: "Pantry Manager",
-                        description: "Track ingredients and get expiry alerts",
-                        action: { }
+            VStack(spacing: 12) {
+                // Planning & Cooking Row
+                HStack(spacing: 12) {
+                    featureCompactCard(
+                        icon: "📋",
+                        title: "Meal Planner",
+                        description: "Plan your week",
+                        hasData: (store.currentPlan?.days.count ?? 0) > 0,
+                        color: AppTheme.primary,
+                        action: onOpenPlanner ?? { }
+                    )
+
+                    featureCompactCard(
+                        icon: "🍳",
+                        title: "History",
+                        description: "\(store.recipeHistory.count) cooked",
+                        hasData: !store.recipeHistory.isEmpty,
+                        color: AppTheme.secondary,
+                        action: onCookingHistory
                     )
                 }
 
-                if store.recipeRatings.isEmpty && store.recipeHistory.count > 0 {
-                    featureCard(
-                        icon: "star.fill",
-                        iconColor: AppTheme.secondary,
-                        title: "Rate Recipes",
-                        description: "Share feedback and unlock ratings badge",
+                // Ingredients & Nutrition Row
+                HStack(spacing: 12) {
+                    featureCompactCard(
+                        icon: "🧂",
+                        title: "Pantry",
+                        description: "\(store.pantryItems.count) items",
+                        hasData: !store.pantryItems.isEmpty,
+                        color: AppTheme.tertiary,
                         action: { }
                     )
-                }
 
-                if store.nutritionEntries.isEmpty && store.recipeHistory.count > 0 {
-                    featureCard(
-                        icon: "chart.pie.fill",
-                        iconColor: AppTheme.tertiary,
-                        title: "Nutrition Tracking",
-                        description: "Log meals and monitor your health goals",
+                    featureCompactCard(
+                        icon: "📊",
+                        title: "Nutrition",
+                        description: "Track intake",
+                        hasData: !store.nutritionEntries.isEmpty,
+                        color: .orange,
                         action: onNutrition
                     )
                 }
 
-                if store.favoriteRecipeIds.isEmpty {
-                    featureCard(
-                        icon: "heart.fill",
-                        iconColor: AppTheme.secondary,
-                        title: "Save Favorites",
-                        description: "Build your personal recipe collection",
+                // Favorites & Achievements Row
+                HStack(spacing: 12) {
+                    featureCompactCard(
+                        icon: "❤️",
+                        title: "Favorites",
+                        description: "\(store.favoriteRecipeIds.count) saved",
+                        hasData: !store.favoriteRecipeIds.isEmpty,
+                        color: .red,
                         action: { }
                     )
+
+                    featureCompactCard(
+                        icon: "🏆",
+                        title: "Badges",
+                        description: "Track progress",
+                        hasData: true,
+                        color: AppTheme.primary,
+                        action: onAchievements
+                    )
+                }
+
+                // Full-width feature cards for unused features
+                VStack(spacing: 10) {
+                    if store.recipeRatings.isEmpty && store.recipeHistory.count > 0 {
+                        featureCard(
+                            icon: "star.fill",
+                            iconColor: AppTheme.secondary,
+                            title: "Rate Your Recipes",
+                            description: "Share feedback and unlock the Ratings badge",
+                            action: { }
+                        )
+                    }
+
+                    if store.nutritionEntries.isEmpty && store.recipeHistory.count > 0 {
+                        featureCard(
+                            icon: "clock.fill",
+                            iconColor: AppTheme.secondary,
+                            title: "Cooking Timer",
+                            description: "Time your meals and get push notifications",
+                            action: onTimers
+                        )
+                    }
                 }
             }
         }
         .opacity(appeared ? 1 : 0)
+    }
+
+    private func featureCompactCard(
+        icon: String,
+        title: String,
+        description: String,
+        hasData: Bool,
+        color: Color,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            VStack(spacing: 8) {
+                Text(icon)
+                    .font(.system(size: 24))
+
+                VStack(spacing: 2) {
+                    Text(title)
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(AppTheme.onSurface)
+                        .lineLimit(1)
+
+                    Text(description)
+                        .font(.caption2)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                        .lineLimit(1)
+                }
+
+                if hasData {
+                    HStack(spacing: 2) {
+                        Circle()
+                            .fill(color)
+                            .frame(width: 4, height: 4)
+                        Text("Active")
+                            .font(.caption2)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(color)
+                    }
+                    .padding(.top, 2)
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .padding(12)
+            .background(AppTheme.surfaceVariant.opacity(0.4))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+        .buttonStyle(.plain)
     }
 
     private func featureCard(icon: String, iconColor: Color, title: String, description: String, action: @escaping () -> Void) -> some View {
