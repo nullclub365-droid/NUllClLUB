@@ -407,10 +407,24 @@ final class AppStore: ObservableObject {
                     print("[DEBUG]   - Skipped due to allergen filter")
                     continue
                 }
-                for ing in recipe.ingredients where !ing.optional {
-                    if pantryIds.contains(ing.ingredientId) { continue }
-                    if existingGroceryIds.contains(ing.ingredientId) { continue }
-                    if addedIngredientIds.contains(ing.ingredientId) { continue }
+                for ing in recipe.ingredients {
+                    if ing.optional {
+                        print("[DEBUG]   - Ingredient \(ing.ingredientId): OPTIONAL, skipping")
+                        continue
+                    }
+                    if pantryIds.contains(ing.ingredientId) {
+                        print("[DEBUG]   - Ingredient \(ing.ingredientId): IN PANTRY")
+                        continue
+                    }
+                    if existingGroceryIds.contains(ing.ingredientId) {
+                        print("[DEBUG]   - Ingredient \(ing.ingredientId): IN GROCERY")
+                        continue
+                    }
+                    if addedIngredientIds.contains(ing.ingredientId) {
+                        print("[DEBUG]   - Ingredient \(ing.ingredientId): ALREADY ADDED")
+                        continue
+                    }
+                    print("[DEBUG]   - Ingredient \(ing.ingredientId): WILL ADD")
                     addedIngredientIds.insert(ing.ingredientId)
                     let category = ingredientMap[ing.ingredientId]?.category ?? "Misc"
                     needed.append((ing.ingredientId, ing.qtyText, category))
