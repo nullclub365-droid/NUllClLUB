@@ -30,6 +30,8 @@ struct HomeScreen: View {
             VStack(alignment: .leading, spacing: 24) {
                 headerSection
                 nutritionHeroCard
+                foodLogSection
+                mealPrepSection
                 if store.plannedMealsForToday.isEmpty {
                     if !UserDefaults.standard.bool(forKey: "smartcart_tutorial_shown") {
                         plannedMealsEmptyCard
@@ -145,6 +147,72 @@ struct HomeScreen: View {
                 .font(.subheadline)
                 .foregroundStyle(AppTheme.onPrimaryContainer.opacity(0.7))
         }
+    }
+
+    private var foodLogSection: some View {
+        Button(action: onNutrition) {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle()
+                        .fill(AppTheme.secondary.opacity(0.15))
+                        .frame(width: 48, height: 48)
+                    Image(systemName: "chart.pie.fill")
+                        .font(.system(size: 24))
+                        .foregroundStyle(AppTheme.secondary)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Food Log")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(AppTheme.onSurface)
+                    Text("Track your meals & nutrition")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+            }
+            .padding(12)
+            .background(AppTheme.surfaceVariant.opacity(0.3))
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+        }
+        .buttonStyle(.plain)
+        .opacity(appeared ? 1 : 0)
+    }
+
+    private var mealPrepSection: some View {
+        Button(action: onMealPrep) {
+            HStack(spacing: 12) {
+                ZStack {
+                    Circle()
+                        .fill(AppTheme.tertiary.opacity(0.15))
+                        .frame(width: 48, height: 48)
+                    Image(systemName: "list.bullet.clipboard.fill")
+                        .font(.system(size: 24))
+                        .foregroundStyle(AppTheme.tertiary)
+                }
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Meal Prep")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(AppTheme.onSurface)
+                    Text("Organize & prepare your meals")
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundStyle(AppTheme.onSurfaceVariant)
+            }
+            .padding(12)
+            .background(AppTheme.surfaceVariant.opacity(0.3))
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+        }
+        .buttonStyle(.plain)
+        .opacity(appeared ? 1 : 0)
     }
 
 private var quickAccessGrid: some View {
