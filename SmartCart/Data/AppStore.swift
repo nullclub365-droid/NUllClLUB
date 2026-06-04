@@ -381,6 +381,10 @@ final class AppStore: ObservableObject {
         }
         let pantryIds = Set(pantryItems.map(\.ingredientId))
         let existingGroceryIds = Set(groceryItems.map(\.ingredientId))
+
+        print("[DEBUG] Starting grocery generation")
+        print("[DEBUG] Pantry items: \(pantryItems.count), IDs: \(pantryIds)")
+        print("[DEBUG] Existing grocery items: \(groceryItems.count), IDs: \(existingGroceryIds)")
         let ingredientMap = Dictionary(uniqueKeysWithValues: ingredients.map { ($0.id, $0) })
         let diets = dietPreferences
         let allergies = allergies
@@ -407,10 +411,14 @@ final class AppStore: ObservableObject {
             }
         }
 
+        print("[DEBUG] Recipes found: \(recipeCount), needed ingredients: \(needed.count)")
+        print("[DEBUG] Needed: \(needed.map(\.ingredientId))")
+
         if needed.isEmpty {
             if recipeCount == 0 {
                 return (false, "No recipes in meal plan. Add recipes first!")
             }
+            print("[DEBUG] All ingredients already accounted for - pantry: \(pantryIds.count), grocery: \(existingGroceryIds.count)")
             return (false, "All ingredients are already in your pantry or grocery list!")
         }
 
