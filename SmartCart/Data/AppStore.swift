@@ -398,8 +398,15 @@ final class AppStore: ObservableObject {
             for recipeId in recipeIds {
                 guard let recipe = recipe(byId: recipeId) else { continue }
                 recipeCount += 1
-                if !matchesDiet(recipe: recipe, diets: diets) { continue }
-                if !excludesAllergens(recipe: recipe, ingredientMap: ingredientMap, allergies: allergies) { continue }
+                print("[DEBUG] Recipe \(recipeId): \(recipe.name), ingredients: \(recipe.ingredients.count)")
+                if !matchesDiet(recipe: recipe, diets: diets) {
+                    print("[DEBUG]   - Skipped due to diet filter")
+                    continue
+                }
+                if !excludesAllergens(recipe: recipe, ingredientMap: ingredientMap, allergies: allergies) {
+                    print("[DEBUG]   - Skipped due to allergen filter")
+                    continue
+                }
                 for ing in recipe.ingredients where !ing.optional {
                     if pantryIds.contains(ing.ingredientId) { continue }
                     if existingGroceryIds.contains(ing.ingredientId) { continue }
