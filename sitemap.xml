@@ -36,6 +36,26 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Friendzy -->
+  <url>
+    <loc>https://nullclub365-droid.github.io/NUllClLUB/friendzy.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nullclub365-droid.github.io/NUllClLUB/privacy-friendzy.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://nullclub365-droid.github.io/NUllClLUB/terms-friendzy.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- GymFlow -->
   <url>
     <loc>https://nullclub365-droid.github.io/NUllClLUB/gymflow.html</loc>
