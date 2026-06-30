@@ -9,6 +9,7 @@ import FirebaseAnalytics
 struct HomeScreen: View {
     @EnvironmentObject var store: AppStore
     @EnvironmentObject var referralManager: ReferralManager
+    @ObservedObject private var mealPrepStatus = MealPrepStatusModel.shared
     @State private var appeared = false
 
     var onRecipeSelected: (Int64) -> Void
@@ -41,6 +42,7 @@ struct HomeScreen: View {
             VStack(alignment: .leading, spacing: 24) {
                 headerSection
                 nutritionHeroCard
+                mealPrepStatusCard
                 quickAccessGrid
                 if store.plannedMealsForToday.isEmpty {
                     if !UserDefaults.standard.bool(forKey: "smartcart_tutorial_shown") {
@@ -69,6 +71,7 @@ struct HomeScreen: View {
             try? await Task.sleep(nanoseconds: 400_000_000)
         }
         .onAppear {
+            mealPrepStatus.refresh()
             if AccessibilitySettings.shouldReduceMotion { appeared = true }
             else { withAnimation(.easeOut(duration: 0.2)) { appeared = true } }
         }
@@ -161,7 +164,66 @@ struct HomeScreen: View {
         }
     }
 
-private var quickAccessGrid: some View {
+    @ViewBuilder
+    private var mealPrepStatusCard: some View {
+        if mealPrepStatus.hasInProgressSession {
+            Button(action: onMealPrep) {
+                HStack(spacing: 12) {
+                    Image(systemName: "flame.fill")
+                        .font(.title3)
+                        .foregroundStyle(.white)
+                        .frame(width: 44, height: 44)
+                        .background(AppTheme.primary)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Cook session in progress")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppTheme.onSurface)
+                        Text("Tap to resume your weekly meal prep")
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.onSurfaceVariant)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(AppTheme.onSurfaceVariant)
+                }
+                .padding(14)
+                .background(AppTheme.primaryContainer.opacity(0.35))
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+            }
+            .buttonStyle(.plain)
+        } else {
+            let stash = mealPrepStatus.recentStash
+            if !stash.isEmpty {
+                HStack(spacing: 12) {
+                    Image(systemName: "snowflake")
+                        .font(.title3)
+                        .foregroundStyle(AppTheme.tertiary)
+                        .frame(width: 44, height: 44)
+                        .background(AppTheme.tertiary.opacity(0.15))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("In your freezer")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(AppTheme.onSurface)
+                        Text(stash.prefix(3).joined(separator: ", "))
+                            .font(.caption)
+                            .foregroundStyle(AppTheme.onSurfaceVariant)
+                            .lineLimit(1)
+                    }
+                    Spacer()
+                }
+                .padding(14)
+                .background(AppTheme.surface)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+            }
+        }
+    }
+
+    private var quickAccessGrid: some View {
         VStack(spacing: 12) {
             HStack(spacing: 12) {
                 QuickAccessCard(icon: "chart.pie", title: "Food Log", color: AppTheme.secondary, action: onNutrition)

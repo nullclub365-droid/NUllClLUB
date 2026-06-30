@@ -34,7 +34,8 @@ enum RewardedAdHelper {
             .compactMap({ $0 as? UIWindowScene })
             .first(where: { $0.activationState == .foregroundActive }),
               let window = windowScene.windows.first(where: { $0.isKeyWindow }) ?? windowScene.windows.first,
-              let root = window.rootViewController else { return nil }
-        return root
+              var vc = window.rootViewController else { return nil }
+        while let presented = vc.presentedViewController { vc = presented }
+        return vc
     }
 }

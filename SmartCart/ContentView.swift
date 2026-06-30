@@ -20,6 +20,7 @@ struct ContentView: View {
     @State private var plannerPath: [AppRoute] = []
     @State private var hasInitializedAds = false
     @State private var showTutorial = false
+    @State private var showWeeklyCooking = false
     #if DEBUG
     @State private var showSimulatorATTMessage = false
     #endif
@@ -58,6 +59,17 @@ struct ContentView: View {
         }
         .fullScreenCover(isPresented: $showTutorial) {
             TutorialModal(onDismiss: { showTutorial = false }, dietPreferences: store.dietPreferences)
+        }
+        .fullScreenCover(isPresented: $showWeeklyCooking) {
+            WeeklyCookingWizard(
+                onDismiss: { showWeeklyCooking = false },
+                onOpenRecipe: { id in
+                    showWeeklyCooking = false
+                    selectedTab = 0
+                    homePath.append(.recipeDetail(id))
+                }
+            )
+            .environmentObject(store)
         }
         .alert("Could not save data", isPresented: Binding(
             get: { store.lastPersistenceError != nil },
@@ -151,7 +163,7 @@ struct ContentView: View {
                 onSettings: { homePath.append(.settings) },
                 onPremium: { }, // Premium hidden for next version
                 onNutrition: { homePath.append(.nutrition) },
-                onMealPrep: { homePath.append(.mealPrep) },
+                onMealPrep: { showWeeklyCooking = true },
                 onStatistics: { homePath.append(.statistics) },
                 onTimers: { homePath.append(.timers) },
                 onCookingHistory: { homePath.append(.cookingHistory) },

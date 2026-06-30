@@ -31,3 +31,21 @@ logs/
 # Temporary files
 tmp/
 temp/
+
+# Xcode build artifacts
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.pbxuser
+
+# Swift Package Manager
+.build/
+*.resolved
+
+# CocoaPods
+Pods/
+
+# Video render output (local only)
+videos/
