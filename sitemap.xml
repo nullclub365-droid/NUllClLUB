@@ -17,7 +17,13 @@
   </url>
   <url>
     <loc>https://nullclub365-droid.github.io/NUllClLUB/privacy-smartcart.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://nullclub365-droid.github.io/NUllClLUB/privacy-smartcart-es.html</loc>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
