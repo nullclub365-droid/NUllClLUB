@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join a Friendzy room | NULL CLUB</title>
+  <meta name="description" content="Join your friends' Friendzy room. Open the app with the room code, or get Friendzy on the App Store.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .room-code { font-family: "Syne", sans-serif; font-weight: 800; font-size: 4rem; letter-spacing: 0.4em; margin: 0.5rem 0 1rem; padding-left: 0.4em; color: #FF6B00; }
+    .steps { text-align: left; max-width: 26rem; margin: 1.5rem auto 0; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="page-content" style="text-align:center">
+      <h1>You're invited to a Friendzy room 🦊</h1>
+      <p id="intro">Your friends are playing together, everyone on their own phone.</p>
+      <div class="room-code" id="code" aria-label="Room code">····</div>
+      <div class="cta-row" style="justify-content:center">
+        <a href="#" id="open" class="cta">Open in Friendzy</a>
+        <a href="https://apps.apple.com/app/id6748401981" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Get Friendzy</a>
+      </div>
+      <ol class="steps">
+        <li>No app yet? Get Friendzy from the App Store (free).</li>
+        <li>Come back here and tap <strong>Open in Friendzy</strong> — or open the app, tap <strong>Join</strong> and type the code.</li>
+      </ol>
+    </div>
+  </main>
+  <script>
+    (function () {
+      // Codes are 4 letters from the app's consonant alphabet; anything else is ignored.
+      var raw = (new URLSearchParams(window.location.search).get("code") || "").toUpperCase();
+      var code = /^[BCDFGHJKLMNPQRSTVWXZ]{4}$/.test(raw) ? raw : "";
+      var open = document.getElementById("open");
+      if (code) {
+        document.getElementById("code").textContent = code;
+        document.getElementById("code").setAttribute("aria-label", "Room code " + code.split("").join(" "));
+        open.href = "friendzy://join?code=" + code;
+      } else {
+        document.getElementById("code").style.display = "none";
+        document.getElementById("intro").textContent = "This invite link is missing its room code — ask your friend for the 4-letter code.";
+        open.href = "friendzy://";
+      }
+    })();
+  </script>
+</body>
+</html>

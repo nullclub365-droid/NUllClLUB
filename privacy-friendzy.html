@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Friendzy | NULL CLUB</title>
-  <meta name="description" content="Friendzy privacy policy: on-device preferences only, no accounts, no data collection.">
+  <meta name="description" content="Friendzy privacy policy: on-device preferences, optional multi-phone rooms (nickname and game answers, deleted when the game ends), ads and analytics.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,15 +30,27 @@
 
         <h3>1. Information we collect</h3>
         <p><strong>Information stored only on your device</strong></p>
-        <p>Friendzy stores the following preferences locally on your device using your device's built-in storage (Apple's UserDefaults). This data never leaves your device and is not sent to any server:</p>
-        <ul>
-          <li>Whether you have completed the first-launch walkthrough.</li>
-          <li>Your haptic feedback preference (on/off).</li>
-        </ul>
+        <p>Friendzy stores the following preferences locally on your device using your device's built-in storage (Apple's UserDefaults). This data stays on your device:</p>
+      <ul>
+        <li>Whether you have completed the first-launch walkthrough.</li>
+        <li>Your haptic feedback preference (on/off).</li>
+        <li>The nickname you last used in a multi-phone room, and that room's code (so you can rejoin it).</li>
+      </ul>
         <p>We do not collect your name, email address, phone number, or any other contact information. We do not require you to create an account to use Friendzy.</p>
 
         <p><strong>Game content</strong></p>
-        <p>All game prompts (questions, dares, words, trivia) are bundled inside the app itself. No prompt data is sent to or fetched from a remote server during gameplay.</p>
+        <p>All game prompts (questions, dares, words, trivia) are bundled inside the app itself. When you play on one phone, nothing about the game leaves your device.</p>
+      <p><strong>Multi-phone rooms (optional)</strong></p>
+      <p>If you choose "Play on all phones" or join a friend's room, the app connects to Google Firebase Realtime Database so the phones in the room can play together. While the room exists, the following is stored there:</p>
+      <ul>
+        <li>The nickname you type (it doesn't have to be your real name) and whether your phone is connected.</li>
+        <li>A random identifier created by Firebase Anonymous Authentication. It is not linked to your name, email, phone number or Apple ID.</li>
+        <li>The room's 4-letter code, the game being played, and what players do in it: votes, answers, scores, and any one-word answers or clues typed in Word Association and Spy.</li>
+        <li>Secret game cards (your Mafia role or Spy card), which only your phone can read.</li>
+      </ul>
+      <p>Everything typed in a room is shown only to the other players in that room, who need the room code to join. Words are checked against a filter on your phone before they are sent, and the host can hide any word. A room and everything in it are deleted when the host ends the game, or when the host starts a new room. We don't use room contents for advertising or analytics.</p>
+      <p><strong>App integrity (Firebase App Check)</strong></p>
+      <p>To stop other apps and scripts from using Friendzy's servers, the app uses Firebase App Check with Apple's App Attest. This sends Apple's proof that the request comes from the genuine Friendzy app; it contains no personal information.</p>
 
         <p><strong>Advertising (Google AdMob)</strong></p>
         <p>Friendzy is free and shows ads between game sessions (never during active gameplay), served by Google AdMob. AdMob may collect device identifiers, approximate location derived from your IP address, and ad interaction data to deliver, measure, and limit the frequency of ads. On first launch, iOS asks whether Friendzy may track you across other companies' apps and websites (App Tracking Transparency). If you decline, your device's advertising identifier is not shared and you will see non-personalised ads. See <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a>.</p>
@@ -49,6 +61,7 @@
         <h3>2. Information we do not collect</h3>
         <ul>
           <li>We do not collect your precise location.</li>
+        <li>We do not require an account, and multi-phone rooms never ask for your real name, email or phone number.</li>
           <li>We do not access your contacts, camera, microphone, or photo library.</li>
           <li>We do not sell your personal data. Data is shared with Google only as described above, to serve ads and provide analytics and crash reporting.</li>
         </ul>
@@ -62,6 +75,7 @@
         <h3>5. Your choices</h3>
         <ul>
           <li>You can clear all on-device preferences by deleting and reinstalling the app.</li>
+        <li>Multi-phone rooms are optional; every game except Word Association can be played on one phone without them. To have a room's data deleted sooner, the host can end the game, or contact us via the Support page with the room code.</li>
           <li>You can allow or deny tracking at any time in iOS Settings → Privacy &amp; Security → Tracking.</li>
         </ul>
 
@@ -72,7 +86,7 @@
         <p>If you have questions about this privacy policy or Friendzy's practices, please contact us via the <a href="support.html">Support</a> page.</p>
 
         <p>Related: <a href="terms-friendzy.html">Friendzy Terms of Use</a>.</p>
-        <p class="privacy-updated">Last updated: October 13, 2026</p>
+        <p class="privacy-updated">Last updated: October 20, 2026</p>
       </section>
     </div>
   </main>
