@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join a Friendzy room | NULL CLUB</title>
-  <meta name="description" content="Join your friends' Friendzy room. Open the app with the room code, or get Friendzy on the App Store.">
+  <meta name="description" content="Join your friends' Friendzy room. Open the app with the room code, or get Friendzy on the App Store or Google Play.">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,10 +24,11 @@
       <div class="room-code" id="code" aria-label="Room code">····</div>
       <div class="cta-row" style="justify-content:center">
         <a href="#" id="open" class="cta">Open in Friendzy</a>
-        <a href="https://apps.apple.com/app/id6782549607" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Get Friendzy</a>
+        <a href="https://apps.apple.com/app/id6782549607" id="appstore" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.nullclub.friendzy" id="playstore" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Google Play</a>
       </div>
       <ol class="steps">
-        <li>No app yet? Get Friendzy from the App Store (free).</li>
+        <li>No app yet? Get Friendzy from the App Store or Google Play (free).</li>
         <li>Come back here and tap <strong>Open in Friendzy</strong> — or open the app, tap <strong>Join</strong> and type the code.</li>
       </ol>
     </div>
@@ -38,6 +39,12 @@
       var raw = (new URLSearchParams(window.location.search).get("code") || "").toUpperCase();
       var code = /^[BCDFGHJKLMNPQRSTVWXZ]{4}$/.test(raw) ? raw : "";
       var open = document.getElementById("open");
+      // Show the visitor's own store first (both stay visible for anyone else).
+      var ua = navigator.userAgent || "";
+      if (/Android/i.test(ua)) {
+        var play = document.getElementById("playstore");
+        play.parentNode.insertBefore(play, document.getElementById("appstore"));
+      }
       if (code) {
         document.getElementById("code").textContent = code;
         document.getElementById("code").setAttribute("aria-label", "Room code " + code.split("").join(" "));
