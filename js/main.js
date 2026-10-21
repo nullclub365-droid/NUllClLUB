@@ -32,8 +32,9 @@
       if (e.target.closest('.product-link') && !e.target.closest('.product-link--disabled')) {
         return;
       }
-      var url = card.getAttribute('data-detail-url');
-      if (url) {
+      // Only follow our own page names (e.g. "smartcart.html"), never arbitrary URLs
+      var url = card.getAttribute('data-detail-url') || '';
+      if (/^[a-z0-9-]+\.html$/.test(url)) {
         window.location.href = url;
       }
     });

@@ -32,16 +32,18 @@
     gtag('js', new Date());
     gtag('config', 'G-SMARTCART-GA4', { 'page_path': window.location.pathname });
 
-    // Track App Store link clicks
+    // Track App Store link clicks (compare the real hostname, not a substring of the URL)
     document.addEventListener('click', function(e) {
-      if (e.target.href && e.target.href.includes('apps.apple.com')) {
+      var link = e.target.closest && e.target.closest('a[href]');
+      var host = link ? new URL(link.href, location.href).hostname : '';
+      if (host === 'apps.apple.com') {
         gtag('event', 'app_store_click', {
           'event_category': 'engagement',
           'event_label': 'SmartCart App Store',
           'value': 1
         });
       }
-      if (e.target.href && e.target.href.includes('play.google.com')) {
+      if (host === 'play.google.com') {
         gtag('event', 'play_store_click', {
           'event_category': 'engagement',
           'event_label': 'SmartCart Google Play',
