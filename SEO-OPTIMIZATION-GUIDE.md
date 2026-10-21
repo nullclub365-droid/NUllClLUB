@@ -210,12 +210,12 @@ SmartCart plans your meals in 5 minutes, auto-generates a smart grocery list, an
 
 1. **Verify site:**
    - Go to: https://search.google.com/search-console
-   - Add property: https://nullclub365-droid.github.io/NUllClLUB/
+   - Add property: https://nullclub.xyz/
    - Verify via DNS record (recommended)
 
 2. **Submit sitemap:**
    - Sitemaps → Add new sitemap
-   - Enter: https://nullclub365-droid.github.io/NUllClLUB/sitemap.xml
+   - Enter: https://nullclub.xyz/sitemap.xml
 
 3. **Monitor:**
    - Search Analytics (impressions, clicks, rankings)

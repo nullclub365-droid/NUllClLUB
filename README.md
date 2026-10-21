@@ -1,6 +1,6 @@
 # NULL CLUB — Company website
 
-A 3D-style static site for **NULL CLUB**, showcasing SmartCart, Saidu, GymFlow, MemoroLearn (coming soon), and ready for privacy policy and support pages.
+A static site for **NULL CLUB**, showcasing SmartCart, Saidu, GymFlow, MemoroLearn (coming soon), and ready for privacy policy and support pages.
 
 ## Run locally
 
@@ -18,13 +18,12 @@ Then visit `http://localhost:8000`.
 
 ## Structure
 
-- **index.html** — Landing: hero with Three.js 3D background, products section, footer.
+- **index.html** — Landing: hero with the logo mark, app lineup, house rules, footer.
 - **privacy.html** — Placeholder for your privacy policy (replace content when ready).
 - **support.html** — Placeholder for support (FAQ, contact, or links to your help desk).
-- **css/styles.css** — Layout, typography, glassmorphism, card hover effects.
-- **js/scene.js** — Three.js hero scene (floating shapes, lights).
-- **js/main.js** — Smooth scroll, optional parallax, clickable app cards.
-- **assets/** — Favicon and (optional) app icons.
+- **css/styles.css** — Paper-and-ink theme shared by every page, brand colors from the logo.
+- **js/main.js** — Smooth scroll, clickable app rows, GymFlow exercise thumbnails.
+- **assets/** — Favicon, logo mark (`mark.svg`), GymFlow exercise art.
 
 ## Adding app store links
 
@@ -40,5 +39,4 @@ Upload the folder to any static host (GitHub Pages, Netlify, Vercel, or your own
 ## Tech
 
 - Vanilla HTML, CSS, JavaScript.
-- [Three.js](https://threejs.org/) (CDN) for the hero 3D background.
-- Fonts: Syne (display), DM Sans (body).
+- Fonts: Bricolage Grotesque (display + body), IBM Plex Mono (labels).

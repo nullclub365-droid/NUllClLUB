@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | NULL CLUB</title>
+  <meta name="robots" content="noindex">
+  <!-- GitHub Pages serves this file for any missing path, so links are absolute to the site root -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .lost { text-align: center; padding-top: clamp(3rem, 10vw, 6rem); }
+    .lost-code { display: flex; align-items: center; justify-content: center; gap: 0.08em; margin: 0 0 1.5rem; font-family: var(--font-display); font-weight: 800; font-size: clamp(6rem, 26vw, 12rem); line-height: 0.85; letter-spacing: -0.05em; color: var(--ink); }
+    .lost-code img { width: 0.78em; height: 0.78em; animation: wobble 3s ease-in-out infinite; }
+    .lost .cta-row { justify-content: center; }
+    @keyframes wobble { 50% { transform: rotate(-14deg); } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">NULL CLUB</a>
+    <nav class="nav">
+      <a href="/#products">Apps</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <div class="page-content lost">
+      <p class="lost-code" aria-label="404">4<img src="/assets/mark.svg" alt="">4</p>
+      <h1>This page is null.</h1>
+      <p>There’s nothing at this address. It may have moved, or the link has a typo.</p>
+      <div class="cta-row">
+        <a href="/" class="cta">Back to the homepage</a>
+        <a href="/support.html" class="cta cta-ghost">Get help</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

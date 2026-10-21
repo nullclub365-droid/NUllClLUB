@@ -10,15 +10,18 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="SmartCart — Meal planner, grocery list & food log">
   <meta property="og:description" content="Plan your meals, generate a smart grocery list, cook from hundreds of recipes, and track what you eat — all in SmartCart from NULL CLUB.">
-  <meta property="og:image" content="assets/favicon.svg">
+  <meta property="og:image" content="https://nullclub.xyz/assets/og/smartcart.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nullclub.xyz/assets/og/smartcart.png">
   <meta name="twitter:title" content="SmartCart — Meal planner, grocery list & food log">
   <meta name="twitter:description" content="Weekly meal planner, grocery list, and food log in one app, from NULL CLUB.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
   <!-- Google Analytics 4 -->
@@ -55,7 +58,7 @@
       "@type": "SoftwareApplication",
       "name": "SmartCart",
       "description": "Weekly meal planner, grocery list, and food log in one app",
-      "url": "https://nullclub365-droid.github.io/NUllClLUB/smartcart.html",
+      "url": "https://nullclub.xyz/smartcart.html",
       "applicationCategory": "LifestyleApplication",
       "operatingSystem": "ANDROID, IOS",
       "offers": {
@@ -71,7 +74,7 @@
       "creator": {
         "@type": "Organization",
         "name": "NULL CLUB",
-        "url": "https://nullclub365-droid.github.io/NUllClLUB/"
+        "url": "https://nullclub.xyz/"
       }
     }
   </script>
@@ -86,9 +89,19 @@
     </nav>
   </header>
 
-  <main class="page app-page">
+  <main class="page app-page" style="--app:var(--teal)">
     <div class="page-content">
       <a href="index.html#products" class="back-link">← All apps</a>
+
+      <div class="app-scene app-hero-scene" aria-hidden="true">
+        <div class="scene-list">
+          <p class="scene-list-title">Sunday · rice bowl</p>
+          <p class="done">Chicken breast</p>
+          <p class="done">Broccoli</p>
+          <p>Brown rice</p>
+          <p>Soy sauce</p>
+        </div>
+      </div>
 
       <header class="app-header">
         <h1 class="app-title">SmartCart</h1>
@@ -124,6 +137,33 @@
           <h3>Food Log</h3>
           <p>Track calories and protein with a simple, no-noise flow.</p>
         </article>
+      </section>
+
+      <section class="app-screens" aria-label="SmartCart screens">
+        <h2>Inside the app</h2>
+        <p>Real screens from the current version. Swipe to see more.</p>
+        <div class="screens-strip">
+          <figure>
+            <img src="assets/clips/smartcart-1.webp" alt="SmartCart: Plan the week" loading="lazy" decoding="async" width="480" height="1066">
+            <figcaption>Plan the week</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/clips/smartcart-2.webp" alt="SmartCart: The list writes itself" loading="lazy" decoding="async" width="480" height="1066">
+            <figcaption>The list writes itself</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/clips/smartcart-3.webp" alt="SmartCart: Hundreds of recipes" loading="lazy" decoding="async" width="480" height="1066">
+            <figcaption>Hundreds of recipes</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/clips/smartcart-4.webp" alt="SmartCart: Add what’s missing" loading="lazy" decoding="async" width="480" height="1066">
+            <figcaption>Add what’s missing</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/clips/smartcart-5.webp" alt="SmartCart: Cook step by step" loading="lazy" decoding="async" width="480" height="1066">
+            <figcaption>Cook step by step</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="app-section" id="features">

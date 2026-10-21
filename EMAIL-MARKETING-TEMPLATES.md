@@ -28,7 +28,7 @@
 
 <p><a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" style="background: #2E7D32; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; display: inline-block;">Get SmartCart on App Store</a></p>
 
-<p>Questions? Check out our <a href="https://nullclub365-droid.github.io/NUllClLUB/support.html">support page</a> or <a href="https://nullclub365-droid.github.io/NUllClLUB/privacy-smartcart.html">privacy policy</a>.</p>
+<p>Questions? Check out our <a href="https://nullclub.xyz/support.html">support page</a> or <a href="https://nullclub.xyz/privacy-smartcart.html">privacy policy</a>.</p>
 
 <p>Eat well,<br>
 The NULL CLUB Team</p>
@@ -238,7 +238,7 @@ The NULL CLUB Team</p>
 
 <p><a href="https://apps.apple.com/us/app/memorolearn/id6762502128" style="background: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; display: inline-block;">Get MemoroLearn on App Store</a></p>
 
-<p>Questions? Check our <a href="https://nullclub365-droid.github.io/NUllClLUB/support.html">support page</a>.</p>
+<p>Questions? Check our <a href="https://nullclub.xyz/support.html">support page</a>.</p>
 
 <p>Happy learning,<br>
 The NULL CLUB Team</p>

@@ -39,18 +39,72 @@
     });
   });
 
-  // Optional: subtle parallax on hero content
-  var hero = document.getElementById('hero');
-  if (hero) {
-    window.addEventListener('scroll', function () {
-      var scrolled = window.scrollY;
-      var rate = scrolled * 0.15;
-      var content = hero.querySelector('.hero-content');
-      if (content && scrolled < window.innerHeight) {
-        content.style.transform = 'translateY(' + rate + 'px)';
-      }
+  // App preview clips: step through real screens like a short story reel
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.clip').forEach(function (clip) {
+    var screens = clip.querySelectorAll('.clip-phone img');
+    var captions = (clip.getAttribute('data-captions') || '').split('|');
+    var captionEl = clip.querySelector('.clip-caption');
+    var bars = clip.querySelector('.clip-bars');
+    var duration = 2800;
+    var index = 0;
+    var timer = null;
+    var visible = false;
+    var hovered = false;
+    if (screens.length < 2) return;
+
+    bars.innerHTML = '';
+    screens.forEach(function () { bars.appendChild(document.createElement('i')); });
+    clip.style.setProperty('--clip-dur', duration + 'ms');
+
+    function show(i) {
+      index = (i + screens.length) % screens.length;
+      screens.forEach(function (img, n) { img.classList.toggle('is-on', n === index); });
+      Array.prototype.forEach.call(bars.children, function (bar, n) {
+        bar.classList.remove('is-active');
+        bar.classList.toggle('is-done', n < index);
+      });
+      // Restart the fill animation on the current bar
+      void bars.children[index].offsetWidth;
+      if (!reduceMotion) bars.children[index].classList.add('is-active');
+      else bars.children[index].classList.add('is-done');
+      if (captionEl && captions[index]) captionEl.textContent = captions[index];
+      // Warm the next screen so the swap never flashes
+      var next = screens[(index + 1) % screens.length];
+      if (next.loading === 'lazy') next.loading = 'eager';
+    }
+
+    function schedule() {
+      clearTimeout(timer);
+      if (reduceMotion || !visible || hovered) return;
+      timer = setTimeout(function () { show(index + 1); schedule(); }, duration);
+    }
+
+    function setPaused(paused) {
+      clip.classList.toggle('is-paused', paused);
+    }
+
+    clip.addEventListener('mouseenter', function () { hovered = true; setPaused(true); clearTimeout(timer); });
+    clip.addEventListener('mouseleave', function () { hovered = false; setPaused(false); show(index); schedule(); });
+    // Tapping the phone skips ahead instead of opening the app page
+    clip.addEventListener('click', function (e) {
+      e.stopPropagation();
+      show(index + 1);
+      schedule();
     });
-  }
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
+        setPaused(!visible);
+        if (visible) { show(index); schedule(); } else { clearTimeout(timer); }
+      }, { threshold: 0.4 }).observe(clip);
+    } else {
+      visible = true;
+      schedule();
+    }
+    show(0);
+  });
 
   // GymFlow: attach exercise thumbnails based on slugified names
   var librarySection = document.querySelector('.library-section');

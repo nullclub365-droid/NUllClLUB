@@ -36,7 +36,7 @@ Replace `G-SMARTCART-ID` in `smartcart.html` with your Measurement ID:
 ### Step 1: Add Property
 1. Go to https://search.google.com/search-console
 2. Click **Add property**
-3. Enter URL: `https://nullclub365-droid.github.io/NUllClLUB/smartcart.html`
+3. Enter URL: `https://nullclub.xyz/smartcart.html`
 4. Choose verification method:
    - **HTML file:** Download file, place in repo root
    - **DNS record:** Add CNAME to your domain registrar (if using custom domain)
@@ -49,22 +49,22 @@ Replace `G-SMARTCART-ID` in `smartcart.html` with your Measurement ID:
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nullclub365-droid.github.io/NUllClLUB/index.html</loc>
+    <loc>https://nullclub.xyz/index.html</loc>
     <lastmod>2026-05-13</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nullclub365-droid.github.io/NUllClLUB/smartcart.html</loc>
+    <loc>https://nullclub.xyz/smartcart.html</loc>
     <lastmod>2026-05-13</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nullclub365-droid.github.io/NUllClLUB/saidu.html</loc>
+    <loc>https://nullclub.xyz/saidu.html</loc>
     <lastmod>2026-05-13</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nullclub365-droid.github.io/NUllClLUB/privacy.html</loc>
+    <loc>https://nullclub.xyz/privacy.html</loc>
     <lastmod>2026-05-13</lastmod>
     <priority>0.5</priority>
   </url>
@@ -72,7 +72,7 @@ Replace `G-SMARTCART-ID` in `smartcart.html` with your Measurement ID:
 ```
 
 2. Go to Search Console → Sitemaps
-3. Paste URL: `https://nullclub365-droid.github.io/NUllClLUB/sitemap.xml`
+3. Paste URL: `https://nullclub.xyz/sitemap.xml`
 4. Click Submit
 
 ### Step 3: Create robots.txt
@@ -83,7 +83,7 @@ User-agent: *
 Allow: /
 Disallow: /private/
 
-Sitemap: https://nullclub365-droid.github.io/NUllClLUB/sitemap.xml
+Sitemap: https://nullclub.xyz/sitemap.xml
 ```
 
 ## 3. Key Analytics to Track

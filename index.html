@@ -3,106 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NULL CLUB — SmartCart, Saidu, GymFlow, MemoroLearn</title>
-  <meta name="description" content="NULL CLUB builds small, privacy-first apps like SmartCart, Saidu, Friendzy, GymFlow, and MemoroLearn — for better planning, playing, training, and learning in everyday life.">
-  <meta name="keywords" content="NULL CLUB, SmartCart app, Saidu app, Friendzy app, GymFlow app, MemoroLearn app, meal planner, grocery list, food log, party games, iPhone party game, workout planner, exercise library, offline study app, privacy-first apps">
+  <title>NULL CLUB — SmartCart, Friendzy, GymFlow, MemoroLearn</title>
+  <meta name="description" content="NULL CLUB builds small, privacy-first apps like SmartCart, Friendzy, GymFlow, and MemoroLearn — for better planning, playing, training, and learning in everyday life.">
+  <meta name="keywords" content="NULL CLUB, SmartCart app, Friendzy app, GymFlow app, MemoroLearn app, meal planner, grocery list, food log, party games, Android party game, iPhone party game, workout planner, exercise library, offline study app, privacy-first apps">
   <meta name="robots" content="index,follow">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="NULL CLUB — SmartCart, Saidu, Friendzy, GymFlow, MemoroLearn">
-  <meta property="og:description" content="SmartCart for meal planning, Saidu and Friendzy for party games, GymFlow for workouts, and MemoroLearn for offline study — all from NULL CLUB.">
-  <meta property="og:image" content="assets/favicon.svg">
+  <meta property="og:title" content="NULL CLUB — SmartCart, Friendzy, GymFlow, MemoroLearn">
+  <meta property="og:description" content="SmartCart for meal planning, Friendzy for party games, GymFlow for workouts, and MemoroLearn for offline study — all from NULL CLUB.">
+  <meta property="og:image" content="https://nullclub.xyz/assets/og/home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="NULL CLUB — SmartCart, Saidu, Friendzy, GymFlow, MemoroLearn">
-  <meta name="twitter:description" content="SmartCart for meals, Saidu and Friendzy for parties, GymFlow for training, MemoroLearn for offline reading and notes.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nullclub.xyz/assets/og/home.png">
+  <meta name="twitter:title" content="NULL CLUB — SmartCart, Friendzy, GymFlow, MemoroLearn">
+  <meta name="twitter:description" content="SmartCart for meals, Friendzy for parties, GymFlow for training, MemoroLearn for offline reading and notes.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="home">
   <header class="header">
     <a href="index.html" class="logo">NULL CLUB</a>
     <nav class="nav">
-      <a href="#products">Products</a>
+      <a href="#products">Apps</a>
       <a href="privacy.html">Privacy</a>
       <a href="support.html">Support</a>
     </nav>
   </header>
 
+  <!-- Brand mark, drawn once and reused -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 100 100">
+      <g fill="none" stroke-width="9">
+        <path class="mark-n" d="M22 14V50M20 14L80 82M70 24V68" stroke="#4CAF93"/>
+        <path class="mark-o" d="M46.7 17.2A36 36 0 0 1 85.5 72.6" stroke="#F2A365"/>
+        <path class="mark-b" d="M20 52A36 36 0 0 0 49.7 87.5" stroke="#5A7DBE"/>
+      </g>
+    </symbol>
+  </svg>
+
   <main>
-    <section class="hero" id="hero">
-      <canvas id="hero-canvas" aria-hidden="true"></canvas>
-      <div class="hero-content">
-        <h1 class="hero-title">NULL CLUB</h1>
-        <p class="hero-tagline">We build apps that matter.</p>
-        <p class="hero-desc">Small, focused tools for meal planning, party games, workouts, and study — designed for privacy and clarity.</p>
-        <a href="#products" class="cta">See our apps</a>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="kicker">Independent app studio · Four apps and counting</p>
+        <h1 class="hero-title">Small apps for <span class="hl hl--teal">dinner</span>, <span class="hl hl--orange">game&nbsp;night</span>, <span class="hl hl--blue">leg&nbsp;day</span> and late&#8209;night reading.</h1>
+        <p class="hero-desc">NULL CLUB makes four apps. Each one does a single job, most of them work without an account, and your stuff stays on your phone.</p>
+        <div class="cta-row">
+          <a href="#products" class="cta">Meet the apps</a>
+          <a href="support.html" class="cta cta-ghost">Say hello</a>
+        </div>
+      </div>
+
+      <div class="hero-board" aria-hidden="true">
+        <svg class="hero-mark" viewBox="0 0 100 100"><use href="#mark"/></svg>
+        <div class="sticker sticker--teal" style="--r:-8deg;--x:2%;--y:6%">SmartCart</div>
+        <div class="sticker sticker--red" style="--r:7deg;--x:62%;--y:2%">Friendzy</div>
+        <div class="sticker sticker--blue" style="--r:9deg;--x:0%;--y:72%">GymFlow</div>
+        <div class="sticker sticker--ink" style="--r:-10deg;--x:50%;--y:86%">MemoroLearn</div>
       </div>
     </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Plan the week</span><i>✦</i><span>Pass the phone</span><i>✦</i><span>One more rep</span><i>✦</i><span>Read it out loud</span><i>✦</i><span>No sign-up wall</span><i>✦</i>
+        <span>Plan the week</span><i>✦</i><span>Pass the phone</span><i>✦</i><span>One more rep</span><i>✦</i><span>Read it out loud</span><i>✦</i><span>No sign-up wall</span><i>✦</i>
+      </div>
+    </div>
 
     <section class="products" id="products">
-      <h2 class="section-title">Our apps</h2>
-      <p class="section-intro">Each app does one job well: plan meals with SmartCart, play together with Saidu or Friendzy, train with GymFlow, or study offline with MemoroLearn. No clutter, no lock-in — just tools that fit into your day.</p>
-      <div class="product-cards">
-        <article class="product-card product-card--clickable" data-detail-url="smartcart.html">
-          <div class="product-card-visual"></div>
-          <h3><a href="smartcart.html">SmartCart</a></h3>
-          <p>Weekly meal planner, grocery list, and food log in one app. Plan your week, shop with a smart grocery list from your meals, cook from hundreds of recipes, and track what you eat.</p>
-          <a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" class="product-link" target="_blank" rel="noopener noreferrer">Get on App Store</a>
-          <a href="https://play.google.com/store/apps/details?id=com.nullclub.smartcartv2" class="product-link" target="_blank" rel="noopener noreferrer">Get on Google Play</a>
-        </article>
-        <article class="product-card product-card--clickable" data-detail-url="saidu.html">
-          <div class="product-card-visual"></div>
-          <h3><a href="saidu.html">Saidu</a></h3>
-          <p>A collection of party games you play together on one device. No sign-up, no accounts—just pass the phone and play. Perfect for game nights, trips, and get-togethers.</p>
-          <a href="https://apps.apple.com/us/app/saidu/id6758945621" class="product-link" target="_blank" rel="noopener noreferrer">Get on App Store</a>
-          <a href="https://play.google.com/store/apps/details?id=com.saidu.game" class="product-link" target="_blank" rel="noopener noreferrer">Get on Google Play</a>
-        </article>
-        <article class="product-card product-card--clickable product-card-coming" data-detail-url="friendzy.html">
-          <div class="product-card-visual product-card-visual--soon"></div>
-          <span class="badge">Coming soon</span>
-          <h3><a href="friendzy.html">Friendzy</a></h3>
-          <p>Party game app for iPhone. Truth or Dare, Mafia, Alias, Trivia, and more on one phone. Let the chaos begin.</p>
-          <a href="friendzy.html" class="product-link">Learn more</a>
-        </article>
-        <article class="product-card product-card--clickable product-card-coming" data-detail-url="gymflow.html">
-          <div class="product-card-visual product-card-visual--soon"></div>
-          <span class="badge">Coming soon</span>
-          <h3><a href="gymflow.html">GymFlow</a></h3>
-          <p>Workouts and progress, all in one place. Built for people who move.</p>
-          <a href="gymflow.html" class="product-link">Learn more</a>
-        </article>
-        <article class="product-card product-card--clickable" data-detail-url="memorolearn.html">
-          <div class="product-card-visual"></div>
-          <h3><a href="memorolearn.html">MemoroLearn</a></h3>
-          <p>Offline study companion for reading PDFs, EPUBs, and text, listening with text‑to‑speech, and taking notes — all stored locally on your device.</p>
-          <a href="https://apps.apple.com/us/app/memorolearn/id6762502128" class="product-link" target="_blank" rel="noopener noreferrer">Get on App Store</a>
-        </article>
-      </div>
+      <header class="section-head">
+        <h2 class="section-title">The lineup</h2>
+        <p class="section-intro">Four apps, four colors, one rule: if a feature doesn’t help you do the thing, it doesn’t ship.</p>
+      </header>
+
+      <ol class="lineup">
+        <li class="app-row product-card--clickable" data-detail-url="smartcart.html" style="--app:var(--teal)">
+          <span class="app-num">01</span>
+          <div class="app-body">
+            <p class="app-status">On iPhone &amp; Android</p>
+            <h3><a href="smartcart.html">SmartCart</a></h3>
+            <p>Plan the week, and the grocery list writes itself. Hundreds of recipes with cook times, a food log for calories and protein, and a pantry that remembers what you already bought.</p>
+            <div class="app-links">
+              <a href="https://apps.apple.com/us/app/smartcart-grocery-recipes/id6759084715" class="product-link" target="_blank" rel="noopener noreferrer">App Store ↗</a>
+              <a href="https://play.google.com/store/apps/details?id=com.nullclub.smartcartv2" class="product-link" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
+            </div>
+          </div>
+          <div class="app-scene app-scene--clip">
+            <div class="clip-side" aria-hidden="true">
+              <div class="scene-list">
+                <p class="scene-list-title">Sunday · rice bowl</p>
+                <p class="done">Chicken breast</p>
+                <p class="done">Broccoli</p>
+                <p>Brown rice</p>
+                <p>Soy sauce</p>
+              </div>
+            </div>
+            <div class="clip" role="img" aria-label="SmartCart app preview: plan the week, the list writes itself, hundreds of recipes, add what’s missing, cook step by step" data-captions="Plan the week|The list writes itself|Hundreds of recipes|Add what’s missing|Cook step by step">
+              <p class="clip-caption" aria-hidden="true">Plan the week</p>
+              <div class="clip-phone" aria-hidden="true">
+                <img src="assets/clips/smartcart-1.webp" alt="" class="is-on" loading="lazy" decoding="async" width="480" height="1066">
+                <img src="assets/clips/smartcart-2.webp" alt="" loading="lazy" decoding="async" width="480" height="1066">
+                <img src="assets/clips/smartcart-3.webp" alt="" loading="lazy" decoding="async" width="480" height="1066">
+                <img src="assets/clips/smartcart-4.webp" alt="" loading="lazy" decoding="async" width="480" height="1066">
+                <img src="assets/clips/smartcart-5.webp" alt="" loading="lazy" decoding="async" width="480" height="1066">
+              </div>
+              <div class="clip-bars" aria-hidden="true"></div>
+            </div>
+          </div>
+        </li>
+
+        <li class="app-row product-card--clickable" data-detail-url="friendzy.html" style="--app:var(--red)">
+          <span class="app-num">02</span>
+          <div class="app-body">
+            <p class="app-status">On Android · iPhone soon</p>
+            <h3><a href="friendzy.html">Friendzy</a></h3>
+            <p>Truth or Dare, Mafia, Alias, Trivia and more, hosted by Riot, a very loud fox. Pass one phone around, or have someone open a room and everyone else joins on their own phone with a four-letter code.</p>
+            <div class="app-links">
+              <a href="https://play.google.com/store/apps/details?id=com.nullclub.friendzy" class="product-link" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
+              <a href="friendzy.html" class="product-link">Learn more →</a>
+            </div>
+          </div>
+          <div class="app-scene app-scene--clip">
+            <div class="clip-side" aria-hidden="true">
+              <img class="clip-mascot" src="assets/clips/riot-hero-splash.webp" alt="" loading="lazy" decoding="async" width="292" height="420">
+            </div>
+            <div class="clip" role="img" aria-label="Friendzy app preview: pick a game, truth or dare, mafia: who’s who?, alias: beat the clock, trivia night" data-captions="Pick a game|Truth or Dare|Mafia: who’s who?|Alias: beat the clock|Trivia night">
+              <p class="clip-caption" aria-hidden="true">Pick a game</p>
+              <div class="clip-phone" aria-hidden="true">
+                <img src="assets/clips/friendzy-1.webp" alt="" class="is-on" loading="lazy" decoding="async" width="480" height="1066">
+                <img src="assets/clips/friendzy-2.webp" alt="" loading="lazy" decoding="async" width="480" height="1066">
+                <img src="assets/clips/friendzy-3.webp" alt="" loading="lazy" decoding="async" width="480" height="1066">
+                <img src="assets/clips/friendzy-4.webp" alt="" loading="lazy" decoding="async" width="480" height="1066">
+                <img src="assets/clips/friendzy-5.webp" alt="" loading="lazy" decoding="async" width="480" height="1066">
+              </div>
+              <div class="clip-bars" aria-hidden="true"></div>
+            </div>
+          </div>
+        </li>
+
+        <li class="app-row product-card--clickable" data-detail-url="gymflow.html" style="--app:var(--blue)">
+          <span class="app-num">03</span>
+          <div class="app-body">
+            <p class="app-status app-status--soon">Coming soon</p>
+            <h3><a href="gymflow.html">GymFlow</a></h3>
+            <p>Your workouts and your progress in one place. Every exercise in the library has a drawing of the movement and the muscles it works, so you don’t have to guess the form.</p>
+            <div class="app-links">
+              <a href="gymflow.html" class="product-link">See the exercise library →</a>
+            </div>
+          </div>
+          <div class="app-scene" aria-hidden="true">
+            <figure class="scene-lift">
+              <img src="assets/gymflow/deadlift.jpg" alt="" loading="lazy" decoding="async" width="1024" height="572">
+              <figcaption>Deadlift <b>3 × 5</b></figcaption>
+            </figure>
+          </div>
+        </li>
+
+        <li class="app-row product-card--clickable" data-detail-url="memorolearn.html" style="--app:var(--ink)">
+          <span class="app-num">04</span>
+          <div class="app-body">
+            <p class="app-status">On iPhone</p>
+            <h3><a href="memorolearn.html">MemoroLearn</a></h3>
+            <p>Open a PDF, EPUB or plain text file, have it read aloud, and take notes in the margin. It all works offline, and none of it leaves your device.</p>
+            <div class="app-links">
+              <a href="https://apps.apple.com/us/app/memorolearn/id6762502128" class="product-link" target="_blank" rel="noopener noreferrer">App Store ↗</a>
+            </div>
+          </div>
+          <div class="app-scene" aria-hidden="true">
+            <div class="scene-page">
+              <p>…and so the cell divides, <mark>copying every strand of its DNA</mark> before it splits in two.</p>
+              <div class="scene-play"><span class="play">▶</span><span class="bar"><i></i></span><span>1.25×</span></div>
+            </div>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <section class="about">
-      <div class="about-inner">
-        <h2 class="about-title">About NULL CLUB</h2>
-        <p class="about-text">NULL CLUB builds small, focused apps that help with everyday life — from planning what you eat, to playing together, to moving more, to learning offline. We design for privacy first, keep as much as possible on your device, and try to make every screen feel calm and clear.</p>
-        <p class="about-text">We’re a small team. We don’t do ads in most of our apps, and when we do, we keep data use minimal. If you have questions or feedback, the <a href="support.html">Support</a> page is the best place to reach us.</p>
-      </div>
+    <section class="rules">
+      <h2 class="section-title">House rules</h2>
+      <ol class="rules-list">
+        <li>
+          <h3>Open it and go.</h3>
+          <p>No account wall before you can try the thing. SmartCart and Friendzy work the moment they open.</p>
+        </li>
+        <li>
+          <h3>Your stuff stays on your phone.</h3>
+          <p>Recipes, meal plans, workouts and notes are saved on your device, not on our servers. Every app has its own privacy policy, written in plain language.</p>
+        </li>
+        <li>
+          <h3>One app, one job.</h3>
+          <p>We would rather make five small apps than one bloated one.</p>
+        </li>
+        <li>
+          <h3>A person reads the inbox.</h3>
+          <p>Write to <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a>. A person on our team reads every message and replies, usually within a few days.</p>
+        </li>
+      </ol>
     </section>
   </main>
 
-  <footer class="footer">
-    <a href="index.html" class="footer-logo">NULL CLUB</a>
-    <nav class="footer-nav">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="support.html">Support</a>
-    </nav>
+  <footer class="footer footer--big">
+    <p class="footer-word">NULL<svg class="footer-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#mark"/></svg>CLUB</p>
+    <div class="footer-row">
+      <span class="footer-logo">© 2026 NULL CLUB · Small apps, made with care</span>
+      <nav class="footer-nav">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:nullclub365@gmail.com">Email</a>
+      </nav>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-  <script src="js/scene.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

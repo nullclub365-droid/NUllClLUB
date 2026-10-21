@@ -25,7 +25,7 @@ Everything stays on your device. No account, no tracking, no ads.
 
 Download now: [App Store link]
 
-The landing page is live at: nullclub365-droid.github.io/NUllClLUB/smartcart.html
+The landing page is live at: nullclub.xyz/smartcart.html
 
 Questions? Check out our privacy page or support page.
 

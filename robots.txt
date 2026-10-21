@@ -7,7 +7,7 @@ Disallow: /.git/
 Disallow: /node_modules/
 
 # Sitemap location
-Sitemap: https://nullclub365-droid.github.io/NUllClLUB/sitemap.xml
+Sitemap: https://nullclub.xyz/sitemap.xml
 
 # Crawl delay (be nice to servers)
 Crawl-delay: 1

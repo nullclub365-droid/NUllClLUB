@@ -3,31 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open SAIDU | NULL CLUB</title>
-  <meta name="description" content="Redirect page for SAIDU store links. iOS users go to App Store, Android users go to Google Play.">
+  <title>Open Friendzy | NULL CLUB</title>
+  <meta name="description" content="Saidu is now Friendzy. Android users go to Friendzy on Google Play; iPhone users go to Saidu on the App Store until Friendzy arrives there.">
+  <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <main class="page">
     <div class="page-content">
-      <h1>Opening SAIDU</h1>
-      <p>If you are on iPhone/iPad, you will be redirected to the App Store. If you are on Android, you will be redirected to Google Play.</p>
+      <h1>Saidu is now Friendzy</h1>
+      <p>On Android you’ll be taken to Friendzy on Google Play. Friendzy isn’t on iPhone yet, so iPhone and iPad users go to Saidu on the App Store for now.</p>
       <p>If nothing happens, use one of the buttons below:</p>
       <div class="cta-row">
-        <a href="https://apps.apple.com/us/app/saidu/id6758945621" class="cta" target="_blank" rel="noopener noreferrer">Open App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.saidu.game" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Open Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.nullclub.friendzy" class="cta" target="_blank" rel="noopener noreferrer">Friendzy on Google Play</a>
+        <a href="https://apps.apple.com/us/app/saidu/id6758945621" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Saidu on the App Store</a>
       </div>
-      <p class="app-outro"><a href="saidu.html">Back to SAIDU page</a></p>
+      <p class="app-outro"><a href="friendzy.html">More about Friendzy</a></p>
     </div>
   </main>
   <script>
     (function () {
+      // Swap appStoreUrl to Friendzy's listing once the iPhone version is live.
       var appStoreUrl = "https://apps.apple.com/us/app/saidu/id6758945621";
-      var playStoreUrl = "https://play.google.com/store/apps/details?id=com.saidu.game";
+      var playStoreUrl = "https://play.google.com/store/apps/details?id=com.nullclub.friendzy";
       var ua = navigator.userAgent || navigator.vendor || "";
       var isAndroid = /Android/i.test(ua);
       var isiOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
