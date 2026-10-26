@@ -26,71 +26,98 @@
       <a href="privacy.html" class="back-link">← All privacy policies</a>
       <section class="privacy-section">
         <h1 class="privacy-title">Privacy Policy — Friendzy</h1>
-        <p><strong>Friendzy</strong> ("we", "our", or "the app") is a party game app for iOS. This policy describes how we handle information when you use the app.</p>
+        <p><strong>Friendzy</strong> ("we", "our", or "the app") is a party game app for iPhone, iPad and Android, made by NULL CLUB. This policy explains what information the app handles, why, who it is shared with, and the choices you have. NULL CLUB is responsible for this information (the "controller"); you can reach us at <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a>.</p>
 
         <h3>1. Information we collect</h3>
-        <p><strong>Information stored only on your device</strong></p>
-        <p>Friendzy stores the following preferences locally on your device using your device's built-in storage (Apple's UserDefaults). This data stays on your device:</p>
-      <ul>
-        <li>Whether you have completed the first-launch walkthrough.</li>
-        <li>Your haptic feedback preference (on/off).</li>
+        <p><strong>Stored only on your device</strong></p>
+        <p>Friendzy keeps these settings and notes in your device's own storage. They never leave your device:</p>
+        <ul>
+        <li>Whether you have finished the first-launch walkthrough, and your sound and vibration settings.</li>
+        <li>Your favourite games and the games you chose not to see suggested.</li>
         <li>The nickname you last used in a multi-phone room, and that room's code (so you can rejoin it).</li>
-      </ul>
-        <p>We do not collect your name, email address, phone number, or any other contact information. We do not require you to create an account to use Friendzy.</p>
+        <li>Your last group ("Your crew"): the nicknames of the players in your most recent room and how many games each of them won, used for the "Host again" shortcut and the game night recap.</li>
+        <li>When a bonus content pack was unlocked, and simple counters such as how many games you have finished (used to time reminders and the rating request).</li>
+        </ul>
+        <p>We do not collect your name, email address, phone number, or other contact details, and you never need an account.</p>
 
         <p><strong>Game content</strong></p>
-        <p>All game prompts (questions, dares, words, trivia) are bundled inside the app itself. When you play on one phone, nothing about the game leaves your device.</p>
-      <p><strong>Multi-phone rooms (optional)</strong></p>
-      <p>If you choose "Play on all phones" or join a friend's room, the app connects to Google Firebase Realtime Database so the phones in the room can play together. While the room exists, the following is stored there:</p>
-      <ul>
+        <p>The game prompts, questions and words are bundled in the app. Extra content packs and a few app settings (such as how often ads appear) are downloaded from Google Firebase Remote Config. This download contains no personal information; Firebase identifies the app installation with a random installation ID.</p>
+
+        <p><strong>Multi-phone rooms (optional)</strong></p>
+        <p>If you host or join a room, the phones in the room connect through Google Firebase Realtime Database. While the room exists, it holds:</p>
+        <ul>
         <li>The nickname you type (it doesn't have to be your real name) and whether your phone is connected.</li>
-        <li>A random identifier created by Firebase Anonymous Authentication. It is not linked to your name, email, phone number or Apple ID.</li>
-        <li>The room's 4-letter code, the game being played, and what players do in it: votes, answers, scores, and any one-word answers or clues typed in Word Association and Spy.</li>
+        <li>A random identifier created by Firebase Anonymous Authentication. It is not linked to your name, email, phone number, Apple ID or Google account.</li>
+        <li>The room's 4-letter code, the game being played, and what players do in it: votes, guesses, scores, and anything typed in games such as Word Association, Spy, Comeback, Close Call and Who Said That? (single words, numbers, or short answers of up to 60 characters).</li>
         <li>Secret game cards (your Mafia role or Spy card), which only your phone can read.</li>
-      </ul>
-      <p>Everything typed in a room is shown only to the other players in that room, who need the room code to join. Words are checked against a filter on your phone before they are sent, and the host can hide any word. A room and everything in it are deleted when the host ends the game, or when the host starts a new room. We don't use room contents for advertising or analytics.</p>
-      <p><strong>App integrity (Firebase App Check)</strong></p>
-      <p>To stop other apps and scripts from using Friendzy's servers, the app uses Firebase App Check with Apple's App Attest. This sends Apple's proof that the request comes from the genuine Friendzy app; it contains no personal information.</p>
+        </ul>
+        <p>What you type is shown to the other players in that room, who need the room code to join. Everything typed is checked against a filter on your phone before it is sent; the host can hide any answer and remove a player from the room. Please don't type personal information (such as addresses, phone numbers or other people's private details) into a room. A room and everything in it are deleted when the host ends the game or starts a new room; a room left open is deleted when its code is reused, and we may delete old rooms at any time. We don't use room contents for advertising or analytics.</p>
+
+        <p><strong>Images you choose to share</strong></p>
+        <p>The game night recap and the "share this answer" card are created on your device. They may contain players' nicknames and answers from your room, and they are only sent anywhere if you choose to share them through your phone's share sheet. Please only share them if the people in them are happy for you to.</p>
+
+        <p><strong>Trending games</strong></p>
+        <p>When a game starts, the app adds one to an anonymous daily count for that game, so "Trending tonight" can show what is popular. No nickname or device identifier is stored with the count.</p>
+
+        <p><strong>Notifications (if you allow them)</strong></p>
+        <p>Reminders (for example, a nudge after a week away or when a new content pack arrives) are scheduled on your device. On iPhone, the app also subscribes to a "new games" topic with Firebase Cloud Messaging, which uses a device push token so we can announce new games. You can turn notifications off at any time in your device settings.</p>
+
+        <p><strong>App integrity</strong></p>
+        <p>To stop other apps and scripts from using Friendzy's servers, the app uses Firebase App Check with Apple's App Attest on iPhone and Google Play Integrity on Android. These send proof that requests come from the genuine Friendzy app; they contain no personal information.</p>
 
         <p><strong>Advertising (Google AdMob)</strong></p>
-        <p>Friendzy is free and shows ads between game sessions (never during active gameplay), served by Google AdMob. AdMob may collect device identifiers, approximate location derived from your IP address, and ad interaction data to deliver, measure, and limit the frequency of ads. On first launch, iOS asks whether Friendzy may track you across other companies' apps and websites (App Tracking Transparency). If you decline, your device's advertising identifier is not shared and you will see non-personalised ads. See <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a>.</p>
+        <p>Friendzy is free and supported by ads served by Google AdMob. Ads appear between games and, in multi-phone rooms, on results screens between rounds, never while anyone is answering. You can also choose to watch a "rewarded" ad for an optional extra, such as hints in Close Call or a bonus content pack; this is never required to play. We limit ads to content suitable for teens (no adult ads). AdMob may collect device identifiers (such as the advertising ID), approximate location derived from your IP address, and ad interaction data to show, measure and limit the frequency of ads. In the European Economic Area, the UK and Switzerland, the app asks for your consent through Google's consent form before personalised ads are used, and you can change your choice in the app's Settings ("Ad Privacy Choices"). On iPhone, iOS asks whether Friendzy may track you across other companies' apps and websites (App Tracking Transparency); if you decline, your advertising identifier is not shared and you see non-personalised ads. See <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a>.</p>
 
         <p><strong>Analytics and crash reports (Google Firebase)</strong></p>
-        <p>We use Firebase Analytics to understand which games are played and how the app is used (for example, screens viewed and games started), and Firebase Crashlytics to receive crash reports so we can fix bugs. This data is associated with a random app-instance identifier, not with your name or contact details. See the <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
+        <p>We use Firebase Analytics to understand how the app is used (for example, which games are started and finished, whether players manage to join rooms, and which features and ads are used), and Firebase Crashlytics to receive crash reports so we can fix bugs. This data is linked to a random app-instance identifier, not to your name or contact details. See the <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
 
-        <h3>2. Information we do not collect</h3>
+        <h3>2. Why we use information</h3>
         <ul>
-          <li>We do not collect your precise location.</li>
-        <li>We do not require an account, and multi-phone rooms never ask for your real name, email or phone number.</li>
-          <li>We do not access your contacts, camera, microphone, or photo library.</li>
-          <li>We do not sell your personal data. Data is shared with Google only as described above, to serve ads and provide analytics and crash reporting.</li>
+          <li>To run the games and multi-phone rooms you ask for.</li>
+          <li>To keep the app secure and working (App Check, crash reports).</li>
+          <li>To understand and improve the app (analytics).</li>
+          <li>To pay for the free app with ads, including personalised ads only where you have allowed them.</li>
+          <li>To send notifications, only if you have turned them on.</li>
+        </ul>
+        <p>If you are in the EEA, the UK or Switzerland, we rely on the following legal bases: providing the service you request (rooms and games); our legitimate interests in keeping the app secure, fixing crashes and improving it; and your consent for personalised advertising and notifications, which you can withdraw at any time.</p>
+
+        <h3>3. Who we share information with</h3>
+        <p>We use Google (Firebase and AdMob) to provide the services described above. Google processes this data on our behalf, or, for advertising, under its own policies. Google may store and process data on servers outside your country, including in the United States, with safeguards such as standard contractual clauses. We do not sell your personal information for money. Under some US state laws (such as California's), showing personalised ads can count as "sharing" personal information; you can opt out by declining tracking or personalised ads as described in section 6.</p>
+
+        <h3>4. How long we keep information</h3>
+        <ul>
+          <li>On-device settings: until you delete the app.</li>
+          <li>Room data: until the host ends the game or starts a new room, or the room is reused or cleaned up.</li>
+          <li>Trending counts: anonymous daily totals only.</li>
+          <li>Analytics, crash reports and advertising data: kept by Google according to its retention settings and policies.</li>
         </ul>
 
-        <h3>3. Children</h3>
-        <p>Friendzy is a party game app intended for use by groups of players. It is not specifically directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information, email us at <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a> and we will delete it.</p>
+        <h3>5. Children</h3>
+        <p>Friendzy is a party game for groups and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information (for example, typed it into a room), email <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a> and we will delete it.</p>
 
-        <h3>4. Future updates</h3>
-        <p>If a future version of Friendzy changes what data is collected, this privacy policy will be updated before those changes are released. The current policy is always available at this page and linked from within the app.</p>
-
-        <h3>5. Your choices</h3>
+        <h3>6. Your choices and rights</h3>
         <ul>
-          <li>You can clear all on-device preferences by deleting and reinstalling the app.</li>
-          <li>Multi-phone rooms are optional; every game except Word Association can be played on one phone without them. To have a room's data deleted sooner, the host can end the game, or email <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a> with the room code.</li>
-          <li>You can allow or deny tracking at any time in iOS Settings → Privacy &amp; Security → Tracking. On Android, you can reset or delete your advertising ID in Settings → Privacy → Ads.</li>
+          <li>Multi-phone rooms, notifications and rewarded ads are all optional. Every game except Word Association, Comeback, Close Call and Who Said That? can be played on one phone without a room.</li>
+          <li>Ads: change your ad consent in the app's Settings (where shown), allow or deny tracking in iOS Settings → Privacy &amp; Security → Tracking, or reset or delete your advertising ID on Android in Settings → Privacy → Ads.</li>
+          <li>Notifications: turn them off in your device settings.</li>
+          <li>On-device data: delete the app.</li>
         </ul>
+        <p>Depending on where you live, you may have the right to access, correct, delete or receive a copy of your personal information, to object to or restrict how we use it, and to withdraw consent. To use these rights, email <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a>. Because Friendzy has no accounts, please include the 4-letter room code if your request is about a room. You also have the right to complain to your local data protection authority.</p>
 
         <h3>Deleting your data</h3>
-        <p>Friendzy has no accounts, so there is nothing to sign in to or close. Data stored on your device is removed when you delete the app. Multi-phone room data (your nickname, your answers and words in that room, and the anonymous ID) is deleted automatically when the host ends the game or starts a new room.</p>
-        <p>To ask us to delete room data sooner, or any other data we hold about you, email <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a> with the subject "Friendzy data deletion" and, if you have it, the 4-letter room code. We will confirm and delete it within 30 days. Data held by Google for ads, analytics and crash reports can be managed through your device's advertising and privacy settings and <a href="https://policies.google.com/technologies/ads">Google's controls</a>.</p>
+        <p>Friendzy has no accounts, so there is nothing to sign in to or close. Data stored on your device is removed when you delete the app. Room data (your nickname, your answers and the anonymous ID) is deleted when the host ends the game or starts a new room. To ask us to delete room data sooner, or any other data we hold about you, email <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a> with the subject "Friendzy data deletion" and, if you have it, the room code. We will confirm and delete it within 30 days. Data held by Google for ads, analytics and crash reports can be managed through your device settings and <a href="https://policies.google.com/technologies/ads">Google's controls</a>.</p>
 
-        <h3>6. Changes to this policy</h3>
-        <p>We may update this privacy policy from time to time. The current version will always be available at this page. Continued use of the app after changes means you accept the updated policy.</p>
+        <h3>7. Security</h3>
+        <p>Room data is only readable by players who know the room code, secret cards only by the phone they belong to, and database access is limited by security rules. No system is perfectly secure, so please don't type sensitive information into a room.</p>
 
-        <h3>7. Contact</h3>
-        <p>If you have questions about this privacy policy or Friendzy's practices, please email <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a> or visit the <a href="support.html">Support</a> page.</p>
+        <h3>8. Changes to this policy</h3>
+        <p>If a new version of Friendzy changes what information is collected, we will update this policy before that version is released. The current version is always available at this page and linked from the app.</p>
+
+        <h3>9. Contact</h3>
+        <p>If you have questions about this privacy policy or Friendzy's practices, email <a href="mailto:nullclub365@gmail.com">nullclub365@gmail.com</a> or visit the <a href="support.html">Support</a> page.</p>
 
         <p>Related: <a href="terms-friendzy.html">Friendzy Terms of Use</a>.</p>
-        <p class="privacy-updated">Last updated: October 21, 2026</p>
+        <p class="privacy-updated">Last updated: October 26, 2026</p>
       </section>
     </div>
   </main>
