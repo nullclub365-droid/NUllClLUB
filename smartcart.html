@@ -19,39 +19,8 @@
   <meta name="twitter:title" content="SmartCart — Meal planner, grocery list & food log">
   <meta name="twitter:description" content="Weekly meal planner, grocery list, and food log in one app, from NULL CLUB.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="/css/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SMARTCART-GA4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SMARTCART-GA4', { 'page_path': window.location.pathname });
-
-    // Track App Store link clicks (compare the real hostname, not a substring of the URL)
-    document.addEventListener('click', function(e) {
-      var link = e.target.closest && e.target.closest('a[href]');
-      var host = link ? new URL(link.href, location.href).hostname : '';
-      if (host === 'apps.apple.com') {
-        gtag('event', 'app_store_click', {
-          'event_category': 'engagement',
-          'event_label': 'SmartCart App Store',
-          'value': 1
-        });
-      }
-      if (host === 'play.google.com') {
-        gtag('event', 'play_store_click', {
-          'event_category': 'engagement',
-          'event_label': 'SmartCart Google Play',
-          'value': 1
-        });
-      }
-    });
-  </script>
 
   <!-- Structured Data for Rich Snippets -->
   <script type="application/ld+json">
