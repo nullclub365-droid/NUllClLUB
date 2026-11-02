@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add a friend on Friendzy | NULL CLUB</title>
+  <meta name="description" content="A friend wants to add you on Friendzy. Open the app with their friend code, or get Friendzy on the App Store or Google Play.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="/css/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .friend-code { font-family: var(--font-display); font-weight: 800; font-size: 3.2rem; letter-spacing: 0.3em; margin: 0.5rem 0 1rem; padding-left: 0.3em; color: var(--red); }
+    .steps { text-align: left; max-width: 26rem; margin: 1.5rem auto 0; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="page-content" style="text-align:center">
+      <h1>A friend wants to add you on Friendzy 🦊</h1>
+      <p id="intro">Tap below to open Friendzy and send them a friend request.</p>
+      <div class="friend-code" id="code" aria-label="Friend code">······</div>
+      <div class="cta-row" style="justify-content:center">
+        <a href="#" id="open" class="cta">Open in Friendzy</a>
+        <a href="https://apps.apple.com/app/id6782549607" id="appstore" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.nullclub.friendzy" id="playstore" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Google Play</a>
+      </div>
+      <ol class="steps">
+        <li>No app yet? Get Friendzy from the App Store or Google Play (free).</li>
+        <li>Sign in from your Profile, then come back here and tap <strong>Open in Friendzy</strong> — or tap <strong>Add a friend</strong> in your Profile and type the code.</li>
+      </ol>
+    </div>
+  </main>
+  <script>
+    (function () {
+      // Friend codes are 6 characters from the app's alphabet (no vowels, no 0/1); anything else is ignored.
+      var raw = (new URLSearchParams(window.location.search).get("code") || "").toUpperCase();
+      var code = /^[BCDFGHJKLMNPQRSTVWXZ2-9]{6}$/.test(raw) ? raw : "";
+      var open = document.getElementById("open");
+      // Show the visitor's own store first (both stay visible for anyone else).
+      var ua = navigator.userAgent || "";
+      if (/Android/i.test(ua)) {
+        var play = document.getElementById("playstore");
+        play.parentNode.insertBefore(play, document.getElementById("appstore"));
+      }
+      if (code) {
+        document.getElementById("code").textContent = code;
+        document.getElementById("code").setAttribute("aria-label", "Friend code " + code.split("").join(" "));
+        open.href = "friendzy://friend?code=" + code;
+      } else {
+        document.getElementById("code").style.display = "none";
+        document.getElementById("intro").textContent = "This link is missing its friend code — ask your friend for their 6-character code.";
+        open.href = "friendzy://";
+      }
+    })();
+  </script>
+</body>
+</html>
