@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Friendzy | NULL CLUB</title>
-  <meta name="description" content="Get Friendzy, free party games for your friend group. iPhone users go to the App Store, Android users go to Google Play.">
+  <meta name="description" content="Get Friendzy, free party games for your friend group.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link href="/css/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -32,24 +32,23 @@
       var isAndroid = /Android/i.test(ua);
       var isiOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
-      if (!iosLive) {
-        var a = document.getElementById("appstore");
-        a.textContent = "iPhone: coming soon";
-        a.removeAttribute("href");
-        a.setAttribute("aria-disabled", "true");
-        a.style.opacity = "0.5";
-      }
+      var appBtn = document.getElementById("appstore");
+      var playBtn = document.getElementById("playstore");
       if (isAndroid) {
         window.location.replace(playStoreUrl);
         return;
       }
       if (isiOS) {
-        if (iosLive) {
-          window.location.replace(appStoreUrl);
-        } else {
-          document.getElementById("msg").textContent = "Friendzy is coming to iPhone very soon. It's already on Android: send this link to a friend with an Android phone!";
-          document.getElementById("msg-es").textContent = "Friendzy llega muy pronto a iPhone. Ya está en Android.";
-        }
+        // iPhone/iPad visitors only ever see the App Store (App Review, Guideline 2.3.10).
+        playBtn.style.display = "none";
+        if (iosLive) window.location.replace(appStoreUrl);
+        return;
+      }
+      if (!iosLive) {
+        appBtn.textContent = "iPhone: coming soon";
+        appBtn.removeAttribute("href");
+        appBtn.setAttribute("aria-disabled", "true");
+        appBtn.style.opacity = "0.5";
       }
     })();
   </script>

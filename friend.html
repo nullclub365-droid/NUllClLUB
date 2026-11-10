@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add a friend on Friendzy | NULL CLUB</title>
-  <meta name="description" content="A friend wants to add you on Friendzy. Open the app with their friend code, or get Friendzy on the App Store or Google Play.">
+  <meta name="description" content="A friend wants to add you on Friendzy. Open the app with their friend code, or get Friendzy free.">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link href="/css/fonts.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         <a href="https://play.google.com/store/apps/details?id=com.nullclub.friendzy" id="playstore" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Google Play</a>
       </div>
       <ol class="steps">
-        <li>No app yet? Get Friendzy from the App Store or Google Play (free).</li>
+        <li id="store-step">No app yet? Get Friendzy from the App Store or Google Play (free).</li>
         <li>Sign in from your Profile, then come back here and tap <strong>Open in Friendzy</strong> — or tap <strong>Add a friend</strong> in your Profile and type the code.</li>
       </ol>
     </div>
@@ -37,11 +37,16 @@
       var raw = (new URLSearchParams(window.location.search).get("code") || "").toUpperCase();
       var code = /^[BCDFGHJKLMNPQRSTVWXZ2-9]{6}$/.test(raw) ? raw : "";
       var open = document.getElementById("open");
-      // Show the visitor's own store first (both stay visible for anyone else).
       var ua = navigator.userAgent || "";
+      var isiOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      var storeStep = document.getElementById("store-step");
+      // Phones see only their own store (App Review, Guideline 2.3.10); computers see both.
       if (/Android/i.test(ua)) {
-        var play = document.getElementById("playstore");
-        play.parentNode.insertBefore(play, document.getElementById("appstore"));
+        document.getElementById("appstore").style.display = "none";
+        storeStep.textContent = "No app yet? Get Friendzy from Google Play (free).";
+      } else if (isiOS) {
+        document.getElementById("playstore").style.display = "none";
+        storeStep.textContent = "No app yet? Get Friendzy from the App Store (free).";
       }
       if (code) {
         document.getElementById("code").textContent = code;
