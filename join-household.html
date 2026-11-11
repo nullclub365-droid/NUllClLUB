@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join a household on SmartCart | NULL CLUB</title>
+  <meta name="description" content="You're invited to share a grocery list, pantry and meal plan on SmartCart.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="/css/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .steps { text-align: left; max-width: 26rem; margin: 1.5rem auto 0; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="page-content" style="text-align:center">
+      <h1 id="title">You're invited to a household on SmartCart</h1>
+      <p id="intro">Share one grocery list, pantry and meal plan with the people you live with.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a href="#" id="open" class="cta">Open in SmartCart</a>
+        <a href="https://apps.apple.com/app/id6759084715" id="appstore" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.nullclub.smartcartv2" id="playstore" class="cta cta-ghost" target="_blank" rel="noopener noreferrer">Google Play</a>
+      </div>
+      <ol class="steps">
+        <li id="store-step">No app yet? Get SmartCart from the App Store or Google Play (free).</li>
+        <li id="open-step">Come back to this link and tap <strong>Open in SmartCart</strong>, then sign in and tap <strong>Ask to join</strong>.</li>
+        <li id="approve-step">The person who invited you approves your request.</li>
+      </ol>
+    </div>
+  </main>
+  <script>
+    (function () {
+      // Spanish for Spanish-language phones (most SmartCart users).
+      var es = /^es\b/i.test(navigator.language || "");
+      var t = es ? {
+        title: "Te invitaron a un hogar en SmartCart",
+        intro: "Comparte una lista de compras, despensa y plan de comidas con las personas con quienes vives.",
+        open: "Abrir en SmartCart",
+        store: "¿Aún no tienes la app? Descarga SmartCart gratis en la App Store o Google Play.",
+        storeIOS: "¿Aún no tienes la app? Descarga SmartCart gratis en la App Store.",
+        storeAndroid: "¿Aún no tienes la app? Descarga SmartCart gratis en Google Play.",
+        openStep: "Vuelve a este enlace y toca <strong>Abrir en SmartCart</strong>; luego inicia sesión y toca <strong>Pedir unirme</strong>.",
+        approve: "La persona que te invitó aprueba tu solicitud.",
+        broken: "A este enlace le falta información. Pide un enlace nuevo a quien te invitó."
+      } : {
+        store: "No app yet? Get SmartCart from the App Store or Google Play (free).",
+        storeIOS: "No app yet? Get SmartCart from the App Store (free).",
+        storeAndroid: "No app yet? Get SmartCart from Google Play (free).",
+        broken: "This invite link is incomplete. Ask the person who invited you for a new one."
+      };
+      if (es) {
+        document.documentElement.lang = "es";
+        document.title = "Únete a un hogar en SmartCart | NULL CLUB";
+        document.getElementById("title").textContent = t.title;
+        document.getElementById("intro").textContent = t.intro;
+        document.getElementById("open").textContent = t.open;
+        document.getElementById("open-step").innerHTML = t.openStep;
+        document.getElementById("approve-step").textContent = t.approve;
+      }
+      // Ids and codes are letters, digits, - and _ only; anything else means a broken link.
+      var params = new URLSearchParams(window.location.search);
+      var key = /^[A-Za-z0-9_-]{1,64}$/;
+      var h = params.get("h") || "", c = params.get("c") || "";
+      var valid = key.test(h) && key.test(c) && c.length >= 22;
+      var open = document.getElementById("open");
+      // Phones see only their own store (App Review, Guideline 2.3.10); computers see both.
+      var ua = navigator.userAgent || "";
+      var isiOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      var storeStep = document.getElementById("store-step");
+      storeStep.textContent = t.store;
+      if (/Android/i.test(ua)) {
+        document.getElementById("appstore").style.display = "none";
+        storeStep.textContent = t.storeAndroid;
+      } else if (isiOS) {
+        document.getElementById("playstore").style.display = "none";
+        storeStep.textContent = t.storeIOS;
+      }
+      if (valid) {
+        open.href = "smartcart://join-household?h=" + encodeURIComponent(h) + "&c=" + encodeURIComponent(c);
+      } else {
+        document.getElementById("intro").textContent = t.broken;
+        open.style.display = "none";
+        document.getElementById("open-step").style.display = "none";
+        document.getElementById("approve-step").style.display = "none";
+      }
+    })();
+  </script>
+</body>
+</html>
