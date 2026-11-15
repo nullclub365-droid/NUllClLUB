@@ -47,7 +47,14 @@
       if (isiOS) {
         // iPhone/iPad visitors only ever see the App Store (App Review, Guideline 2.3.10).
         playBtn.style.display = "none";
-        if (iosLive) window.location.replace(appStoreUrl);
+        if (iosLive) { window.location.replace(appStoreUrl); return; }
+        // Not live yet: say so, with no mention of another platform's store.
+        appBtn.textContent = "iPhone: coming soon";
+        appBtn.removeAttribute("href");
+        appBtn.setAttribute("aria-disabled", "true");
+        appBtn.style.opacity = "0.5";
+        document.getElementById("msg").textContent = "Friendzy is coming to iPhone very soon.";
+        document.getElementById("msg-es").textContent = "Friendzy llega muy pronto a iPhone.";
         return;
       }
       if (!iosLive) {
