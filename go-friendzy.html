@@ -28,6 +28,12 @@
       var iosLive = false;
       var appStoreUrl = "https://apps.apple.com/app/id6782549607";
       var playStoreUrl = "https://play.google.com/store/apps/details?id=com.nullclub.friendzy";
+      // Attribution: ?s=tiktok|instagram|youtube (any short a-z0-9_- tag) becomes the Play install
+      // referrer, so Play Console reports installs per source under Acquisition -> utm_source.
+      var src = (new URLSearchParams(window.location.search).get("s") || "").toLowerCase();
+      src = /^[a-z0-9_-]{1,20}$/.test(src) ? src : "direct";
+      playStoreUrl += "&referrer=" + encodeURIComponent("utm_source=" + src + "&utm_medium=social&utm_campaign=friendzy");
+      document.getElementById("playstore").href = playStoreUrl;
       var ua = navigator.userAgent || navigator.vendor || "";
       var isAndroid = /Android/i.test(ua);
       var isiOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);

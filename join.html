@@ -37,6 +37,9 @@
       var raw = (new URLSearchParams(window.location.search).get("code") || "").toUpperCase();
       var code = /^[BCDFGHJKLMNPQRSTVWXZ]{4}$/.test(raw) ? raw : "";
       var open = document.getElementById("open");
+      // Play Console reports these installs under utm_source=room_invite. The room code rides along
+      // (room=KZBT) so the Android app can join it right after the first launch.
+      document.getElementById("playstore").href += "&referrer=" + encodeURIComponent("utm_source=room_invite&utm_medium=app&utm_campaign=invite" + (code ? "&room=" + code : ""));
       // Phones see only their own store (App Review, Guideline 2.3.10); computers see both.
       var ua = navigator.userAgent || "";
       var isiOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
