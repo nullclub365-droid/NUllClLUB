@@ -1,0 +1,24 @@
+# NULL CLUB
+
+> NULL CLUB is an independent studio that builds small, privacy-first mobile apps for everyday life. Flagship apps: SmartCart (weekly meal planning, grocery lists, recipes, food logging) and Friendzy (14 free party games for friends). Apps are available on iPhone and Android where noted.
+
+## Apps
+
+- [SmartCart](https://nullclub.xyz/smartcart.html): Plan your week, shop with a smart grocery list, cook from hundreds of recipes, and log what you eat, all in one app. Available on the App Store and Google Play. Optional account with household sharing; English and Spanish.
+- [Friendzy](https://nullclub.xyz/friendzy.html): 14 free party games (Truth or Dare, Mafia, Comeback, Close Call, trivia and more). Pass one phone around, or open a room so everyone plays on their own phone. Available on Android, coming soon to iPhone.
+- [GymFlow](https://nullclub.xyz/gymflow.html): Workout planner with routines, workout tracking and a detailed exercise library.
+- [MemoroLearn](https://nullclub.xyz/memorolearn.html): Offline study companion for reading documents, listening with text-to-speech and taking notes, all stored locally on the device.
+
+## Support and policies
+
+- [Support](https://nullclub.xyz/support.html): Help for all NULL CLUB apps. Contact: nullclub365@gmail.com
+- [SmartCart privacy policy](https://nullclub.xyz/privacy-smartcart.html)
+- [SmartCart account deletion](https://nullclub.xyz/delete-account-smartcart.html)
+- [Friendzy privacy policy](https://nullclub.xyz/privacy-friendzy.html)
+- [Friendzy terms](https://nullclub.xyz/terms-friendzy.html)
+- [Friendzy help](https://nullclub.xyz/help-friendzy.html)
+
+## Optional
+
+- [Home](https://nullclub.xyz/): Overview of all NULL CLUB apps
+- [Sitemap](https://nullclub.xyz/sitemap.xml)
